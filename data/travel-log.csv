@@ -1,0 +1,152 @@
+start,end,nights,place,country,region,is_home,is_side_trip,inferred_home
+2022-10-01,2022-10-06,5,"Wheaton, IL",United States,Home,1,0,0
+2022-10-06,2022-10-25,12,Hanoi,Vietnam,Asia,0,0,0
+2022-10-11,2022-10-14,3,Ha Long Bay,Vietnam,Asia,0,1,0
+2022-10-17,2022-10-21,4,Ninh Binh,Vietnam,Asia,0,1,0
+2022-10-25,2022-10-30,5,Seoul,South Korea,Asia,0,0,0
+2022-10-30,2022-11-24,25,Chiang Mai,Thailand,Asia,0,0,0
+2022-11-24,2022-11-28,4,Pai,Thailand,Asia,0,0,0
+2022-11-28,2022-12-05,7,Elephant Nature Park,Thailand,Asia,0,0,0
+2022-12-05,2022-12-09,4,Pa Pae Retreat,Thailand,Asia,0,0,0
+2022-12-09,2022-12-15,6,"Wheaton, IL",United States,Home,1,0,1
+2022-12-15,2022-12-29,14,Koh Tao,Thailand,Asia,0,0,0
+2022-12-29,2023-01-05,7,Ao Nang,Thailand,Asia,0,0,0
+2023-01-05,2023-01-14,9,Krabi,Thailand,Asia,0,0,0
+2023-01-14,2023-01-18,4,Ko Lanta,Thailand,Asia,0,0,0
+2023-01-18,2023-01-22,4,Ko Lipe,Thailand,Asia,0,0,0
+2023-01-22,2023-01-28,6,George Town,Malaysia,Asia,0,0,0
+2023-01-28,2023-02-01,4,Kuala Lumpur,Malaysia,Asia,0,0,0
+2023-02-01,2023-02-02,1,Bangkok,Thailand,Asia,0,0,0
+2023-02-02,2023-02-03,1,Phnom Penh,Cambodia,Asia,0,0,0
+2023-02-03,2023-02-05,2,Siem Reap,Cambodia,Asia,0,0,0
+2023-02-05,2023-03-05,28,Ho Chi Minh City,Vietnam,Asia,0,0,0
+2023-03-05,2023-03-09,4,"Ubud, Bali",Indonesia,Asia,0,0,0
+2023-03-09,2023-03-13,4,"Candidasa, Bali",Indonesia,Asia,0,0,0
+2023-03-13,2023-03-20,7,Gili Trawangan,Indonesia,Asia,0,0,0
+2023-03-20,2023-03-25,5,Nusa Penida,Indonesia,Asia,0,0,0
+2023-03-25,2023-04-01,7,"Uluwatu, Bali",Indonesia,Asia,0,0,0
+2023-04-01,2023-04-05,4,Bangkok,Thailand,Asia,0,0,0
+2023-04-05,2023-04-11,6,Surat Thani,Thailand,Asia,0,0,0
+2023-04-11,2023-04-17,2,Koh Phangan,Thailand,Asia,0,0,0
+2023-04-12,2023-04-16,4,"Wonderland, Koh Phangan",Thailand,Asia,0,1,0
+2023-04-17,2023-04-28,11,Koh Tao,Thailand,Asia,0,0,0
+2023-04-28,2023-05-01,3,Bangkok,Thailand,Asia,0,0,0
+2023-05-01,2023-05-04,3,Hoi An,Vietnam,Asia,0,0,0
+2023-05-04,2023-05-10,6,Da Nang,Vietnam,Asia,0,0,0
+2023-05-10,2023-05-15,5,Hanoi,Vietnam,Asia,0,0,0
+2023-05-15,2023-05-17,2,London Heathrow,United Kingdom,Europe,0,0,0
+2023-05-17,2023-05-20,3,Bergamo,Italy,Europe,0,0,0
+2023-05-20,2023-06-10,21,Pontassieve,Italy,Europe,0,0,0
+2023-06-10,2023-06-13,3,Rome,Italy,Europe,0,0,0
+2023-06-13,2023-06-17,4,Barcelona,Spain,Europe,0,0,0
+2023-06-17,2023-06-20,3,San Sebastián,Spain,Europe,0,0,0
+2023-06-20,2023-06-23,3,Ericeira,Portugal,Europe,0,0,0
+2023-06-23,2023-06-28,5,Lisbon,Portugal,Europe,0,0,0
+2023-06-28,2023-06-30,2,London,United Kingdom,Europe,0,0,0
+2023-06-30,2023-07-06,6,Utrecht,Netherlands,Europe,0,0,0
+2023-07-06,2023-07-10,4,Amsterdam,Netherlands,Europe,0,0,0
+2023-07-10,2023-07-14,4,Sønderborg,Denmark,Europe,0,0,0
+2023-07-14,2023-08-05,22,Gjøvik,Norway,Europe,0,0,0
+2023-08-05,2023-08-08,3,Oslo,Norway,Europe,0,0,0
+2023-08-08,2023-09-09,28,Fort Lauderdale,United States,United States,0,0,0
+2023-08-24,2023-08-28,4,Iowa,United States,United States,0,1,0
+2023-09-09,2023-09-14,5,"Wheaton, IL",United States,Home,1,0,1
+2023-09-14,2023-10-04,20,Fort Lauderdale,United States,United States,0,0,0
+2023-10-04,2023-10-12,8,"Wheaton, IL",United States,Home,1,0,1
+2023-10-12,2023-10-16,4,New Orleans,United States,United States,0,0,0
+2023-10-16,2023-10-21,5,"Wheaton, IL",United States,Home,1,0,1
+2023-10-21,2023-10-28,7,Fort Lauderdale,United States,United States,0,0,0
+2023-10-28,2023-11-05,8,"Wheaton, IL",United States,Home,1,0,0
+2023-11-05,2023-11-10,5,Mexico,Mexico,Central America & Mexico,0,0,0
+2023-11-10,2023-11-14,4,"Wheaton, IL",United States,Home,1,0,1
+2023-11-14,2023-11-21,7,Denver,United States,United States,0,0,0
+2023-11-21,2024-01-27,67,Arizona,United States,United States,0,0,0
+2024-01-27,2024-01-31,4,"Crested Butte, CO",United States,United States,0,0,0
+2024-01-31,2024-03-10,39,Salt Lake City,United States,United States,0,0,0
+2024-03-10,2024-03-28,18,Arizona,United States,United States,0,0,0
+2024-03-28,2024-04-14,17,"Wheaton, IL",United States,Home,1,0,0
+2024-04-14,2024-04-22,8,Arizona,United States,United States,0,0,0
+2024-04-22,2024-04-26,4,New York,United States,United States,0,0,0
+2024-04-26,2024-04-29,3,San Francisco,United States,United States,0,0,0
+2024-04-29,2024-05-05,6,"Wheaton, IL",United States,Home,1,0,0
+2024-05-05,2024-05-27,22,Belize,Belize,Central America & Mexico,0,0,0
+2024-05-27,2024-06-01,5,Arizona,United States,United States,0,0,0
+2024-06-01,2024-06-07,6,Colorado,United States,United States,0,0,0
+2024-06-07,2024-06-10,3,San Francisco,United States,United States,0,0,0
+2024-06-10,2024-06-13,3,Arkansas,United States,United States,0,0,0
+2024-06-13,2024-06-20,7,"Wheaton, IL",United States,Home,1,0,1
+2024-06-20,2024-06-24,4,"Petoskey, MI",United States,United States,0,0,0
+2024-06-24,2024-06-30,6,"Wheaton, IL",United States,Home,1,0,1
+2024-06-30,2024-07-03,3,Miami,United States,United States,0,0,0
+2024-07-03,2024-07-21,18,Mexico City,Mexico,Central America & Mexico,0,0,0
+2024-07-21,2024-07-23,2,"Omaha, NE",United States,United States,0,0,0
+2024-07-23,2024-08-31,39,"Wheaton, IL",United States,Home,1,0,1
+2024-08-31,2024-09-06,6,Costa Rica,Costa Rica,Central America & Mexico,0,0,0
+2024-09-06,2024-09-16,10,"Wheaton, IL",United States,Home,1,0,1
+2024-09-16,2024-09-19,3,"Hoboken, NJ",United States,United States,0,0,0
+2024-09-19,2024-09-23,4,Las Vegas,United States,United States,0,0,0
+2024-09-23,2024-11-02,40,"Wheaton, IL",United States,Home,1,0,1
+2024-11-02,2024-11-08,6,Arizona,United States,United States,0,0,0
+2024-11-08,2024-11-18,10,Medellín,Colombia,South America,0,0,0
+2024-11-18,2024-11-21,3,"Wheaton, IL",United States,Home,1,0,1
+2024-11-21,2024-11-24,3,Austin,United States,United States,0,0,0
+2024-11-24,2024-12-28,34,"Wheaton, IL",United States,Home,1,0,1
+2024-12-28,2025-01-05,8,Rio de Janeiro,Brazil,South America,0,0,0
+2025-01-05,2025-01-27,22,Pipa,Brazil,South America,0,0,0
+2025-01-27,2025-02-12,16,"Wheaton, IL",United States,Home,1,0,1
+2025-02-12,2025-02-13,1,Wisconsin,United States,United States,0,0,0
+2025-02-13,2025-04-07,53,"Wheaton, IL",United States,Home,1,0,1
+2025-04-07,2025-04-10,3,"Hoboken, NJ",United States,United States,0,0,0
+2025-04-10,2025-04-14,4,Phoenix,United States,United States,0,0,0
+2025-04-14,2025-04-25,11,"Wheaton, IL",United States,Home,1,0,1
+2025-04-25,2025-05-24,25,Antigua,Guatemala,Central America & Mexico,0,0,0
+2025-05-01,2025-05-05,4,Lake Atitlán,Guatemala,Central America & Mexico,0,1,0
+2025-05-24,2025-05-29,5,Costa Rica,Costa Rica,Central America & Mexico,0,0,0
+2025-05-29,2025-06-24,26,"Wheaton, IL",United States,Home,1,0,1
+2025-06-24,2025-06-27,3,"Hoboken, NJ",United States,United States,0,0,0
+2025-06-27,2025-07-18,21,"Wheaton, IL",United States,Home,1,0,1
+2025-07-18,2025-07-19,1,Colorado Springs,United States,United States,0,0,0
+2025-07-19,2025-07-27,8,Costa Rica,Costa Rica,Central America & Mexico,0,0,0
+2025-07-27,2025-08-28,32,"Wheaton, IL",United States,Home,1,0,1
+2025-08-28,2025-08-30,2,New York,United States,United States,0,0,0
+2025-08-30,2025-09-01,2,Denver,United States,United States,0,0,0
+2025-09-01,2025-09-03,2,"San Jose, CA",United States,United States,0,0,0
+2025-09-03,2025-09-08,5,San Francisco,United States,United States,0,0,0
+2025-09-08,2025-09-19,11,"Wheaton, IL",United States,Home,1,0,1
+2025-09-19,2025-09-23,4,Medellín,Colombia,South America,0,0,0
+2025-09-23,2025-10-06,13,Cartagena,Colombia,South America,0,0,0
+2025-10-06,2025-10-12,6,San Miguel de Allende,Mexico,Central America & Mexico,0,0,0
+2025-10-12,2025-10-17,5,Mexico City,Mexico,Central America & Mexico,0,0,0
+2025-10-17,2025-11-14,26,Tarifa,Spain,Europe,0,0,0
+2025-11-01,2025-11-03,2,Morocco,Morocco,Africa,0,1,0
+2025-11-14,2025-11-20,6,Seville,Spain,Europe,0,0,0
+2025-11-20,2025-11-26,6,"Wheaton, IL",United States,Home,1,0,1
+2025-11-26,2025-11-30,4,"Decatur, IL",United States,United States,0,0,0
+2025-11-30,2025-12-07,7,"Wheaton, IL",United States,Home,1,0,1
+2025-12-07,2025-12-10,2,"Hoboken, NJ",United States,United States,0,0,0
+2025-12-09,2025-12-10,1,New York,United States,United States,0,1,0
+2025-12-10,2025-12-31,21,"Wheaton, IL",United States,Home,1,0,1
+2025-12-31,2026-01-02,2,New York,United States,United States,0,0,0
+2026-01-02,2026-02-04,33,"Wheaton, IL",United States,Home,1,0,1
+2026-02-04,2026-02-08,4,Phoenix,United States,United States,0,0,0
+2026-02-08,2026-02-14,6,"Wheaton, IL",United States,Home,1,0,1
+2026-02-14,2026-03-03,17,Medellín,Colombia,South America,0,0,0
+2026-03-03,2026-03-15,12,"Wheaton, IL",United States,Home,1,0,1
+2026-03-15,2026-04-05,21,Buenos Aires,Argentina,South America,0,0,0
+2026-04-05,2026-04-07,2,Iguazú,Argentina,South America,0,0,0
+2026-04-07,2026-04-23,13,Cusco,Peru,South America,0,0,0
+2026-04-20,2026-04-23,3,Machu Picchu,Peru,South America,0,1,0
+2026-04-23,2026-04-27,4,Huacachina,Peru,South America,0,0,0
+2026-04-27,2026-04-28,1,Paracas,Peru,South America,0,0,0
+2026-04-28,2026-05-04,6,Lima,Peru,South America,0,0,0
+2026-05-04,2026-06-06,33,"Wheaton, IL",United States,Home,1,0,1
+2026-06-06,2026-06-08,2,"Decatur / Hillsboro, IL",United States,United States,0,0,0
+2026-06-08,2026-07-20,42,"Wheaton, IL",United States,Home,1,0,1
+2026-07-20,2026-07-22,2,Madrid,Spain,Europe,0,0,0
+2026-07-22,2026-07-31,9,Valencia,Spain,Europe,0,0,0
+2026-07-31,2026-08-03,3,Amsterdam,Netherlands,Europe,0,0,0
+2026-08-03,2026-08-07,4,Lisbon,Portugal,Europe,0,0,0
+2026-08-07,2026-08-11,4,Ericeira,Portugal,Europe,0,0,0
+2026-08-11,2026-08-26,12,Valencia,Spain,Europe,0,0,0
+2026-08-21,2026-08-24,3,Barcelona,Spain,Europe,0,1,0
+2026-08-26,2026-09-01,6,Granada,Spain,Europe,0,0,0

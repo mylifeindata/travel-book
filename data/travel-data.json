@@ -1,0 +1,5839 @@
+{
+ "meta": {
+  "window_start": "2022-10-01",
+  "window_end": "2026-09-01",
+  "window_days": 1431,
+  "total_nights": 898,
+  "home_nights": 533,
+  "pct": 62.8,
+  "n_trips": 120,
+  "n_countries": 23,
+  "n_places": 90,
+  "n_buckets": 7,
+  "us_nights": 293,
+  "intl_nights": 605,
+  "median_trip": 4,
+  "max_trip": 67,
+  "home_place": "Wheaton, IL"
+ },
+ "bucket_names": [
+  "Home",
+  "United States",
+  "Central America & Mexico",
+  "South America",
+  "Europe",
+  "Africa",
+  "Asia"
+ ],
+ "nights_by_bucket": {
+  "Home": 533,
+  "United States": 293,
+  "Central America & Mexico": 104,
+  "South America": 124,
+  "Europe": 160,
+  "Africa": 2,
+  "Asia": 215
+ },
+ "years": [
+  {
+   "year": 2022,
+   "nights": 81,
+   "home": 11,
+   "trips": 10,
+   "countries": 3,
+   "places": 10,
+   "days_in_year": 92,
+   "pct": 88.0,
+   "partial": true
+  },
+  {
+   "year": 2023,
+   "nights": 335,
+   "home": 30,
+   "trips": 45,
+   "countries": 14,
+   "places": 41,
+   "days_in_year": 365,
+   "pct": 91.8,
+   "partial": false
+  },
+  {
+   "year": 2024,
+   "nights": 204,
+   "home": 162,
+   "trips": 22,
+   "countries": 6,
+   "places": 18,
+   "days_in_year": 366,
+   "pct": 55.7,
+   "partial": false
+  },
+  {
+   "year": 2025,
+   "nights": 161,
+   "home": 204,
+   "trips": 25,
+   "countries": 8,
+   "places": 20,
+   "days_in_year": 365,
+   "pct": 44.1,
+   "partial": false
+  },
+  {
+   "year": 2026,
+   "nights": 117,
+   "home": 126,
+   "trips": 18,
+   "countries": 7,
+   "places": 17,
+   "days_in_year": 243,
+   "pct": 48.1,
+   "partial": true
+  }
+ ],
+ "countries": [
+  {
+   "name": "United States",
+   "nights": 293,
+   "trips": 39,
+   "b": 1
+  },
+  {
+   "name": "Thailand",
+   "nights": 109,
+   "trips": 16,
+   "b": 6
+  },
+  {
+   "name": "Spain",
+   "nights": 71,
+   "trips": 9,
+   "b": 4
+  },
+  {
+   "name": "Vietnam",
+   "nights": 61,
+   "trips": 7,
+   "b": 6
+  },
+  {
+   "name": "Colombia",
+   "nights": 44,
+   "trips": 4,
+   "b": 3
+  },
+  {
+   "name": "Mexico",
+   "nights": 34,
+   "trips": 4,
+   "b": 2
+  },
+  {
+   "name": "Brazil",
+   "nights": 30,
+   "trips": 2,
+   "b": 3
+  },
+  {
+   "name": "Guatemala",
+   "nights": 29,
+   "trips": 2,
+   "b": 2
+  },
+  {
+   "name": "Indonesia",
+   "nights": 27,
+   "trips": 5,
+   "b": 6
+  },
+  {
+   "name": "Italy",
+   "nights": 27,
+   "trips": 3,
+   "b": 4
+  },
+  {
+   "name": "Peru",
+   "nights": 27,
+   "trips": 5,
+   "b": 3
+  },
+  {
+   "name": "Norway",
+   "nights": 25,
+   "trips": 2,
+   "b": 4
+  },
+  {
+   "name": "Argentina",
+   "nights": 23,
+   "trips": 2,
+   "b": 3
+  },
+  {
+   "name": "Belize",
+   "nights": 22,
+   "trips": 1,
+   "b": 2
+  },
+  {
+   "name": "Costa Rica",
+   "nights": 19,
+   "trips": 3,
+   "b": 2
+  },
+  {
+   "name": "Portugal",
+   "nights": 16,
+   "trips": 4,
+   "b": 4
+  },
+  {
+   "name": "Netherlands",
+   "nights": 13,
+   "trips": 3,
+   "b": 4
+  },
+  {
+   "name": "Malaysia",
+   "nights": 10,
+   "trips": 2,
+   "b": 6
+  },
+  {
+   "name": "South Korea",
+   "nights": 5,
+   "trips": 1,
+   "b": 6
+  },
+  {
+   "name": "United Kingdom",
+   "nights": 4,
+   "trips": 2,
+   "b": 4
+  },
+  {
+   "name": "Denmark",
+   "nights": 4,
+   "trips": 1,
+   "b": 4
+  },
+  {
+   "name": "Cambodia",
+   "nights": 3,
+   "trips": 2,
+   "b": 6
+  },
+  {
+   "name": "Morocco",
+   "nights": 2,
+   "trips": 1,
+   "b": 5
+  }
+ ],
+ "longest": [
+  {
+   "place": "Arizona",
+   "country": "United States",
+   "b": 1,
+   "start": "2023-11-21",
+   "end": "2024-01-27",
+   "n": 67
+  },
+  {
+   "place": "Salt Lake City",
+   "country": "United States",
+   "b": 1,
+   "start": "2024-01-31",
+   "end": "2024-03-10",
+   "n": 39
+  },
+  {
+   "place": "Ho Chi Minh City",
+   "country": "Vietnam",
+   "b": 6,
+   "start": "2023-02-05",
+   "end": "2023-03-05",
+   "n": 28
+  },
+  {
+   "place": "Fort Lauderdale",
+   "country": "United States",
+   "b": 1,
+   "start": "2023-08-08",
+   "end": "2023-09-09",
+   "n": 28
+  },
+  {
+   "place": "Tarifa",
+   "country": "Spain",
+   "b": 4,
+   "start": "2025-10-17",
+   "end": "2025-11-14",
+   "n": 26
+  },
+  {
+   "place": "Chiang Mai",
+   "country": "Thailand",
+   "b": 6,
+   "start": "2022-10-30",
+   "end": "2022-11-24",
+   "n": 25
+  },
+  {
+   "place": "Antigua",
+   "country": "Guatemala",
+   "b": 2,
+   "start": "2025-04-25",
+   "end": "2025-05-24",
+   "n": 25
+  },
+  {
+   "place": "Gjøvik",
+   "country": "Norway",
+   "b": 4,
+   "start": "2023-07-14",
+   "end": "2023-08-05",
+   "n": 22
+  },
+  {
+   "place": "Belize",
+   "country": "Belize",
+   "b": 2,
+   "start": "2024-05-05",
+   "end": "2024-05-27",
+   "n": 22
+  },
+  {
+   "place": "Pipa",
+   "country": "Brazil",
+   "b": 3,
+   "start": "2025-01-05",
+   "end": "2025-01-27",
+   "n": 22
+  }
+ ],
+ "trips": [
+  {
+   "s": "2022-10-01",
+   "e": "2022-10-06",
+   "n": 5,
+   "place": "Wheaton, IL",
+   "country": "United States",
+   "b": 0,
+   "side": false,
+   "filled": false,
+   "home": true
+  },
+  {
+   "s": "2022-10-06",
+   "e": "2022-10-25",
+   "n": 12,
+   "place": "Hanoi",
+   "country": "Vietnam",
+   "b": 6,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2022-10-11",
+   "e": "2022-10-14",
+   "n": 3,
+   "place": "Ha Long Bay",
+   "country": "Vietnam",
+   "b": 6,
+   "side": true,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2022-10-17",
+   "e": "2022-10-21",
+   "n": 4,
+   "place": "Ninh Binh",
+   "country": "Vietnam",
+   "b": 6,
+   "side": true,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2022-10-25",
+   "e": "2022-10-30",
+   "n": 5,
+   "place": "Seoul",
+   "country": "South Korea",
+   "b": 6,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2022-10-30",
+   "e": "2022-11-24",
+   "n": 25,
+   "place": "Chiang Mai",
+   "country": "Thailand",
+   "b": 6,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2022-11-24",
+   "e": "2022-11-28",
+   "n": 4,
+   "place": "Pai",
+   "country": "Thailand",
+   "b": 6,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2022-11-28",
+   "e": "2022-12-05",
+   "n": 7,
+   "place": "Elephant Nature Park",
+   "country": "Thailand",
+   "b": 6,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2022-12-05",
+   "e": "2022-12-09",
+   "n": 4,
+   "place": "Pa Pae Retreat",
+   "country": "Thailand",
+   "b": 6,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2022-12-09",
+   "e": "2022-12-15",
+   "n": 6,
+   "place": "Wheaton, IL",
+   "country": "United States",
+   "b": 0,
+   "side": false,
+   "filled": true,
+   "home": true
+  },
+  {
+   "s": "2022-12-15",
+   "e": "2022-12-29",
+   "n": 14,
+   "place": "Koh Tao",
+   "country": "Thailand",
+   "b": 6,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2022-12-29",
+   "e": "2023-01-05",
+   "n": 7,
+   "place": "Ao Nang",
+   "country": "Thailand",
+   "b": 6,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2023-01-05",
+   "e": "2023-01-14",
+   "n": 9,
+   "place": "Krabi",
+   "country": "Thailand",
+   "b": 6,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2023-01-14",
+   "e": "2023-01-18",
+   "n": 4,
+   "place": "Ko Lanta",
+   "country": "Thailand",
+   "b": 6,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2023-01-18",
+   "e": "2023-01-22",
+   "n": 4,
+   "place": "Ko Lipe",
+   "country": "Thailand",
+   "b": 6,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2023-01-22",
+   "e": "2023-01-28",
+   "n": 6,
+   "place": "George Town",
+   "country": "Malaysia",
+   "b": 6,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2023-01-28",
+   "e": "2023-02-01",
+   "n": 4,
+   "place": "Kuala Lumpur",
+   "country": "Malaysia",
+   "b": 6,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2023-02-01",
+   "e": "2023-02-02",
+   "n": 1,
+   "place": "Bangkok",
+   "country": "Thailand",
+   "b": 6,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2023-02-02",
+   "e": "2023-02-03",
+   "n": 1,
+   "place": "Phnom Penh",
+   "country": "Cambodia",
+   "b": 6,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2023-02-03",
+   "e": "2023-02-05",
+   "n": 2,
+   "place": "Siem Reap",
+   "country": "Cambodia",
+   "b": 6,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2023-02-05",
+   "e": "2023-03-05",
+   "n": 28,
+   "place": "Ho Chi Minh City",
+   "country": "Vietnam",
+   "b": 6,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2023-03-05",
+   "e": "2023-03-09",
+   "n": 4,
+   "place": "Ubud, Bali",
+   "country": "Indonesia",
+   "b": 6,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2023-03-09",
+   "e": "2023-03-13",
+   "n": 4,
+   "place": "Candidasa, Bali",
+   "country": "Indonesia",
+   "b": 6,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2023-03-13",
+   "e": "2023-03-20",
+   "n": 7,
+   "place": "Gili Trawangan",
+   "country": "Indonesia",
+   "b": 6,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2023-03-20",
+   "e": "2023-03-25",
+   "n": 5,
+   "place": "Nusa Penida",
+   "country": "Indonesia",
+   "b": 6,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2023-03-25",
+   "e": "2023-04-01",
+   "n": 7,
+   "place": "Uluwatu, Bali",
+   "country": "Indonesia",
+   "b": 6,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2023-04-01",
+   "e": "2023-04-05",
+   "n": 4,
+   "place": "Bangkok",
+   "country": "Thailand",
+   "b": 6,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2023-04-05",
+   "e": "2023-04-11",
+   "n": 6,
+   "place": "Surat Thani",
+   "country": "Thailand",
+   "b": 6,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2023-04-11",
+   "e": "2023-04-17",
+   "n": 2,
+   "place": "Koh Phangan",
+   "country": "Thailand",
+   "b": 6,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2023-04-12",
+   "e": "2023-04-16",
+   "n": 4,
+   "place": "Wonderland, Koh Phangan",
+   "country": "Thailand",
+   "b": 6,
+   "side": true,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2023-04-17",
+   "e": "2023-04-28",
+   "n": 11,
+   "place": "Koh Tao",
+   "country": "Thailand",
+   "b": 6,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2023-04-28",
+   "e": "2023-05-01",
+   "n": 3,
+   "place": "Bangkok",
+   "country": "Thailand",
+   "b": 6,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2023-05-01",
+   "e": "2023-05-04",
+   "n": 3,
+   "place": "Hoi An",
+   "country": "Vietnam",
+   "b": 6,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2023-05-04",
+   "e": "2023-05-10",
+   "n": 6,
+   "place": "Da Nang",
+   "country": "Vietnam",
+   "b": 6,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2023-05-10",
+   "e": "2023-05-15",
+   "n": 5,
+   "place": "Hanoi",
+   "country": "Vietnam",
+   "b": 6,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2023-05-15",
+   "e": "2023-05-17",
+   "n": 2,
+   "place": "London Heathrow",
+   "country": "United Kingdom",
+   "b": 4,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2023-05-17",
+   "e": "2023-05-20",
+   "n": 3,
+   "place": "Bergamo",
+   "country": "Italy",
+   "b": 4,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2023-05-20",
+   "e": "2023-06-10",
+   "n": 21,
+   "place": "Pontassieve",
+   "country": "Italy",
+   "b": 4,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2023-06-10",
+   "e": "2023-06-13",
+   "n": 3,
+   "place": "Rome",
+   "country": "Italy",
+   "b": 4,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2023-06-13",
+   "e": "2023-06-17",
+   "n": 4,
+   "place": "Barcelona",
+   "country": "Spain",
+   "b": 4,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2023-06-17",
+   "e": "2023-06-20",
+   "n": 3,
+   "place": "San Sebastián",
+   "country": "Spain",
+   "b": 4,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2023-06-20",
+   "e": "2023-06-23",
+   "n": 3,
+   "place": "Ericeira",
+   "country": "Portugal",
+   "b": 4,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2023-06-23",
+   "e": "2023-06-28",
+   "n": 5,
+   "place": "Lisbon",
+   "country": "Portugal",
+   "b": 4,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2023-06-28",
+   "e": "2023-06-30",
+   "n": 2,
+   "place": "London",
+   "country": "United Kingdom",
+   "b": 4,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2023-06-30",
+   "e": "2023-07-06",
+   "n": 6,
+   "place": "Utrecht",
+   "country": "Netherlands",
+   "b": 4,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2023-07-06",
+   "e": "2023-07-10",
+   "n": 4,
+   "place": "Amsterdam",
+   "country": "Netherlands",
+   "b": 4,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2023-07-10",
+   "e": "2023-07-14",
+   "n": 4,
+   "place": "Sønderborg",
+   "country": "Denmark",
+   "b": 4,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2023-07-14",
+   "e": "2023-08-05",
+   "n": 22,
+   "place": "Gjøvik",
+   "country": "Norway",
+   "b": 4,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2023-08-05",
+   "e": "2023-08-08",
+   "n": 3,
+   "place": "Oslo",
+   "country": "Norway",
+   "b": 4,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2023-08-08",
+   "e": "2023-09-09",
+   "n": 28,
+   "place": "Fort Lauderdale",
+   "country": "United States",
+   "b": 1,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2023-08-24",
+   "e": "2023-08-28",
+   "n": 4,
+   "place": "Iowa",
+   "country": "United States",
+   "b": 1,
+   "side": true,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2023-09-09",
+   "e": "2023-09-14",
+   "n": 5,
+   "place": "Wheaton, IL",
+   "country": "United States",
+   "b": 0,
+   "side": false,
+   "filled": true,
+   "home": true
+  },
+  {
+   "s": "2023-09-14",
+   "e": "2023-10-04",
+   "n": 20,
+   "place": "Fort Lauderdale",
+   "country": "United States",
+   "b": 1,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2023-10-04",
+   "e": "2023-10-12",
+   "n": 8,
+   "place": "Wheaton, IL",
+   "country": "United States",
+   "b": 0,
+   "side": false,
+   "filled": true,
+   "home": true
+  },
+  {
+   "s": "2023-10-12",
+   "e": "2023-10-16",
+   "n": 4,
+   "place": "New Orleans",
+   "country": "United States",
+   "b": 1,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2023-10-16",
+   "e": "2023-10-21",
+   "n": 5,
+   "place": "Wheaton, IL",
+   "country": "United States",
+   "b": 0,
+   "side": false,
+   "filled": true,
+   "home": true
+  },
+  {
+   "s": "2023-10-21",
+   "e": "2023-10-28",
+   "n": 7,
+   "place": "Fort Lauderdale",
+   "country": "United States",
+   "b": 1,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2023-10-28",
+   "e": "2023-11-05",
+   "n": 8,
+   "place": "Wheaton, IL",
+   "country": "United States",
+   "b": 0,
+   "side": false,
+   "filled": false,
+   "home": true
+  },
+  {
+   "s": "2023-11-05",
+   "e": "2023-11-10",
+   "n": 5,
+   "place": "Mexico",
+   "country": "Mexico",
+   "b": 2,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2023-11-10",
+   "e": "2023-11-14",
+   "n": 4,
+   "place": "Wheaton, IL",
+   "country": "United States",
+   "b": 0,
+   "side": false,
+   "filled": true,
+   "home": true
+  },
+  {
+   "s": "2023-11-14",
+   "e": "2023-11-21",
+   "n": 7,
+   "place": "Denver",
+   "country": "United States",
+   "b": 1,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2023-11-21",
+   "e": "2024-01-27",
+   "n": 67,
+   "place": "Arizona",
+   "country": "United States",
+   "b": 1,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2024-01-27",
+   "e": "2024-01-31",
+   "n": 4,
+   "place": "Crested Butte, CO",
+   "country": "United States",
+   "b": 1,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2024-01-31",
+   "e": "2024-03-10",
+   "n": 39,
+   "place": "Salt Lake City",
+   "country": "United States",
+   "b": 1,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2024-03-10",
+   "e": "2024-03-28",
+   "n": 18,
+   "place": "Arizona",
+   "country": "United States",
+   "b": 1,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2024-03-28",
+   "e": "2024-04-14",
+   "n": 17,
+   "place": "Wheaton, IL",
+   "country": "United States",
+   "b": 0,
+   "side": false,
+   "filled": false,
+   "home": true
+  },
+  {
+   "s": "2024-04-14",
+   "e": "2024-04-22",
+   "n": 8,
+   "place": "Arizona",
+   "country": "United States",
+   "b": 1,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2024-04-22",
+   "e": "2024-04-26",
+   "n": 4,
+   "place": "New York",
+   "country": "United States",
+   "b": 1,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2024-04-26",
+   "e": "2024-04-29",
+   "n": 3,
+   "place": "San Francisco",
+   "country": "United States",
+   "b": 1,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2024-04-29",
+   "e": "2024-05-05",
+   "n": 6,
+   "place": "Wheaton, IL",
+   "country": "United States",
+   "b": 0,
+   "side": false,
+   "filled": false,
+   "home": true
+  },
+  {
+   "s": "2024-05-05",
+   "e": "2024-05-27",
+   "n": 22,
+   "place": "Belize",
+   "country": "Belize",
+   "b": 2,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2024-05-27",
+   "e": "2024-06-01",
+   "n": 5,
+   "place": "Arizona",
+   "country": "United States",
+   "b": 1,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2024-06-01",
+   "e": "2024-06-07",
+   "n": 6,
+   "place": "Colorado",
+   "country": "United States",
+   "b": 1,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2024-06-07",
+   "e": "2024-06-10",
+   "n": 3,
+   "place": "San Francisco",
+   "country": "United States",
+   "b": 1,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2024-06-10",
+   "e": "2024-06-13",
+   "n": 3,
+   "place": "Arkansas",
+   "country": "United States",
+   "b": 1,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2024-06-13",
+   "e": "2024-06-20",
+   "n": 7,
+   "place": "Wheaton, IL",
+   "country": "United States",
+   "b": 0,
+   "side": false,
+   "filled": true,
+   "home": true
+  },
+  {
+   "s": "2024-06-20",
+   "e": "2024-06-24",
+   "n": 4,
+   "place": "Petoskey, MI",
+   "country": "United States",
+   "b": 1,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2024-06-24",
+   "e": "2024-06-30",
+   "n": 6,
+   "place": "Wheaton, IL",
+   "country": "United States",
+   "b": 0,
+   "side": false,
+   "filled": true,
+   "home": true
+  },
+  {
+   "s": "2024-06-30",
+   "e": "2024-07-03",
+   "n": 3,
+   "place": "Miami",
+   "country": "United States",
+   "b": 1,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2024-07-03",
+   "e": "2024-07-21",
+   "n": 18,
+   "place": "Mexico City",
+   "country": "Mexico",
+   "b": 2,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2024-07-21",
+   "e": "2024-07-23",
+   "n": 2,
+   "place": "Omaha, NE",
+   "country": "United States",
+   "b": 1,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2024-07-23",
+   "e": "2024-08-31",
+   "n": 39,
+   "place": "Wheaton, IL",
+   "country": "United States",
+   "b": 0,
+   "side": false,
+   "filled": true,
+   "home": true
+  },
+  {
+   "s": "2024-08-31",
+   "e": "2024-09-06",
+   "n": 6,
+   "place": "Costa Rica",
+   "country": "Costa Rica",
+   "b": 2,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2024-09-06",
+   "e": "2024-09-16",
+   "n": 10,
+   "place": "Wheaton, IL",
+   "country": "United States",
+   "b": 0,
+   "side": false,
+   "filled": true,
+   "home": true
+  },
+  {
+   "s": "2024-09-16",
+   "e": "2024-09-19",
+   "n": 3,
+   "place": "Hoboken, NJ",
+   "country": "United States",
+   "b": 1,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2024-09-19",
+   "e": "2024-09-23",
+   "n": 4,
+   "place": "Las Vegas",
+   "country": "United States",
+   "b": 1,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2024-09-23",
+   "e": "2024-11-02",
+   "n": 40,
+   "place": "Wheaton, IL",
+   "country": "United States",
+   "b": 0,
+   "side": false,
+   "filled": true,
+   "home": true
+  },
+  {
+   "s": "2024-11-02",
+   "e": "2024-11-08",
+   "n": 6,
+   "place": "Arizona",
+   "country": "United States",
+   "b": 1,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2024-11-08",
+   "e": "2024-11-18",
+   "n": 10,
+   "place": "Medellín",
+   "country": "Colombia",
+   "b": 3,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2024-11-18",
+   "e": "2024-11-21",
+   "n": 3,
+   "place": "Wheaton, IL",
+   "country": "United States",
+   "b": 0,
+   "side": false,
+   "filled": true,
+   "home": true
+  },
+  {
+   "s": "2024-11-21",
+   "e": "2024-11-24",
+   "n": 3,
+   "place": "Austin",
+   "country": "United States",
+   "b": 1,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2024-11-24",
+   "e": "2024-12-28",
+   "n": 34,
+   "place": "Wheaton, IL",
+   "country": "United States",
+   "b": 0,
+   "side": false,
+   "filled": true,
+   "home": true
+  },
+  {
+   "s": "2024-12-28",
+   "e": "2025-01-05",
+   "n": 8,
+   "place": "Rio de Janeiro",
+   "country": "Brazil",
+   "b": 3,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2025-01-05",
+   "e": "2025-01-27",
+   "n": 22,
+   "place": "Pipa",
+   "country": "Brazil",
+   "b": 3,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2025-01-27",
+   "e": "2025-02-12",
+   "n": 16,
+   "place": "Wheaton, IL",
+   "country": "United States",
+   "b": 0,
+   "side": false,
+   "filled": true,
+   "home": true
+  },
+  {
+   "s": "2025-02-12",
+   "e": "2025-02-13",
+   "n": 1,
+   "place": "Wisconsin",
+   "country": "United States",
+   "b": 1,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2025-02-13",
+   "e": "2025-04-07",
+   "n": 53,
+   "place": "Wheaton, IL",
+   "country": "United States",
+   "b": 0,
+   "side": false,
+   "filled": true,
+   "home": true
+  },
+  {
+   "s": "2025-04-07",
+   "e": "2025-04-10",
+   "n": 3,
+   "place": "Hoboken, NJ",
+   "country": "United States",
+   "b": 1,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2025-04-10",
+   "e": "2025-04-14",
+   "n": 4,
+   "place": "Phoenix",
+   "country": "United States",
+   "b": 1,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2025-04-14",
+   "e": "2025-04-25",
+   "n": 11,
+   "place": "Wheaton, IL",
+   "country": "United States",
+   "b": 0,
+   "side": false,
+   "filled": true,
+   "home": true
+  },
+  {
+   "s": "2025-04-25",
+   "e": "2025-05-24",
+   "n": 25,
+   "place": "Antigua",
+   "country": "Guatemala",
+   "b": 2,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2025-05-01",
+   "e": "2025-05-05",
+   "n": 4,
+   "place": "Lake Atitlán",
+   "country": "Guatemala",
+   "b": 2,
+   "side": true,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2025-05-24",
+   "e": "2025-05-29",
+   "n": 5,
+   "place": "Costa Rica",
+   "country": "Costa Rica",
+   "b": 2,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2025-05-29",
+   "e": "2025-06-24",
+   "n": 26,
+   "place": "Wheaton, IL",
+   "country": "United States",
+   "b": 0,
+   "side": false,
+   "filled": true,
+   "home": true
+  },
+  {
+   "s": "2025-06-24",
+   "e": "2025-06-27",
+   "n": 3,
+   "place": "Hoboken, NJ",
+   "country": "United States",
+   "b": 1,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2025-06-27",
+   "e": "2025-07-18",
+   "n": 21,
+   "place": "Wheaton, IL",
+   "country": "United States",
+   "b": 0,
+   "side": false,
+   "filled": true,
+   "home": true
+  },
+  {
+   "s": "2025-07-18",
+   "e": "2025-07-19",
+   "n": 1,
+   "place": "Colorado Springs",
+   "country": "United States",
+   "b": 1,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2025-07-19",
+   "e": "2025-07-27",
+   "n": 8,
+   "place": "Costa Rica",
+   "country": "Costa Rica",
+   "b": 2,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2025-07-27",
+   "e": "2025-08-28",
+   "n": 32,
+   "place": "Wheaton, IL",
+   "country": "United States",
+   "b": 0,
+   "side": false,
+   "filled": true,
+   "home": true
+  },
+  {
+   "s": "2025-08-28",
+   "e": "2025-08-30",
+   "n": 2,
+   "place": "New York",
+   "country": "United States",
+   "b": 1,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2025-08-30",
+   "e": "2025-09-01",
+   "n": 2,
+   "place": "Denver",
+   "country": "United States",
+   "b": 1,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2025-09-01",
+   "e": "2025-09-03",
+   "n": 2,
+   "place": "San Jose, CA",
+   "country": "United States",
+   "b": 1,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2025-09-03",
+   "e": "2025-09-08",
+   "n": 5,
+   "place": "San Francisco",
+   "country": "United States",
+   "b": 1,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2025-09-08",
+   "e": "2025-09-19",
+   "n": 11,
+   "place": "Wheaton, IL",
+   "country": "United States",
+   "b": 0,
+   "side": false,
+   "filled": true,
+   "home": true
+  },
+  {
+   "s": "2025-09-19",
+   "e": "2025-09-23",
+   "n": 4,
+   "place": "Medellín",
+   "country": "Colombia",
+   "b": 3,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2025-09-23",
+   "e": "2025-10-06",
+   "n": 13,
+   "place": "Cartagena",
+   "country": "Colombia",
+   "b": 3,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2025-10-06",
+   "e": "2025-10-12",
+   "n": 6,
+   "place": "San Miguel de Allende",
+   "country": "Mexico",
+   "b": 2,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2025-10-12",
+   "e": "2025-10-17",
+   "n": 5,
+   "place": "Mexico City",
+   "country": "Mexico",
+   "b": 2,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2025-10-17",
+   "e": "2025-11-14",
+   "n": 26,
+   "place": "Tarifa",
+   "country": "Spain",
+   "b": 4,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2025-11-01",
+   "e": "2025-11-03",
+   "n": 2,
+   "place": "Morocco",
+   "country": "Morocco",
+   "b": 5,
+   "side": true,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2025-11-14",
+   "e": "2025-11-20",
+   "n": 6,
+   "place": "Seville",
+   "country": "Spain",
+   "b": 4,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2025-11-20",
+   "e": "2025-11-26",
+   "n": 6,
+   "place": "Wheaton, IL",
+   "country": "United States",
+   "b": 0,
+   "side": false,
+   "filled": true,
+   "home": true
+  },
+  {
+   "s": "2025-11-26",
+   "e": "2025-11-30",
+   "n": 4,
+   "place": "Decatur, IL",
+   "country": "United States",
+   "b": 1,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2025-11-30",
+   "e": "2025-12-07",
+   "n": 7,
+   "place": "Wheaton, IL",
+   "country": "United States",
+   "b": 0,
+   "side": false,
+   "filled": true,
+   "home": true
+  },
+  {
+   "s": "2025-12-07",
+   "e": "2025-12-10",
+   "n": 2,
+   "place": "Hoboken, NJ",
+   "country": "United States",
+   "b": 1,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2025-12-09",
+   "e": "2025-12-10",
+   "n": 1,
+   "place": "New York",
+   "country": "United States",
+   "b": 1,
+   "side": true,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2025-12-10",
+   "e": "2025-12-31",
+   "n": 21,
+   "place": "Wheaton, IL",
+   "country": "United States",
+   "b": 0,
+   "side": false,
+   "filled": true,
+   "home": true
+  },
+  {
+   "s": "2025-12-31",
+   "e": "2026-01-02",
+   "n": 2,
+   "place": "New York",
+   "country": "United States",
+   "b": 1,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2026-01-02",
+   "e": "2026-02-04",
+   "n": 33,
+   "place": "Wheaton, IL",
+   "country": "United States",
+   "b": 0,
+   "side": false,
+   "filled": true,
+   "home": true
+  },
+  {
+   "s": "2026-02-04",
+   "e": "2026-02-08",
+   "n": 4,
+   "place": "Phoenix",
+   "country": "United States",
+   "b": 1,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2026-02-08",
+   "e": "2026-02-14",
+   "n": 6,
+   "place": "Wheaton, IL",
+   "country": "United States",
+   "b": 0,
+   "side": false,
+   "filled": true,
+   "home": true
+  },
+  {
+   "s": "2026-02-14",
+   "e": "2026-03-03",
+   "n": 17,
+   "place": "Medellín",
+   "country": "Colombia",
+   "b": 3,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2026-03-03",
+   "e": "2026-03-15",
+   "n": 12,
+   "place": "Wheaton, IL",
+   "country": "United States",
+   "b": 0,
+   "side": false,
+   "filled": true,
+   "home": true
+  },
+  {
+   "s": "2026-03-15",
+   "e": "2026-04-05",
+   "n": 21,
+   "place": "Buenos Aires",
+   "country": "Argentina",
+   "b": 3,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2026-04-05",
+   "e": "2026-04-07",
+   "n": 2,
+   "place": "Iguazú",
+   "country": "Argentina",
+   "b": 3,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2026-04-07",
+   "e": "2026-04-23",
+   "n": 13,
+   "place": "Cusco",
+   "country": "Peru",
+   "b": 3,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2026-04-20",
+   "e": "2026-04-23",
+   "n": 3,
+   "place": "Machu Picchu",
+   "country": "Peru",
+   "b": 3,
+   "side": true,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2026-04-23",
+   "e": "2026-04-27",
+   "n": 4,
+   "place": "Huacachina",
+   "country": "Peru",
+   "b": 3,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2026-04-27",
+   "e": "2026-04-28",
+   "n": 1,
+   "place": "Paracas",
+   "country": "Peru",
+   "b": 3,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2026-04-28",
+   "e": "2026-05-04",
+   "n": 6,
+   "place": "Lima",
+   "country": "Peru",
+   "b": 3,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2026-05-04",
+   "e": "2026-06-06",
+   "n": 33,
+   "place": "Wheaton, IL",
+   "country": "United States",
+   "b": 0,
+   "side": false,
+   "filled": true,
+   "home": true
+  },
+  {
+   "s": "2026-06-06",
+   "e": "2026-06-08",
+   "n": 2,
+   "place": "Decatur / Hillsboro, IL",
+   "country": "United States",
+   "b": 1,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2026-06-08",
+   "e": "2026-07-20",
+   "n": 42,
+   "place": "Wheaton, IL",
+   "country": "United States",
+   "b": 0,
+   "side": false,
+   "filled": true,
+   "home": true
+  },
+  {
+   "s": "2026-07-20",
+   "e": "2026-07-22",
+   "n": 2,
+   "place": "Madrid",
+   "country": "Spain",
+   "b": 4,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2026-07-22",
+   "e": "2026-07-31",
+   "n": 9,
+   "place": "Valencia",
+   "country": "Spain",
+   "b": 4,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2026-07-31",
+   "e": "2026-08-03",
+   "n": 3,
+   "place": "Amsterdam",
+   "country": "Netherlands",
+   "b": 4,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2026-08-03",
+   "e": "2026-08-07",
+   "n": 4,
+   "place": "Lisbon",
+   "country": "Portugal",
+   "b": 4,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2026-08-07",
+   "e": "2026-08-11",
+   "n": 4,
+   "place": "Ericeira",
+   "country": "Portugal",
+   "b": 4,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2026-08-11",
+   "e": "2026-08-26",
+   "n": 12,
+   "place": "Valencia",
+   "country": "Spain",
+   "b": 4,
+   "side": false,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2026-08-21",
+   "e": "2026-08-24",
+   "n": 3,
+   "place": "Barcelona",
+   "country": "Spain",
+   "b": 4,
+   "side": true,
+   "filled": false,
+   "home": false
+  },
+  {
+   "s": "2026-08-26",
+   "e": "2026-09-01",
+   "n": 6,
+   "place": "Granada",
+   "country": "Spain",
+   "b": 4,
+   "side": false,
+   "filled": false,
+   "home": false
+  }
+ ],
+ "seq": [
+  {
+   "s": "2022-10-01",
+   "e": "2022-10-06",
+   "place": "Wheaton, IL",
+   "country": "United States",
+   "b": 0,
+   "n": 5,
+   "lat": 41.87,
+   "lon": -88.11,
+   "home": true,
+   "side": false
+  },
+  {
+   "s": "2022-10-06",
+   "e": "2022-10-25",
+   "place": "Hanoi",
+   "country": "Vietnam",
+   "b": 6,
+   "n": 12,
+   "lat": 21.03,
+   "lon": 105.85,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2022-10-11",
+   "e": "2022-10-14",
+   "place": "Ha Long Bay",
+   "country": "Vietnam",
+   "b": 6,
+   "n": 3,
+   "lat": 20.91,
+   "lon": 107.18,
+   "home": false,
+   "side": true
+  },
+  {
+   "s": "2022-10-17",
+   "e": "2022-10-21",
+   "place": "Ninh Binh",
+   "country": "Vietnam",
+   "b": 6,
+   "n": 4,
+   "lat": 20.25,
+   "lon": 105.97,
+   "home": false,
+   "side": true
+  },
+  {
+   "s": "2022-10-25",
+   "e": "2022-10-30",
+   "place": "Seoul",
+   "country": "South Korea",
+   "b": 6,
+   "n": 5,
+   "lat": 37.57,
+   "lon": 126.98,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2022-10-30",
+   "e": "2022-11-24",
+   "place": "Chiang Mai",
+   "country": "Thailand",
+   "b": 6,
+   "n": 25,
+   "lat": 18.79,
+   "lon": 98.99,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2022-11-24",
+   "e": "2022-11-28",
+   "place": "Pai",
+   "country": "Thailand",
+   "b": 6,
+   "n": 4,
+   "lat": 19.36,
+   "lon": 98.44,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2022-11-28",
+   "e": "2022-12-05",
+   "place": "Elephant Nature Park",
+   "country": "Thailand",
+   "b": 6,
+   "n": 7,
+   "lat": 19.2,
+   "lon": 98.86,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2022-12-05",
+   "e": "2022-12-09",
+   "place": "Pa Pae Retreat",
+   "country": "Thailand",
+   "b": 6,
+   "n": 4,
+   "lat": 18.55,
+   "lon": 98.53,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2022-12-09",
+   "e": "2022-12-15",
+   "place": "Wheaton, IL",
+   "country": "United States",
+   "b": 0,
+   "n": 6,
+   "lat": 41.87,
+   "lon": -88.11,
+   "home": true,
+   "side": false
+  },
+  {
+   "s": "2022-12-15",
+   "e": "2022-12-29",
+   "place": "Koh Tao",
+   "country": "Thailand",
+   "b": 6,
+   "n": 14,
+   "lat": 10.1,
+   "lon": 99.84,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2022-12-29",
+   "e": "2023-01-05",
+   "place": "Ao Nang",
+   "country": "Thailand",
+   "b": 6,
+   "n": 7,
+   "lat": 8.03,
+   "lon": 98.82,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2023-01-05",
+   "e": "2023-01-14",
+   "place": "Krabi",
+   "country": "Thailand",
+   "b": 6,
+   "n": 9,
+   "lat": 8.09,
+   "lon": 98.91,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2023-01-14",
+   "e": "2023-01-18",
+   "place": "Ko Lanta",
+   "country": "Thailand",
+   "b": 6,
+   "n": 4,
+   "lat": 7.62,
+   "lon": 99.05,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2023-01-18",
+   "e": "2023-01-22",
+   "place": "Ko Lipe",
+   "country": "Thailand",
+   "b": 6,
+   "n": 4,
+   "lat": 6.49,
+   "lon": 99.3,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2023-01-22",
+   "e": "2023-01-28",
+   "place": "George Town",
+   "country": "Malaysia",
+   "b": 6,
+   "n": 6,
+   "lat": 5.41,
+   "lon": 100.34,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2023-01-28",
+   "e": "2023-02-01",
+   "place": "Kuala Lumpur",
+   "country": "Malaysia",
+   "b": 6,
+   "n": 4,
+   "lat": 3.14,
+   "lon": 101.69,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2023-02-01",
+   "e": "2023-02-02",
+   "place": "Bangkok",
+   "country": "Thailand",
+   "b": 6,
+   "n": 1,
+   "lat": 13.76,
+   "lon": 100.5,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2023-02-02",
+   "e": "2023-02-03",
+   "place": "Phnom Penh",
+   "country": "Cambodia",
+   "b": 6,
+   "n": 1,
+   "lat": 11.56,
+   "lon": 104.92,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2023-02-03",
+   "e": "2023-02-05",
+   "place": "Siem Reap",
+   "country": "Cambodia",
+   "b": 6,
+   "n": 2,
+   "lat": 13.36,
+   "lon": 103.86,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2023-02-05",
+   "e": "2023-03-05",
+   "place": "Ho Chi Minh City",
+   "country": "Vietnam",
+   "b": 6,
+   "n": 28,
+   "lat": 10.82,
+   "lon": 106.63,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2023-03-05",
+   "e": "2023-03-09",
+   "place": "Ubud, Bali",
+   "country": "Indonesia",
+   "b": 6,
+   "n": 4,
+   "lat": -8.51,
+   "lon": 115.26,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2023-03-09",
+   "e": "2023-03-13",
+   "place": "Candidasa, Bali",
+   "country": "Indonesia",
+   "b": 6,
+   "n": 4,
+   "lat": -8.51,
+   "lon": 115.57,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2023-03-13",
+   "e": "2023-03-20",
+   "place": "Gili Trawangan",
+   "country": "Indonesia",
+   "b": 6,
+   "n": 7,
+   "lat": -8.35,
+   "lon": 116.04,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2023-03-20",
+   "e": "2023-03-25",
+   "place": "Nusa Penida",
+   "country": "Indonesia",
+   "b": 6,
+   "n": 5,
+   "lat": -8.73,
+   "lon": 115.54,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2023-03-25",
+   "e": "2023-04-01",
+   "place": "Uluwatu, Bali",
+   "country": "Indonesia",
+   "b": 6,
+   "n": 7,
+   "lat": -8.83,
+   "lon": 115.09,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2023-04-01",
+   "e": "2023-04-05",
+   "place": "Bangkok",
+   "country": "Thailand",
+   "b": 6,
+   "n": 4,
+   "lat": 13.76,
+   "lon": 100.5,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2023-04-05",
+   "e": "2023-04-11",
+   "place": "Surat Thani",
+   "country": "Thailand",
+   "b": 6,
+   "n": 6,
+   "lat": 9.14,
+   "lon": 99.33,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2023-04-11",
+   "e": "2023-04-17",
+   "place": "Koh Phangan",
+   "country": "Thailand",
+   "b": 6,
+   "n": 2,
+   "lat": 9.73,
+   "lon": 100.01,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2023-04-12",
+   "e": "2023-04-16",
+   "place": "Wonderland, Koh Phangan",
+   "country": "Thailand",
+   "b": 6,
+   "n": 4,
+   "lat": 9.73,
+   "lon": 100.01,
+   "home": false,
+   "side": true
+  },
+  {
+   "s": "2023-04-17",
+   "e": "2023-04-28",
+   "place": "Koh Tao",
+   "country": "Thailand",
+   "b": 6,
+   "n": 11,
+   "lat": 10.1,
+   "lon": 99.84,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2023-04-28",
+   "e": "2023-05-01",
+   "place": "Bangkok",
+   "country": "Thailand",
+   "b": 6,
+   "n": 3,
+   "lat": 13.76,
+   "lon": 100.5,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2023-05-01",
+   "e": "2023-05-04",
+   "place": "Hoi An",
+   "country": "Vietnam",
+   "b": 6,
+   "n": 3,
+   "lat": 15.88,
+   "lon": 108.34,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2023-05-04",
+   "e": "2023-05-10",
+   "place": "Da Nang",
+   "country": "Vietnam",
+   "b": 6,
+   "n": 6,
+   "lat": 16.05,
+   "lon": 108.2,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2023-05-10",
+   "e": "2023-05-15",
+   "place": "Hanoi",
+   "country": "Vietnam",
+   "b": 6,
+   "n": 5,
+   "lat": 21.03,
+   "lon": 105.85,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2023-05-15",
+   "e": "2023-05-17",
+   "place": "London Heathrow",
+   "country": "United Kingdom",
+   "b": 4,
+   "n": 2,
+   "lat": 51.47,
+   "lon": -0.45,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2023-05-17",
+   "e": "2023-05-20",
+   "place": "Bergamo",
+   "country": "Italy",
+   "b": 4,
+   "n": 3,
+   "lat": 45.7,
+   "lon": 9.67,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2023-05-20",
+   "e": "2023-06-10",
+   "place": "Pontassieve",
+   "country": "Italy",
+   "b": 4,
+   "n": 21,
+   "lat": 43.78,
+   "lon": 11.44,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2023-06-10",
+   "e": "2023-06-13",
+   "place": "Rome",
+   "country": "Italy",
+   "b": 4,
+   "n": 3,
+   "lat": 41.9,
+   "lon": 12.5,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2023-06-13",
+   "e": "2023-06-17",
+   "place": "Barcelona",
+   "country": "Spain",
+   "b": 4,
+   "n": 4,
+   "lat": 41.39,
+   "lon": 2.17,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2023-06-17",
+   "e": "2023-06-20",
+   "place": "San Sebastián",
+   "country": "Spain",
+   "b": 4,
+   "n": 3,
+   "lat": 43.32,
+   "lon": -1.98,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2023-06-20",
+   "e": "2023-06-23",
+   "place": "Ericeira",
+   "country": "Portugal",
+   "b": 4,
+   "n": 3,
+   "lat": 38.96,
+   "lon": -9.42,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2023-06-23",
+   "e": "2023-06-28",
+   "place": "Lisbon",
+   "country": "Portugal",
+   "b": 4,
+   "n": 5,
+   "lat": 38.72,
+   "lon": -9.14,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2023-06-28",
+   "e": "2023-06-30",
+   "place": "London",
+   "country": "United Kingdom",
+   "b": 4,
+   "n": 2,
+   "lat": 51.51,
+   "lon": -0.13,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2023-06-30",
+   "e": "2023-07-06",
+   "place": "Utrecht",
+   "country": "Netherlands",
+   "b": 4,
+   "n": 6,
+   "lat": 52.09,
+   "lon": 5.12,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2023-07-06",
+   "e": "2023-07-10",
+   "place": "Amsterdam",
+   "country": "Netherlands",
+   "b": 4,
+   "n": 4,
+   "lat": 52.37,
+   "lon": 4.9,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2023-07-10",
+   "e": "2023-07-14",
+   "place": "Sønderborg",
+   "country": "Denmark",
+   "b": 4,
+   "n": 4,
+   "lat": 54.91,
+   "lon": 9.79,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2023-07-14",
+   "e": "2023-08-05",
+   "place": "Gjøvik",
+   "country": "Norway",
+   "b": 4,
+   "n": 22,
+   "lat": 60.8,
+   "lon": 10.69,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2023-08-05",
+   "e": "2023-08-08",
+   "place": "Oslo",
+   "country": "Norway",
+   "b": 4,
+   "n": 3,
+   "lat": 59.91,
+   "lon": 10.75,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2023-08-08",
+   "e": "2023-09-09",
+   "place": "Fort Lauderdale",
+   "country": "United States",
+   "b": 1,
+   "n": 28,
+   "lat": 26.12,
+   "lon": -80.14,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2023-08-24",
+   "e": "2023-08-28",
+   "place": "Iowa",
+   "country": "United States",
+   "b": 1,
+   "n": 4,
+   "lat": 41.88,
+   "lon": -93.1,
+   "home": false,
+   "side": true
+  },
+  {
+   "s": "2023-09-09",
+   "e": "2023-09-14",
+   "place": "Wheaton, IL",
+   "country": "United States",
+   "b": 0,
+   "n": 5,
+   "lat": 41.87,
+   "lon": -88.11,
+   "home": true,
+   "side": false
+  },
+  {
+   "s": "2023-09-14",
+   "e": "2023-10-04",
+   "place": "Fort Lauderdale",
+   "country": "United States",
+   "b": 1,
+   "n": 20,
+   "lat": 26.12,
+   "lon": -80.14,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2023-10-04",
+   "e": "2023-10-12",
+   "place": "Wheaton, IL",
+   "country": "United States",
+   "b": 0,
+   "n": 8,
+   "lat": 41.87,
+   "lon": -88.11,
+   "home": true,
+   "side": false
+  },
+  {
+   "s": "2023-10-12",
+   "e": "2023-10-16",
+   "place": "New Orleans",
+   "country": "United States",
+   "b": 1,
+   "n": 4,
+   "lat": 29.95,
+   "lon": -90.07,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2023-10-16",
+   "e": "2023-10-21",
+   "place": "Wheaton, IL",
+   "country": "United States",
+   "b": 0,
+   "n": 5,
+   "lat": 41.87,
+   "lon": -88.11,
+   "home": true,
+   "side": false
+  },
+  {
+   "s": "2023-10-21",
+   "e": "2023-10-28",
+   "place": "Fort Lauderdale",
+   "country": "United States",
+   "b": 1,
+   "n": 7,
+   "lat": 26.12,
+   "lon": -80.14,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2023-10-28",
+   "e": "2023-11-05",
+   "place": "Wheaton, IL",
+   "country": "United States",
+   "b": 0,
+   "n": 8,
+   "lat": 41.87,
+   "lon": -88.11,
+   "home": true,
+   "side": false
+  },
+  {
+   "s": "2023-11-05",
+   "e": "2023-11-10",
+   "place": "Mexico",
+   "country": "Mexico",
+   "b": 2,
+   "n": 5,
+   "lat": 19.43,
+   "lon": -99.13,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2023-11-10",
+   "e": "2023-11-14",
+   "place": "Wheaton, IL",
+   "country": "United States",
+   "b": 0,
+   "n": 4,
+   "lat": 41.87,
+   "lon": -88.11,
+   "home": true,
+   "side": false
+  },
+  {
+   "s": "2023-11-14",
+   "e": "2023-11-21",
+   "place": "Denver",
+   "country": "United States",
+   "b": 1,
+   "n": 7,
+   "lat": 39.74,
+   "lon": -104.99,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2023-11-21",
+   "e": "2024-01-27",
+   "place": "Arizona",
+   "country": "United States",
+   "b": 1,
+   "n": 67,
+   "lat": 33.45,
+   "lon": -112.07,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2024-01-27",
+   "e": "2024-01-31",
+   "place": "Crested Butte, CO",
+   "country": "United States",
+   "b": 1,
+   "n": 4,
+   "lat": 38.87,
+   "lon": -106.99,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2024-01-31",
+   "e": "2024-03-10",
+   "place": "Salt Lake City",
+   "country": "United States",
+   "b": 1,
+   "n": 39,
+   "lat": 40.76,
+   "lon": -111.89,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2024-03-10",
+   "e": "2024-03-28",
+   "place": "Arizona",
+   "country": "United States",
+   "b": 1,
+   "n": 18,
+   "lat": 33.45,
+   "lon": -112.07,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2024-03-28",
+   "e": "2024-04-14",
+   "place": "Wheaton, IL",
+   "country": "United States",
+   "b": 0,
+   "n": 17,
+   "lat": 41.87,
+   "lon": -88.11,
+   "home": true,
+   "side": false
+  },
+  {
+   "s": "2024-04-14",
+   "e": "2024-04-22",
+   "place": "Arizona",
+   "country": "United States",
+   "b": 1,
+   "n": 8,
+   "lat": 33.45,
+   "lon": -112.07,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2024-04-22",
+   "e": "2024-04-26",
+   "place": "New York",
+   "country": "United States",
+   "b": 1,
+   "n": 4,
+   "lat": 40.71,
+   "lon": -74.01,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2024-04-26",
+   "e": "2024-04-29",
+   "place": "San Francisco",
+   "country": "United States",
+   "b": 1,
+   "n": 3,
+   "lat": 37.77,
+   "lon": -122.42,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2024-04-29",
+   "e": "2024-05-05",
+   "place": "Wheaton, IL",
+   "country": "United States",
+   "b": 0,
+   "n": 6,
+   "lat": 41.87,
+   "lon": -88.11,
+   "home": true,
+   "side": false
+  },
+  {
+   "s": "2024-05-05",
+   "e": "2024-05-27",
+   "place": "Belize",
+   "country": "Belize",
+   "b": 2,
+   "n": 22,
+   "lat": 17.19,
+   "lon": -88.5,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2024-05-27",
+   "e": "2024-06-01",
+   "place": "Arizona",
+   "country": "United States",
+   "b": 1,
+   "n": 5,
+   "lat": 33.45,
+   "lon": -112.07,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2024-06-01",
+   "e": "2024-06-07",
+   "place": "Colorado",
+   "country": "United States",
+   "b": 1,
+   "n": 6,
+   "lat": 39.55,
+   "lon": -105.78,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2024-06-07",
+   "e": "2024-06-10",
+   "place": "San Francisco",
+   "country": "United States",
+   "b": 1,
+   "n": 3,
+   "lat": 37.77,
+   "lon": -122.42,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2024-06-10",
+   "e": "2024-06-13",
+   "place": "Arkansas",
+   "country": "United States",
+   "b": 1,
+   "n": 3,
+   "lat": 34.75,
+   "lon": -92.29,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2024-06-13",
+   "e": "2024-06-20",
+   "place": "Wheaton, IL",
+   "country": "United States",
+   "b": 0,
+   "n": 7,
+   "lat": 41.87,
+   "lon": -88.11,
+   "home": true,
+   "side": false
+  },
+  {
+   "s": "2024-06-20",
+   "e": "2024-06-24",
+   "place": "Petoskey, MI",
+   "country": "United States",
+   "b": 1,
+   "n": 4,
+   "lat": 45.37,
+   "lon": -84.96,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2024-06-24",
+   "e": "2024-06-30",
+   "place": "Wheaton, IL",
+   "country": "United States",
+   "b": 0,
+   "n": 6,
+   "lat": 41.87,
+   "lon": -88.11,
+   "home": true,
+   "side": false
+  },
+  {
+   "s": "2024-06-30",
+   "e": "2024-07-03",
+   "place": "Miami",
+   "country": "United States",
+   "b": 1,
+   "n": 3,
+   "lat": 25.76,
+   "lon": -80.19,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2024-07-03",
+   "e": "2024-07-21",
+   "place": "Mexico City",
+   "country": "Mexico",
+   "b": 2,
+   "n": 18,
+   "lat": 19.43,
+   "lon": -99.13,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2024-07-21",
+   "e": "2024-07-23",
+   "place": "Omaha, NE",
+   "country": "United States",
+   "b": 1,
+   "n": 2,
+   "lat": 41.26,
+   "lon": -95.93,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2024-07-23",
+   "e": "2024-08-31",
+   "place": "Wheaton, IL",
+   "country": "United States",
+   "b": 0,
+   "n": 39,
+   "lat": 41.87,
+   "lon": -88.11,
+   "home": true,
+   "side": false
+  },
+  {
+   "s": "2024-08-31",
+   "e": "2024-09-06",
+   "place": "Costa Rica",
+   "country": "Costa Rica",
+   "b": 2,
+   "n": 6,
+   "lat": 9.75,
+   "lon": -83.75,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2024-09-06",
+   "e": "2024-09-16",
+   "place": "Wheaton, IL",
+   "country": "United States",
+   "b": 0,
+   "n": 10,
+   "lat": 41.87,
+   "lon": -88.11,
+   "home": true,
+   "side": false
+  },
+  {
+   "s": "2024-09-16",
+   "e": "2024-09-19",
+   "place": "Hoboken, NJ",
+   "country": "United States",
+   "b": 1,
+   "n": 3,
+   "lat": 40.74,
+   "lon": -74.03,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2024-09-19",
+   "e": "2024-09-23",
+   "place": "Las Vegas",
+   "country": "United States",
+   "b": 1,
+   "n": 4,
+   "lat": 36.17,
+   "lon": -115.14,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2024-09-23",
+   "e": "2024-11-02",
+   "place": "Wheaton, IL",
+   "country": "United States",
+   "b": 0,
+   "n": 40,
+   "lat": 41.87,
+   "lon": -88.11,
+   "home": true,
+   "side": false
+  },
+  {
+   "s": "2024-11-02",
+   "e": "2024-11-08",
+   "place": "Arizona",
+   "country": "United States",
+   "b": 1,
+   "n": 6,
+   "lat": 33.45,
+   "lon": -112.07,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2024-11-08",
+   "e": "2024-11-18",
+   "place": "Medellín",
+   "country": "Colombia",
+   "b": 3,
+   "n": 10,
+   "lat": 6.24,
+   "lon": -75.58,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2024-11-18",
+   "e": "2024-11-21",
+   "place": "Wheaton, IL",
+   "country": "United States",
+   "b": 0,
+   "n": 3,
+   "lat": 41.87,
+   "lon": -88.11,
+   "home": true,
+   "side": false
+  },
+  {
+   "s": "2024-11-21",
+   "e": "2024-11-24",
+   "place": "Austin",
+   "country": "United States",
+   "b": 1,
+   "n": 3,
+   "lat": 30.27,
+   "lon": -97.74,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2024-11-24",
+   "e": "2024-12-28",
+   "place": "Wheaton, IL",
+   "country": "United States",
+   "b": 0,
+   "n": 34,
+   "lat": 41.87,
+   "lon": -88.11,
+   "home": true,
+   "side": false
+  },
+  {
+   "s": "2024-12-28",
+   "e": "2025-01-05",
+   "place": "Rio de Janeiro",
+   "country": "Brazil",
+   "b": 3,
+   "n": 8,
+   "lat": -22.91,
+   "lon": -43.17,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2025-01-05",
+   "e": "2025-01-27",
+   "place": "Pipa",
+   "country": "Brazil",
+   "b": 3,
+   "n": 22,
+   "lat": -6.23,
+   "lon": -35.05,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2025-01-27",
+   "e": "2025-02-12",
+   "place": "Wheaton, IL",
+   "country": "United States",
+   "b": 0,
+   "n": 16,
+   "lat": 41.87,
+   "lon": -88.11,
+   "home": true,
+   "side": false
+  },
+  {
+   "s": "2025-02-12",
+   "e": "2025-02-13",
+   "place": "Wisconsin",
+   "country": "United States",
+   "b": 1,
+   "n": 1,
+   "lat": 44.5,
+   "lon": -89.5,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2025-02-13",
+   "e": "2025-04-07",
+   "place": "Wheaton, IL",
+   "country": "United States",
+   "b": 0,
+   "n": 53,
+   "lat": 41.87,
+   "lon": -88.11,
+   "home": true,
+   "side": false
+  },
+  {
+   "s": "2025-04-07",
+   "e": "2025-04-10",
+   "place": "Hoboken, NJ",
+   "country": "United States",
+   "b": 1,
+   "n": 3,
+   "lat": 40.74,
+   "lon": -74.03,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2025-04-10",
+   "e": "2025-04-14",
+   "place": "Phoenix",
+   "country": "United States",
+   "b": 1,
+   "n": 4,
+   "lat": 33.45,
+   "lon": -112.07,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2025-04-14",
+   "e": "2025-04-25",
+   "place": "Wheaton, IL",
+   "country": "United States",
+   "b": 0,
+   "n": 11,
+   "lat": 41.87,
+   "lon": -88.11,
+   "home": true,
+   "side": false
+  },
+  {
+   "s": "2025-04-25",
+   "e": "2025-05-24",
+   "place": "Antigua",
+   "country": "Guatemala",
+   "b": 2,
+   "n": 25,
+   "lat": 14.56,
+   "lon": -90.73,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2025-05-01",
+   "e": "2025-05-05",
+   "place": "Lake Atitlán",
+   "country": "Guatemala",
+   "b": 2,
+   "n": 4,
+   "lat": 14.69,
+   "lon": -91.2,
+   "home": false,
+   "side": true
+  },
+  {
+   "s": "2025-05-24",
+   "e": "2025-05-29",
+   "place": "Costa Rica",
+   "country": "Costa Rica",
+   "b": 2,
+   "n": 5,
+   "lat": 9.75,
+   "lon": -83.75,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2025-05-29",
+   "e": "2025-06-24",
+   "place": "Wheaton, IL",
+   "country": "United States",
+   "b": 0,
+   "n": 26,
+   "lat": 41.87,
+   "lon": -88.11,
+   "home": true,
+   "side": false
+  },
+  {
+   "s": "2025-06-24",
+   "e": "2025-06-27",
+   "place": "Hoboken, NJ",
+   "country": "United States",
+   "b": 1,
+   "n": 3,
+   "lat": 40.74,
+   "lon": -74.03,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2025-06-27",
+   "e": "2025-07-18",
+   "place": "Wheaton, IL",
+   "country": "United States",
+   "b": 0,
+   "n": 21,
+   "lat": 41.87,
+   "lon": -88.11,
+   "home": true,
+   "side": false
+  },
+  {
+   "s": "2025-07-18",
+   "e": "2025-07-19",
+   "place": "Colorado Springs",
+   "country": "United States",
+   "b": 1,
+   "n": 1,
+   "lat": 38.83,
+   "lon": -104.82,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2025-07-19",
+   "e": "2025-07-27",
+   "place": "Costa Rica",
+   "country": "Costa Rica",
+   "b": 2,
+   "n": 8,
+   "lat": 9.75,
+   "lon": -83.75,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2025-07-27",
+   "e": "2025-08-28",
+   "place": "Wheaton, IL",
+   "country": "United States",
+   "b": 0,
+   "n": 32,
+   "lat": 41.87,
+   "lon": -88.11,
+   "home": true,
+   "side": false
+  },
+  {
+   "s": "2025-08-28",
+   "e": "2025-08-30",
+   "place": "New York",
+   "country": "United States",
+   "b": 1,
+   "n": 2,
+   "lat": 40.71,
+   "lon": -74.01,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2025-08-30",
+   "e": "2025-09-01",
+   "place": "Denver",
+   "country": "United States",
+   "b": 1,
+   "n": 2,
+   "lat": 39.74,
+   "lon": -104.99,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2025-09-01",
+   "e": "2025-09-03",
+   "place": "San Jose, CA",
+   "country": "United States",
+   "b": 1,
+   "n": 2,
+   "lat": 37.34,
+   "lon": -121.89,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2025-09-03",
+   "e": "2025-09-08",
+   "place": "San Francisco",
+   "country": "United States",
+   "b": 1,
+   "n": 5,
+   "lat": 37.77,
+   "lon": -122.42,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2025-09-08",
+   "e": "2025-09-19",
+   "place": "Wheaton, IL",
+   "country": "United States",
+   "b": 0,
+   "n": 11,
+   "lat": 41.87,
+   "lon": -88.11,
+   "home": true,
+   "side": false
+  },
+  {
+   "s": "2025-09-19",
+   "e": "2025-09-23",
+   "place": "Medellín",
+   "country": "Colombia",
+   "b": 3,
+   "n": 4,
+   "lat": 6.24,
+   "lon": -75.58,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2025-09-23",
+   "e": "2025-10-06",
+   "place": "Cartagena",
+   "country": "Colombia",
+   "b": 3,
+   "n": 13,
+   "lat": 10.39,
+   "lon": -75.51,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2025-10-06",
+   "e": "2025-10-12",
+   "place": "San Miguel de Allende",
+   "country": "Mexico",
+   "b": 2,
+   "n": 6,
+   "lat": 20.91,
+   "lon": -100.74,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2025-10-12",
+   "e": "2025-10-17",
+   "place": "Mexico City",
+   "country": "Mexico",
+   "b": 2,
+   "n": 5,
+   "lat": 19.43,
+   "lon": -99.13,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2025-10-17",
+   "e": "2025-11-14",
+   "place": "Tarifa",
+   "country": "Spain",
+   "b": 4,
+   "n": 26,
+   "lat": 36.01,
+   "lon": -5.6,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2025-11-01",
+   "e": "2025-11-03",
+   "place": "Morocco",
+   "country": "Morocco",
+   "b": 5,
+   "n": 2,
+   "lat": 31.63,
+   "lon": -7.99,
+   "home": false,
+   "side": true
+  },
+  {
+   "s": "2025-11-14",
+   "e": "2025-11-20",
+   "place": "Seville",
+   "country": "Spain",
+   "b": 4,
+   "n": 6,
+   "lat": 37.39,
+   "lon": -5.98,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2025-11-20",
+   "e": "2025-11-26",
+   "place": "Wheaton, IL",
+   "country": "United States",
+   "b": 0,
+   "n": 6,
+   "lat": 41.87,
+   "lon": -88.11,
+   "home": true,
+   "side": false
+  },
+  {
+   "s": "2025-11-26",
+   "e": "2025-11-30",
+   "place": "Decatur, IL",
+   "country": "United States",
+   "b": 1,
+   "n": 4,
+   "lat": 39.84,
+   "lon": -88.95,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2025-11-30",
+   "e": "2025-12-07",
+   "place": "Wheaton, IL",
+   "country": "United States",
+   "b": 0,
+   "n": 7,
+   "lat": 41.87,
+   "lon": -88.11,
+   "home": true,
+   "side": false
+  },
+  {
+   "s": "2025-12-07",
+   "e": "2025-12-10",
+   "place": "Hoboken, NJ",
+   "country": "United States",
+   "b": 1,
+   "n": 2,
+   "lat": 40.74,
+   "lon": -74.03,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2025-12-09",
+   "e": "2025-12-10",
+   "place": "New York",
+   "country": "United States",
+   "b": 1,
+   "n": 1,
+   "lat": 40.71,
+   "lon": -74.01,
+   "home": false,
+   "side": true
+  },
+  {
+   "s": "2025-12-10",
+   "e": "2025-12-31",
+   "place": "Wheaton, IL",
+   "country": "United States",
+   "b": 0,
+   "n": 21,
+   "lat": 41.87,
+   "lon": -88.11,
+   "home": true,
+   "side": false
+  },
+  {
+   "s": "2025-12-31",
+   "e": "2026-01-02",
+   "place": "New York",
+   "country": "United States",
+   "b": 1,
+   "n": 2,
+   "lat": 40.71,
+   "lon": -74.01,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2026-01-02",
+   "e": "2026-02-04",
+   "place": "Wheaton, IL",
+   "country": "United States",
+   "b": 0,
+   "n": 33,
+   "lat": 41.87,
+   "lon": -88.11,
+   "home": true,
+   "side": false
+  },
+  {
+   "s": "2026-02-04",
+   "e": "2026-02-08",
+   "place": "Phoenix",
+   "country": "United States",
+   "b": 1,
+   "n": 4,
+   "lat": 33.45,
+   "lon": -112.07,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2026-02-08",
+   "e": "2026-02-14",
+   "place": "Wheaton, IL",
+   "country": "United States",
+   "b": 0,
+   "n": 6,
+   "lat": 41.87,
+   "lon": -88.11,
+   "home": true,
+   "side": false
+  },
+  {
+   "s": "2026-02-14",
+   "e": "2026-03-03",
+   "place": "Medellín",
+   "country": "Colombia",
+   "b": 3,
+   "n": 17,
+   "lat": 6.24,
+   "lon": -75.58,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2026-03-03",
+   "e": "2026-03-15",
+   "place": "Wheaton, IL",
+   "country": "United States",
+   "b": 0,
+   "n": 12,
+   "lat": 41.87,
+   "lon": -88.11,
+   "home": true,
+   "side": false
+  },
+  {
+   "s": "2026-03-15",
+   "e": "2026-04-05",
+   "place": "Buenos Aires",
+   "country": "Argentina",
+   "b": 3,
+   "n": 21,
+   "lat": -34.6,
+   "lon": -58.38,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2026-04-05",
+   "e": "2026-04-07",
+   "place": "Iguazú",
+   "country": "Argentina",
+   "b": 3,
+   "n": 2,
+   "lat": -25.6,
+   "lon": -54.57,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2026-04-07",
+   "e": "2026-04-23",
+   "place": "Cusco",
+   "country": "Peru",
+   "b": 3,
+   "n": 13,
+   "lat": -13.53,
+   "lon": -71.97,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2026-04-20",
+   "e": "2026-04-23",
+   "place": "Machu Picchu",
+   "country": "Peru",
+   "b": 3,
+   "n": 3,
+   "lat": -13.16,
+   "lon": -72.55,
+   "home": false,
+   "side": true
+  },
+  {
+   "s": "2026-04-23",
+   "e": "2026-04-27",
+   "place": "Huacachina",
+   "country": "Peru",
+   "b": 3,
+   "n": 4,
+   "lat": -14.09,
+   "lon": -75.76,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2026-04-27",
+   "e": "2026-04-28",
+   "place": "Paracas",
+   "country": "Peru",
+   "b": 3,
+   "n": 1,
+   "lat": -13.84,
+   "lon": -76.25,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2026-04-28",
+   "e": "2026-05-04",
+   "place": "Lima",
+   "country": "Peru",
+   "b": 3,
+   "n": 6,
+   "lat": -12.05,
+   "lon": -77.04,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2026-05-04",
+   "e": "2026-06-06",
+   "place": "Wheaton, IL",
+   "country": "United States",
+   "b": 0,
+   "n": 33,
+   "lat": 41.87,
+   "lon": -88.11,
+   "home": true,
+   "side": false
+  },
+  {
+   "s": "2026-06-06",
+   "e": "2026-06-08",
+   "place": "Decatur / Hillsboro, IL",
+   "country": "United States",
+   "b": 1,
+   "n": 2,
+   "lat": 39.84,
+   "lon": -88.95,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2026-06-08",
+   "e": "2026-07-20",
+   "place": "Wheaton, IL",
+   "country": "United States",
+   "b": 0,
+   "n": 42,
+   "lat": 41.87,
+   "lon": -88.11,
+   "home": true,
+   "side": false
+  },
+  {
+   "s": "2026-07-20",
+   "e": "2026-07-22",
+   "place": "Madrid",
+   "country": "Spain",
+   "b": 4,
+   "n": 2,
+   "lat": 40.42,
+   "lon": -3.7,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2026-07-22",
+   "e": "2026-07-31",
+   "place": "Valencia",
+   "country": "Spain",
+   "b": 4,
+   "n": 9,
+   "lat": 39.47,
+   "lon": -0.38,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2026-07-31",
+   "e": "2026-08-03",
+   "place": "Amsterdam",
+   "country": "Netherlands",
+   "b": 4,
+   "n": 3,
+   "lat": 52.37,
+   "lon": 4.9,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2026-08-03",
+   "e": "2026-08-07",
+   "place": "Lisbon",
+   "country": "Portugal",
+   "b": 4,
+   "n": 4,
+   "lat": 38.72,
+   "lon": -9.14,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2026-08-07",
+   "e": "2026-08-11",
+   "place": "Ericeira",
+   "country": "Portugal",
+   "b": 4,
+   "n": 4,
+   "lat": 38.96,
+   "lon": -9.42,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2026-08-11",
+   "e": "2026-08-26",
+   "place": "Valencia",
+   "country": "Spain",
+   "b": 4,
+   "n": 12,
+   "lat": 39.47,
+   "lon": -0.38,
+   "home": false,
+   "side": false
+  },
+  {
+   "s": "2026-08-21",
+   "e": "2026-08-24",
+   "place": "Barcelona",
+   "country": "Spain",
+   "b": 4,
+   "n": 3,
+   "lat": 41.39,
+   "lon": 2.17,
+   "home": false,
+   "side": true
+  },
+  {
+   "s": "2026-08-26",
+   "e": "2026-09-01",
+   "place": "Granada",
+   "country": "Spain",
+   "b": 4,
+   "n": 6,
+   "lat": 37.18,
+   "lon": -3.6,
+   "home": false,
+   "side": false
+  }
+ ],
+ "map_places": [
+  {
+   "place": "Wheaton, IL",
+   "lat": 41.87,
+   "lon": -88.11,
+   "n": 533,
+   "b": 0,
+   "country": "United States"
+  },
+  {
+   "place": "Arizona",
+   "lat": 33.45,
+   "lon": -112.07,
+   "n": 104,
+   "b": 1,
+   "country": "United States"
+  },
+  {
+   "place": "Fort Lauderdale",
+   "lat": 26.12,
+   "lon": -80.14,
+   "n": 55,
+   "b": 1,
+   "country": "United States"
+  },
+  {
+   "place": "Salt Lake City",
+   "lat": 40.76,
+   "lon": -111.89,
+   "n": 39,
+   "b": 1,
+   "country": "United States"
+  },
+  {
+   "place": "Medellín",
+   "lat": 6.24,
+   "lon": -75.58,
+   "n": 31,
+   "b": 3,
+   "country": "Colombia"
+  },
+  {
+   "place": "Ho Chi Minh City",
+   "lat": 10.82,
+   "lon": 106.63,
+   "n": 28,
+   "b": 6,
+   "country": "Vietnam"
+  },
+  {
+   "place": "Tarifa",
+   "lat": 36.01,
+   "lon": -5.6,
+   "n": 26,
+   "b": 4,
+   "country": "Spain"
+  },
+  {
+   "place": "Chiang Mai",
+   "lat": 18.79,
+   "lon": 98.99,
+   "n": 25,
+   "b": 6,
+   "country": "Thailand"
+  },
+  {
+   "place": "Koh Tao",
+   "lat": 10.1,
+   "lon": 99.84,
+   "n": 25,
+   "b": 6,
+   "country": "Thailand"
+  },
+  {
+   "place": "Antigua",
+   "lat": 14.56,
+   "lon": -90.73,
+   "n": 25,
+   "b": 2,
+   "country": "Guatemala"
+  },
+  {
+   "place": "Mexico City",
+   "lat": 19.43,
+   "lon": -99.13,
+   "n": 23,
+   "b": 2,
+   "country": "Mexico"
+  },
+  {
+   "place": "Gjøvik",
+   "lat": 60.8,
+   "lon": 10.69,
+   "n": 22,
+   "b": 4,
+   "country": "Norway"
+  },
+  {
+   "place": "Belize",
+   "lat": 17.19,
+   "lon": -88.5,
+   "n": 22,
+   "b": 2,
+   "country": "Belize"
+  },
+  {
+   "place": "Pipa",
+   "lat": -6.23,
+   "lon": -35.05,
+   "n": 22,
+   "b": 3,
+   "country": "Brazil"
+  },
+  {
+   "place": "Pontassieve",
+   "lat": 43.78,
+   "lon": 11.44,
+   "n": 21,
+   "b": 4,
+   "country": "Italy"
+  },
+  {
+   "place": "Buenos Aires",
+   "lat": -34.6,
+   "lon": -58.38,
+   "n": 21,
+   "b": 3,
+   "country": "Argentina"
+  },
+  {
+   "place": "Valencia",
+   "lat": 39.47,
+   "lon": -0.38,
+   "n": 21,
+   "b": 4,
+   "country": "Spain"
+  },
+  {
+   "place": "Costa Rica",
+   "lat": 9.75,
+   "lon": -83.75,
+   "n": 19,
+   "b": 2,
+   "country": "Costa Rica"
+  },
+  {
+   "place": "Hanoi",
+   "lat": 21.03,
+   "lon": 105.85,
+   "n": 17,
+   "b": 6,
+   "country": "Vietnam"
+  },
+  {
+   "place": "Cartagena",
+   "lat": 10.39,
+   "lon": -75.51,
+   "n": 13,
+   "b": 3,
+   "country": "Colombia"
+  },
+  {
+   "place": "Cusco",
+   "lat": -13.53,
+   "lon": -71.97,
+   "n": 13,
+   "b": 3,
+   "country": "Peru"
+  },
+  {
+   "place": "San Francisco",
+   "lat": 37.77,
+   "lon": -122.42,
+   "n": 11,
+   "b": 1,
+   "country": "United States"
+  },
+  {
+   "place": "Hoboken, NJ",
+   "lat": 40.74,
+   "lon": -74.03,
+   "n": 11,
+   "b": 1,
+   "country": "United States"
+  },
+  {
+   "place": "Krabi",
+   "lat": 8.09,
+   "lon": 98.91,
+   "n": 9,
+   "b": 6,
+   "country": "Thailand"
+  },
+  {
+   "place": "Lisbon",
+   "lat": 38.72,
+   "lon": -9.14,
+   "n": 9,
+   "b": 4,
+   "country": "Portugal"
+  },
+  {
+   "place": "Denver",
+   "lat": 39.74,
+   "lon": -104.99,
+   "n": 9,
+   "b": 1,
+   "country": "United States"
+  },
+  {
+   "place": "New York",
+   "lat": 40.71,
+   "lon": -74.01,
+   "n": 9,
+   "b": 1,
+   "country": "United States"
+  },
+  {
+   "place": "Bangkok",
+   "lat": 13.76,
+   "lon": 100.5,
+   "n": 8,
+   "b": 6,
+   "country": "Thailand"
+  },
+  {
+   "place": "Rio de Janeiro",
+   "lat": -22.91,
+   "lon": -43.17,
+   "n": 8,
+   "b": 3,
+   "country": "Brazil"
+  },
+  {
+   "place": "Phoenix",
+   "lat": 33.45,
+   "lon": -112.07,
+   "n": 8,
+   "b": 1,
+   "country": "United States"
+  },
+  {
+   "place": "Elephant Nature Park",
+   "lat": 19.2,
+   "lon": 98.86,
+   "n": 7,
+   "b": 6,
+   "country": "Thailand"
+  },
+  {
+   "place": "Ao Nang",
+   "lat": 8.03,
+   "lon": 98.82,
+   "n": 7,
+   "b": 6,
+   "country": "Thailand"
+  },
+  {
+   "place": "Gili Trawangan",
+   "lat": -8.35,
+   "lon": 116.04,
+   "n": 7,
+   "b": 6,
+   "country": "Indonesia"
+  },
+  {
+   "place": "Uluwatu, Bali",
+   "lat": -8.83,
+   "lon": 115.09,
+   "n": 7,
+   "b": 6,
+   "country": "Indonesia"
+  },
+  {
+   "place": "Barcelona",
+   "lat": 41.39,
+   "lon": 2.17,
+   "n": 7,
+   "b": 4,
+   "country": "Spain"
+  },
+  {
+   "place": "Ericeira",
+   "lat": 38.96,
+   "lon": -9.42,
+   "n": 7,
+   "b": 4,
+   "country": "Portugal"
+  },
+  {
+   "place": "Amsterdam",
+   "lat": 52.37,
+   "lon": 4.9,
+   "n": 7,
+   "b": 4,
+   "country": "Netherlands"
+  },
+  {
+   "place": "George Town",
+   "lat": 5.41,
+   "lon": 100.34,
+   "n": 6,
+   "b": 6,
+   "country": "Malaysia"
+  },
+  {
+   "place": "Surat Thani",
+   "lat": 9.14,
+   "lon": 99.33,
+   "n": 6,
+   "b": 6,
+   "country": "Thailand"
+  },
+  {
+   "place": "Da Nang",
+   "lat": 16.05,
+   "lon": 108.2,
+   "n": 6,
+   "b": 6,
+   "country": "Vietnam"
+  },
+  {
+   "place": "Utrecht",
+   "lat": 52.09,
+   "lon": 5.12,
+   "n": 6,
+   "b": 4,
+   "country": "Netherlands"
+  },
+  {
+   "place": "Colorado",
+   "lat": 39.55,
+   "lon": -105.78,
+   "n": 6,
+   "b": 1,
+   "country": "United States"
+  },
+  {
+   "place": "San Miguel de Allende",
+   "lat": 20.91,
+   "lon": -100.74,
+   "n": 6,
+   "b": 2,
+   "country": "Mexico"
+  },
+  {
+   "place": "Seville",
+   "lat": 37.39,
+   "lon": -5.98,
+   "n": 6,
+   "b": 4,
+   "country": "Spain"
+  },
+  {
+   "place": "Lima",
+   "lat": -12.05,
+   "lon": -77.04,
+   "n": 6,
+   "b": 3,
+   "country": "Peru"
+  },
+  {
+   "place": "Granada",
+   "lat": 37.18,
+   "lon": -3.6,
+   "n": 6,
+   "b": 4,
+   "country": "Spain"
+  },
+  {
+   "place": "Seoul",
+   "lat": 37.57,
+   "lon": 126.98,
+   "n": 5,
+   "b": 6,
+   "country": "South Korea"
+  },
+  {
+   "place": "Nusa Penida",
+   "lat": -8.73,
+   "lon": 115.54,
+   "n": 5,
+   "b": 6,
+   "country": "Indonesia"
+  },
+  {
+   "place": "Mexico",
+   "lat": 19.43,
+   "lon": -99.13,
+   "n": 5,
+   "b": 2,
+   "country": "Mexico"
+  },
+  {
+   "place": "Ninh Binh",
+   "lat": 20.25,
+   "lon": 105.97,
+   "n": 4,
+   "b": 6,
+   "country": "Vietnam"
+  },
+  {
+   "place": "Pai",
+   "lat": 19.36,
+   "lon": 98.44,
+   "n": 4,
+   "b": 6,
+   "country": "Thailand"
+  },
+  {
+   "place": "Pa Pae Retreat",
+   "lat": 18.55,
+   "lon": 98.53,
+   "n": 4,
+   "b": 6,
+   "country": "Thailand"
+  },
+  {
+   "place": "Ko Lanta",
+   "lat": 7.62,
+   "lon": 99.05,
+   "n": 4,
+   "b": 6,
+   "country": "Thailand"
+  },
+  {
+   "place": "Ko Lipe",
+   "lat": 6.49,
+   "lon": 99.3,
+   "n": 4,
+   "b": 6,
+   "country": "Thailand"
+  },
+  {
+   "place": "Kuala Lumpur",
+   "lat": 3.14,
+   "lon": 101.69,
+   "n": 4,
+   "b": 6,
+   "country": "Malaysia"
+  },
+  {
+   "place": "Ubud, Bali",
+   "lat": -8.51,
+   "lon": 115.26,
+   "n": 4,
+   "b": 6,
+   "country": "Indonesia"
+  },
+  {
+   "place": "Candidasa, Bali",
+   "lat": -8.51,
+   "lon": 115.57,
+   "n": 4,
+   "b": 6,
+   "country": "Indonesia"
+  },
+  {
+   "place": "Wonderland, Koh Phangan",
+   "lat": 9.73,
+   "lon": 100.01,
+   "n": 4,
+   "b": 6,
+   "country": "Thailand"
+  },
+  {
+   "place": "Sønderborg",
+   "lat": 54.91,
+   "lon": 9.79,
+   "n": 4,
+   "b": 4,
+   "country": "Denmark"
+  },
+  {
+   "place": "Iowa",
+   "lat": 41.88,
+   "lon": -93.1,
+   "n": 4,
+   "b": 1,
+   "country": "United States"
+  },
+  {
+   "place": "New Orleans",
+   "lat": 29.95,
+   "lon": -90.07,
+   "n": 4,
+   "b": 1,
+   "country": "United States"
+  },
+  {
+   "place": "Crested Butte, CO",
+   "lat": 38.87,
+   "lon": -106.99,
+   "n": 4,
+   "b": 1,
+   "country": "United States"
+  },
+  {
+   "place": "Petoskey, MI",
+   "lat": 45.37,
+   "lon": -84.96,
+   "n": 4,
+   "b": 1,
+   "country": "United States"
+  },
+  {
+   "place": "Las Vegas",
+   "lat": 36.17,
+   "lon": -115.14,
+   "n": 4,
+   "b": 1,
+   "country": "United States"
+  },
+  {
+   "place": "Lake Atitlán",
+   "lat": 14.69,
+   "lon": -91.2,
+   "n": 4,
+   "b": 2,
+   "country": "Guatemala"
+  },
+  {
+   "place": "Decatur, IL",
+   "lat": 39.84,
+   "lon": -88.95,
+   "n": 4,
+   "b": 1,
+   "country": "United States"
+  },
+  {
+   "place": "Huacachina",
+   "lat": -14.09,
+   "lon": -75.76,
+   "n": 4,
+   "b": 3,
+   "country": "Peru"
+  },
+  {
+   "place": "Ha Long Bay",
+   "lat": 20.91,
+   "lon": 107.18,
+   "n": 3,
+   "b": 6,
+   "country": "Vietnam"
+  },
+  {
+   "place": "Hoi An",
+   "lat": 15.88,
+   "lon": 108.34,
+   "n": 3,
+   "b": 6,
+   "country": "Vietnam"
+  },
+  {
+   "place": "Bergamo",
+   "lat": 45.7,
+   "lon": 9.67,
+   "n": 3,
+   "b": 4,
+   "country": "Italy"
+  },
+  {
+   "place": "Rome",
+   "lat": 41.9,
+   "lon": 12.5,
+   "n": 3,
+   "b": 4,
+   "country": "Italy"
+  },
+  {
+   "place": "San Sebastián",
+   "lat": 43.32,
+   "lon": -1.98,
+   "n": 3,
+   "b": 4,
+   "country": "Spain"
+  },
+  {
+   "place": "Oslo",
+   "lat": 59.91,
+   "lon": 10.75,
+   "n": 3,
+   "b": 4,
+   "country": "Norway"
+  },
+  {
+   "place": "Arkansas",
+   "lat": 34.75,
+   "lon": -92.29,
+   "n": 3,
+   "b": 1,
+   "country": "United States"
+  },
+  {
+   "place": "Miami",
+   "lat": 25.76,
+   "lon": -80.19,
+   "n": 3,
+   "b": 1,
+   "country": "United States"
+  },
+  {
+   "place": "Austin",
+   "lat": 30.27,
+   "lon": -97.74,
+   "n": 3,
+   "b": 1,
+   "country": "United States"
+  },
+  {
+   "place": "Machu Picchu",
+   "lat": -13.16,
+   "lon": -72.55,
+   "n": 3,
+   "b": 3,
+   "country": "Peru"
+  },
+  {
+   "place": "Siem Reap",
+   "lat": 13.36,
+   "lon": 103.86,
+   "n": 2,
+   "b": 6,
+   "country": "Cambodia"
+  },
+  {
+   "place": "Koh Phangan",
+   "lat": 9.73,
+   "lon": 100.01,
+   "n": 2,
+   "b": 6,
+   "country": "Thailand"
+  },
+  {
+   "place": "London Heathrow",
+   "lat": 51.47,
+   "lon": -0.45,
+   "n": 2,
+   "b": 4,
+   "country": "United Kingdom"
+  },
+  {
+   "place": "London",
+   "lat": 51.51,
+   "lon": -0.13,
+   "n": 2,
+   "b": 4,
+   "country": "United Kingdom"
+  },
+  {
+   "place": "Omaha, NE",
+   "lat": 41.26,
+   "lon": -95.93,
+   "n": 2,
+   "b": 1,
+   "country": "United States"
+  },
+  {
+   "place": "San Jose, CA",
+   "lat": 37.34,
+   "lon": -121.89,
+   "n": 2,
+   "b": 1,
+   "country": "United States"
+  },
+  {
+   "place": "Morocco",
+   "lat": 31.63,
+   "lon": -7.99,
+   "n": 2,
+   "b": 5,
+   "country": "Morocco"
+  },
+  {
+   "place": "Iguazú",
+   "lat": -25.6,
+   "lon": -54.57,
+   "n": 2,
+   "b": 3,
+   "country": "Argentina"
+  },
+  {
+   "place": "Decatur / Hillsboro, IL",
+   "lat": 39.84,
+   "lon": -88.95,
+   "n": 2,
+   "b": 1,
+   "country": "United States"
+  },
+  {
+   "place": "Madrid",
+   "lat": 40.42,
+   "lon": -3.7,
+   "n": 2,
+   "b": 4,
+   "country": "Spain"
+  },
+  {
+   "place": "Phnom Penh",
+   "lat": 11.56,
+   "lon": 104.92,
+   "n": 1,
+   "b": 6,
+   "country": "Cambodia"
+  },
+  {
+   "place": "Wisconsin",
+   "lat": 44.5,
+   "lon": -89.5,
+   "n": 1,
+   "b": 1,
+   "country": "United States"
+  },
+  {
+   "place": "Colorado Springs",
+   "lat": 38.83,
+   "lon": -104.82,
+   "n": 1,
+   "b": 1,
+   "country": "United States"
+  },
+  {
+   "place": "Paracas",
+   "lat": -13.84,
+   "lon": -76.25,
+   "n": 1,
+   "b": 3,
+   "country": "Peru"
+  }
+ ],
+ "sankey": {
+  "nodes": [
+   {
+    "id": "Y2022",
+    "label": "2022",
+    "layer": 0,
+    "b": -1
+   },
+   {
+    "id": "Y2023",
+    "label": "2023",
+    "layer": 0,
+    "b": -1
+   },
+   {
+    "id": "Y2024",
+    "label": "2024",
+    "layer": 0,
+    "b": -1
+   },
+   {
+    "id": "Y2025",
+    "label": "2025",
+    "layer": 0,
+    "b": -1
+   },
+   {
+    "id": "Y2026",
+    "label": "2026",
+    "layer": 0,
+    "b": -1
+   },
+   {
+    "id": "BHome",
+    "label": "Home",
+    "layer": 1,
+    "b": 0,
+    "home": true
+   },
+   {
+    "id": "BUnited States",
+    "label": "United States",
+    "layer": 1,
+    "b": 1,
+    "home": false
+   },
+   {
+    "id": "BCentral America & Mexico",
+    "label": "Central America & Mexico",
+    "layer": 1,
+    "b": 2,
+    "home": false
+   },
+   {
+    "id": "BSouth America",
+    "label": "South America",
+    "layer": 1,
+    "b": 3,
+    "home": false
+   },
+   {
+    "id": "BEurope",
+    "label": "Europe",
+    "layer": 1,
+    "b": 4,
+    "home": false
+   },
+   {
+    "id": "BAfrica",
+    "label": "Africa",
+    "layer": 1,
+    "b": 5,
+    "home": false
+   },
+   {
+    "id": "BAsia",
+    "label": "Asia",
+    "layer": 1,
+    "b": 6,
+    "home": false
+   },
+   {
+    "id": "DHome|Wheaton, IL",
+    "label": "Wheaton, IL",
+    "layer": 2,
+    "b": 0,
+    "home": true
+   },
+   {
+    "id": "DUnited States|Arizona",
+    "label": "Arizona",
+    "layer": 2,
+    "b": 1,
+    "home": false
+   },
+   {
+    "id": "DUnited States|Fort Lauderdale",
+    "label": "Fort Lauderdale",
+    "layer": 2,
+    "b": 1,
+    "home": false
+   },
+   {
+    "id": "DUnited States|Salt Lake City",
+    "label": "Salt Lake City",
+    "layer": 2,
+    "b": 1,
+    "home": false
+   },
+   {
+    "id": "DUnited States|Hoboken, NJ",
+    "label": "Hoboken, NJ",
+    "layer": 2,
+    "b": 1,
+    "home": false
+   },
+   {
+    "id": "DUnited States|San Francisco",
+    "label": "San Francisco",
+    "layer": 2,
+    "b": 1,
+    "home": false
+   },
+   {
+    "id": "DUnited States|Denver",
+    "label": "Denver",
+    "layer": 2,
+    "b": 1,
+    "home": false
+   },
+   {
+    "id": "DUnited States|New York",
+    "label": "New York",
+    "layer": 2,
+    "b": 1,
+    "home": false
+   },
+   {
+    "id": "DUnited States|Phoenix",
+    "label": "Phoenix",
+    "layer": 2,
+    "b": 1,
+    "home": false
+   },
+   {
+    "id": "DUnited States|Colorado",
+    "label": "Colorado",
+    "layer": 2,
+    "b": 1,
+    "home": false
+   },
+   {
+    "id": "DUnited States|Crested Butte, CO",
+    "label": "Crested Butte, CO",
+    "layer": 2,
+    "b": 1,
+    "home": false
+   },
+   {
+    "id": "DUnited States|Decatur, IL",
+    "label": "Decatur, IL",
+    "layer": 2,
+    "b": 1,
+    "home": false
+   },
+   {
+    "id": "DUnited States|Iowa",
+    "label": "Iowa",
+    "layer": 2,
+    "b": 1,
+    "home": false
+   },
+   {
+    "id": "DUnited States|Las Vegas",
+    "label": "Las Vegas",
+    "layer": 2,
+    "b": 1,
+    "home": false
+   },
+   {
+    "id": "DUnited States|New Orleans",
+    "label": "New Orleans",
+    "layer": 2,
+    "b": 1,
+    "home": false
+   },
+   {
+    "id": "DUnited States|Petoskey, MI",
+    "label": "Petoskey, MI",
+    "layer": 2,
+    "b": 1,
+    "home": false
+   },
+   {
+    "id": "DUnited States|Arkansas",
+    "label": "Arkansas",
+    "layer": 2,
+    "b": 1,
+    "home": false
+   },
+   {
+    "id": "DUnited States|Austin",
+    "label": "Austin",
+    "layer": 2,
+    "b": 1,
+    "home": false
+   },
+   {
+    "id": "DUnited States|Miami",
+    "label": "Miami",
+    "layer": 2,
+    "b": 1,
+    "home": false
+   },
+   {
+    "id": "DUnited States|Decatur / Hillsboro, IL",
+    "label": "Decatur / Hillsboro, IL",
+    "layer": 2,
+    "b": 1,
+    "home": false
+   },
+   {
+    "id": "DUnited States|Omaha, NE",
+    "label": "Omaha, NE",
+    "layer": 2,
+    "b": 1,
+    "home": false
+   },
+   {
+    "id": "DUnited States|San Jose, CA",
+    "label": "San Jose, CA",
+    "layer": 2,
+    "b": 1,
+    "home": false
+   },
+   {
+    "id": "DUnited States|Colorado Springs",
+    "label": "Colorado Springs",
+    "layer": 2,
+    "b": 1,
+    "home": false
+   },
+   {
+    "id": "DUnited States|Wisconsin",
+    "label": "Wisconsin",
+    "layer": 2,
+    "b": 1,
+    "home": false
+   },
+   {
+    "id": "DCentral America & Mexico|Mexico",
+    "label": "Mexico",
+    "layer": 2,
+    "b": 2,
+    "home": false
+   },
+   {
+    "id": "DCentral America & Mexico|Guatemala",
+    "label": "Guatemala",
+    "layer": 2,
+    "b": 2,
+    "home": false
+   },
+   {
+    "id": "DCentral America & Mexico|Belize",
+    "label": "Belize",
+    "layer": 2,
+    "b": 2,
+    "home": false
+   },
+   {
+    "id": "DCentral America & Mexico|Costa Rica",
+    "label": "Costa Rica",
+    "layer": 2,
+    "b": 2,
+    "home": false
+   },
+   {
+    "id": "DSouth America|Colombia",
+    "label": "Colombia",
+    "layer": 2,
+    "b": 3,
+    "home": false
+   },
+   {
+    "id": "DSouth America|Brazil",
+    "label": "Brazil",
+    "layer": 2,
+    "b": 3,
+    "home": false
+   },
+   {
+    "id": "DSouth America|Peru",
+    "label": "Peru",
+    "layer": 2,
+    "b": 3,
+    "home": false
+   },
+   {
+    "id": "DSouth America|Argentina",
+    "label": "Argentina",
+    "layer": 2,
+    "b": 3,
+    "home": false
+   },
+   {
+    "id": "DEurope|Spain",
+    "label": "Spain",
+    "layer": 2,
+    "b": 4,
+    "home": false
+   },
+   {
+    "id": "DEurope|Italy",
+    "label": "Italy",
+    "layer": 2,
+    "b": 4,
+    "home": false
+   },
+   {
+    "id": "DEurope|Norway",
+    "label": "Norway",
+    "layer": 2,
+    "b": 4,
+    "home": false
+   },
+   {
+    "id": "DEurope|Portugal",
+    "label": "Portugal",
+    "layer": 2,
+    "b": 4,
+    "home": false
+   },
+   {
+    "id": "DEurope|Netherlands",
+    "label": "Netherlands",
+    "layer": 2,
+    "b": 4,
+    "home": false
+   },
+   {
+    "id": "DEurope|Denmark",
+    "label": "Denmark",
+    "layer": 2,
+    "b": 4,
+    "home": false
+   },
+   {
+    "id": "DEurope|United Kingdom",
+    "label": "United Kingdom",
+    "layer": 2,
+    "b": 4,
+    "home": false
+   },
+   {
+    "id": "DAfrica|Morocco",
+    "label": "Morocco",
+    "layer": 2,
+    "b": 5,
+    "home": false
+   },
+   {
+    "id": "DAsia|Thailand",
+    "label": "Thailand",
+    "layer": 2,
+    "b": 6,
+    "home": false
+   },
+   {
+    "id": "DAsia|Vietnam",
+    "label": "Vietnam",
+    "layer": 2,
+    "b": 6,
+    "home": false
+   },
+   {
+    "id": "DAsia|Indonesia",
+    "label": "Indonesia",
+    "layer": 2,
+    "b": 6,
+    "home": false
+   },
+   {
+    "id": "DAsia|Malaysia",
+    "label": "Malaysia",
+    "layer": 2,
+    "b": 6,
+    "home": false
+   },
+   {
+    "id": "DAsia|South Korea",
+    "label": "South Korea",
+    "layer": 2,
+    "b": 6,
+    "home": false
+   },
+   {
+    "id": "DAsia|Cambodia",
+    "label": "Cambodia",
+    "layer": 2,
+    "b": 6,
+    "home": false
+   }
+  ],
+  "links": [
+   {
+    "s": "Y2022",
+    "t": "BHome",
+    "v": 11,
+    "b": 0,
+    "home": true
+   },
+   {
+    "s": "Y2022",
+    "t": "BAsia",
+    "v": 81,
+    "b": 6,
+    "home": false
+   },
+   {
+    "s": "Y2023",
+    "t": "BHome",
+    "v": 30,
+    "b": 0,
+    "home": true
+   },
+   {
+    "s": "Y2023",
+    "t": "BUnited States",
+    "v": 111,
+    "b": 1,
+    "home": false
+   },
+   {
+    "s": "Y2023",
+    "t": "BCentral America & Mexico",
+    "v": 5,
+    "b": 2,
+    "home": false
+   },
+   {
+    "s": "Y2023",
+    "t": "BEurope",
+    "v": 85,
+    "b": 4,
+    "home": false
+   },
+   {
+    "s": "Y2023",
+    "t": "BAsia",
+    "v": 134,
+    "b": 6,
+    "home": false
+   },
+   {
+    "s": "Y2024",
+    "t": "BHome",
+    "v": 162,
+    "b": 0,
+    "home": true
+   },
+   {
+    "s": "Y2024",
+    "t": "BUnited States",
+    "v": 144,
+    "b": 1,
+    "home": false
+   },
+   {
+    "s": "Y2024",
+    "t": "BCentral America & Mexico",
+    "v": 46,
+    "b": 2,
+    "home": false
+   },
+   {
+    "s": "Y2024",
+    "t": "BSouth America",
+    "v": 14,
+    "b": 3,
+    "home": false
+   },
+   {
+    "s": "Y2025",
+    "t": "BHome",
+    "v": 204,
+    "b": 0,
+    "home": true
+   },
+   {
+    "s": "Y2025",
+    "t": "BUnited States",
+    "v": 31,
+    "b": 1,
+    "home": false
+   },
+   {
+    "s": "Y2025",
+    "t": "BCentral America & Mexico",
+    "v": 53,
+    "b": 2,
+    "home": false
+   },
+   {
+    "s": "Y2025",
+    "t": "BSouth America",
+    "v": 43,
+    "b": 3,
+    "home": false
+   },
+   {
+    "s": "Y2025",
+    "t": "BEurope",
+    "v": 32,
+    "b": 4,
+    "home": false
+   },
+   {
+    "s": "Y2025",
+    "t": "BAfrica",
+    "v": 2,
+    "b": 5,
+    "home": false
+   },
+   {
+    "s": "Y2026",
+    "t": "BHome",
+    "v": 126,
+    "b": 0,
+    "home": true
+   },
+   {
+    "s": "Y2026",
+    "t": "BUnited States",
+    "v": 7,
+    "b": 1,
+    "home": false
+   },
+   {
+    "s": "Y2026",
+    "t": "BSouth America",
+    "v": 67,
+    "b": 3,
+    "home": false
+   },
+   {
+    "s": "Y2026",
+    "t": "BEurope",
+    "v": 43,
+    "b": 4,
+    "home": false
+   },
+   {
+    "s": "BHome",
+    "t": "DHome|Wheaton, IL",
+    "v": 533,
+    "b": 0,
+    "home": true
+   },
+   {
+    "s": "BUnited States",
+    "t": "DUnited States|Arizona",
+    "v": 104,
+    "b": 1,
+    "home": false
+   },
+   {
+    "s": "BUnited States",
+    "t": "DUnited States|Fort Lauderdale",
+    "v": 55,
+    "b": 1,
+    "home": false
+   },
+   {
+    "s": "BUnited States",
+    "t": "DUnited States|Salt Lake City",
+    "v": 39,
+    "b": 1,
+    "home": false
+   },
+   {
+    "s": "BUnited States",
+    "t": "DUnited States|Hoboken, NJ",
+    "v": 11,
+    "b": 1,
+    "home": false
+   },
+   {
+    "s": "BUnited States",
+    "t": "DUnited States|San Francisco",
+    "v": 11,
+    "b": 1,
+    "home": false
+   },
+   {
+    "s": "BUnited States",
+    "t": "DUnited States|Denver",
+    "v": 9,
+    "b": 1,
+    "home": false
+   },
+   {
+    "s": "BUnited States",
+    "t": "DUnited States|New York",
+    "v": 9,
+    "b": 1,
+    "home": false
+   },
+   {
+    "s": "BUnited States",
+    "t": "DUnited States|Phoenix",
+    "v": 8,
+    "b": 1,
+    "home": false
+   },
+   {
+    "s": "BUnited States",
+    "t": "DUnited States|Colorado",
+    "v": 6,
+    "b": 1,
+    "home": false
+   },
+   {
+    "s": "BUnited States",
+    "t": "DUnited States|Crested Butte, CO",
+    "v": 4,
+    "b": 1,
+    "home": false
+   },
+   {
+    "s": "BUnited States",
+    "t": "DUnited States|Decatur, IL",
+    "v": 4,
+    "b": 1,
+    "home": false
+   },
+   {
+    "s": "BUnited States",
+    "t": "DUnited States|Iowa",
+    "v": 4,
+    "b": 1,
+    "home": false
+   },
+   {
+    "s": "BUnited States",
+    "t": "DUnited States|Las Vegas",
+    "v": 4,
+    "b": 1,
+    "home": false
+   },
+   {
+    "s": "BUnited States",
+    "t": "DUnited States|New Orleans",
+    "v": 4,
+    "b": 1,
+    "home": false
+   },
+   {
+    "s": "BUnited States",
+    "t": "DUnited States|Petoskey, MI",
+    "v": 4,
+    "b": 1,
+    "home": false
+   },
+   {
+    "s": "BUnited States",
+    "t": "DUnited States|Arkansas",
+    "v": 3,
+    "b": 1,
+    "home": false
+   },
+   {
+    "s": "BUnited States",
+    "t": "DUnited States|Austin",
+    "v": 3,
+    "b": 1,
+    "home": false
+   },
+   {
+    "s": "BUnited States",
+    "t": "DUnited States|Miami",
+    "v": 3,
+    "b": 1,
+    "home": false
+   },
+   {
+    "s": "BUnited States",
+    "t": "DUnited States|Decatur / Hillsboro, IL",
+    "v": 2,
+    "b": 1,
+    "home": false
+   },
+   {
+    "s": "BUnited States",
+    "t": "DUnited States|Omaha, NE",
+    "v": 2,
+    "b": 1,
+    "home": false
+   },
+   {
+    "s": "BUnited States",
+    "t": "DUnited States|San Jose, CA",
+    "v": 2,
+    "b": 1,
+    "home": false
+   },
+   {
+    "s": "BUnited States",
+    "t": "DUnited States|Colorado Springs",
+    "v": 1,
+    "b": 1,
+    "home": false
+   },
+   {
+    "s": "BUnited States",
+    "t": "DUnited States|Wisconsin",
+    "v": 1,
+    "b": 1,
+    "home": false
+   },
+   {
+    "s": "BCentral America & Mexico",
+    "t": "DCentral America & Mexico|Mexico",
+    "v": 34,
+    "b": 2,
+    "home": false
+   },
+   {
+    "s": "BCentral America & Mexico",
+    "t": "DCentral America & Mexico|Guatemala",
+    "v": 29,
+    "b": 2,
+    "home": false
+   },
+   {
+    "s": "BCentral America & Mexico",
+    "t": "DCentral America & Mexico|Belize",
+    "v": 22,
+    "b": 2,
+    "home": false
+   },
+   {
+    "s": "BCentral America & Mexico",
+    "t": "DCentral America & Mexico|Costa Rica",
+    "v": 19,
+    "b": 2,
+    "home": false
+   },
+   {
+    "s": "BSouth America",
+    "t": "DSouth America|Colombia",
+    "v": 44,
+    "b": 3,
+    "home": false
+   },
+   {
+    "s": "BSouth America",
+    "t": "DSouth America|Brazil",
+    "v": 30,
+    "b": 3,
+    "home": false
+   },
+   {
+    "s": "BSouth America",
+    "t": "DSouth America|Peru",
+    "v": 27,
+    "b": 3,
+    "home": false
+   },
+   {
+    "s": "BSouth America",
+    "t": "DSouth America|Argentina",
+    "v": 23,
+    "b": 3,
+    "home": false
+   },
+   {
+    "s": "BEurope",
+    "t": "DEurope|Spain",
+    "v": 71,
+    "b": 4,
+    "home": false
+   },
+   {
+    "s": "BEurope",
+    "t": "DEurope|Italy",
+    "v": 27,
+    "b": 4,
+    "home": false
+   },
+   {
+    "s": "BEurope",
+    "t": "DEurope|Norway",
+    "v": 25,
+    "b": 4,
+    "home": false
+   },
+   {
+    "s": "BEurope",
+    "t": "DEurope|Portugal",
+    "v": 16,
+    "b": 4,
+    "home": false
+   },
+   {
+    "s": "BEurope",
+    "t": "DEurope|Netherlands",
+    "v": 13,
+    "b": 4,
+    "home": false
+   },
+   {
+    "s": "BEurope",
+    "t": "DEurope|Denmark",
+    "v": 4,
+    "b": 4,
+    "home": false
+   },
+   {
+    "s": "BEurope",
+    "t": "DEurope|United Kingdom",
+    "v": 4,
+    "b": 4,
+    "home": false
+   },
+   {
+    "s": "BAfrica",
+    "t": "DAfrica|Morocco",
+    "v": 2,
+    "b": 5,
+    "home": false
+   },
+   {
+    "s": "BAsia",
+    "t": "DAsia|Thailand",
+    "v": 109,
+    "b": 6,
+    "home": false
+   },
+   {
+    "s": "BAsia",
+    "t": "DAsia|Vietnam",
+    "v": 61,
+    "b": 6,
+    "home": false
+   },
+   {
+    "s": "BAsia",
+    "t": "DAsia|Indonesia",
+    "v": 27,
+    "b": 6,
+    "home": false
+   },
+   {
+    "s": "BAsia",
+    "t": "DAsia|Malaysia",
+    "v": 10,
+    "b": 6,
+    "home": false
+   },
+   {
+    "s": "BAsia",
+    "t": "DAsia|South Korea",
+    "v": 5,
+    "b": 6,
+    "home": false
+   },
+   {
+    "s": "BAsia",
+    "t": "DAsia|Cambodia",
+    "v": 3,
+    "b": 6,
+    "home": false
+   }
+  ]
+ },
+ "changes": [
+  {
+   "kind": "dropped",
+   "event": "Babe Leaves for India",
+   "detail": "2023-02-01",
+   "why": "Reminder/marker, not a stay"
+  },
+  {
+   "kind": "dropped",
+   "event": "Parents Arrive!",
+   "detail": "2023-03-01",
+   "why": "Reminder/marker, not a stay"
+  },
+  {
+   "kind": "unknown location",
+   "event": "Stay at Morgans",
+   "detail": "2023-04-30 to 2023-05-01",
+   "why": "No location on the event. Counted as time away, not attributed to a country."
+  },
+  {
+   "kind": "inferred location",
+   "event": "Stay with Dela / Jepper - Sonderberg",
+   "detail": "2023-07-10 to 2023-07-14",
+   "why": "Read 'Sonderberg' as Sønderborg, Denmark. Say the word if that is wrong."
+  },
+  {
+   "kind": "dropped",
+   "event": "Leave for FLL",
+   "detail": "2023-08-07",
+   "why": "Reminder/marker, not a stay"
+  },
+  {
+   "kind": "dropped",
+   "event": "Parents back",
+   "detail": "2025-04-09",
+   "why": "Reminder/marker, not a stay"
+  },
+  {
+   "kind": "inferred location",
+   "event": "Antigua - WiFi Tribe Chapter",
+   "detail": "2025-04-25 to 2025-05-24",
+   "why": "Read as Antigua, Guatemala (not Antigua & Barbuda), since Lake Atitlán sits inside this stay."
+  },
+  {
+   "kind": "future",
+   "event": "Lisbon 2",
+   "detail": "2026-09-02 to 2026-09-04",
+   "why": "Hasn't happened yet, excluded"
+  },
+  {
+   "kind": "future",
+   "event": "Sri Lanka Chapter",
+   "detail": "2026-10-16 to 2026-11-14",
+   "why": "Hasn't happened yet, excluded"
+  },
+  {
+   "kind": "future",
+   "event": "Casa Shambala",
+   "detail": "2026-11-17 to 2026-12-05",
+   "why": "Hasn't happened yet, excluded"
+  },
+  {
+   "kind": "trimmed overlap",
+   "event": "Hanoi Street Hotel",
+   "detail": "end 2022-10-12 -> 2022-10-11",
+   "why": "Ran past the start of 'Ha long Bay'"
+  },
+  {
+   "kind": "trimmed overlap",
+   "event": "Seoul, South Korea",
+   "detail": "end 2022-10-31 -> 2022-10-30",
+   "why": "Ran past the start of 'Chiang Mai, Thailand'"
+  },
+  {
+   "kind": "trimmed overlap",
+   "event": "Chiang Mai, Thailand",
+   "detail": "end 2022-11-25 -> 2022-11-24",
+   "why": "Ran past the start of 'Pai, Thailand'"
+  },
+  {
+   "kind": "trimmed overlap",
+   "event": "Koh Tao - Sairee Cottage",
+   "detail": "end 2022-12-20 -> 2022-12-19",
+   "why": "Ran past the start of 'Koh Tao Sairee Upgrade'"
+  },
+  {
+   "kind": "trimmed overlap",
+   "event": "Koh Tao Sairee Upgrade",
+   "detail": "end 2022-12-23 -> 2022-12-22",
+   "why": "Ran past the start of 'Koh Tao Sairee Downgrade'"
+  },
+  {
+   "kind": "trimmed overlap",
+   "event": "Koh Tao Sairee Downgrade",
+   "detail": "end 2022-12-25 -> 2022-12-24",
+   "why": "Ran past the start of 'Koh Tao Sairee Hut'"
+  },
+  {
+   "kind": "trimmed overlap",
+   "event": "Ko Lanta",
+   "detail": "end 2023-01-19 -> 2023-01-18",
+   "why": "Ran past the start of 'Ko Lipe'"
+  },
+  {
+   "kind": "trimmed overlap",
+   "event": "Kuala Lumpur",
+   "detail": "end 2023-02-02 -> 2023-02-01",
+   "why": "Ran past the start of 'Bangkok'"
+  },
+  {
+   "kind": "trimmed overlap",
+   "event": "Bangkok",
+   "detail": "end 2023-02-03 -> 2023-02-02",
+   "why": "Ran past the start of 'Phnom Penh'"
+  },
+  {
+   "kind": "trimmed overlap",
+   "event": "Phnom Penh",
+   "detail": "end 2023-02-04 -> 2023-02-03",
+   "why": "Ran past the start of 'Siem Reap'"
+  },
+  {
+   "kind": "trimmed overlap",
+   "event": "Siem Reap",
+   "detail": "end 2023-02-06 -> 2023-02-05",
+   "why": "Ran past the start of 'Ho Chi Minh - TEFL'"
+  },
+  {
+   "kind": "trimmed overlap",
+   "event": "Ho Chi Minh - TEFL",
+   "detail": "end 2023-03-06 -> 2023-03-05",
+   "why": "Ran past the start of 'Ubud Bali'"
+  },
+  {
+   "kind": "trimmed overlap",
+   "event": "Bangkok 2",
+   "detail": "end 2023-04-06 -> 2023-04-05",
+   "why": "Ran past the start of 'Surat Thani'"
+  },
+  {
+   "kind": "trimmed overlap",
+   "event": "Koh Phangan",
+   "detail": "end 2023-04-18 -> 2023-04-17",
+   "why": "Ran past the start of 'Koh Tao'"
+  },
+  {
+   "kind": "trimmed overlap",
+   "event": "Hoi An",
+   "detail": "end 2023-05-05 -> 2023-05-04",
+   "why": "Ran past the start of 'Da Nang, Vietnam'"
+  },
+  {
+   "kind": "trimmed overlap",
+   "event": "Hanoi, Vietnam",
+   "detail": "end 2023-05-16 -> 2023-05-15",
+   "why": "Ran past the start of 'Heathrow'"
+  },
+  {
+   "kind": "trimmed overlap",
+   "event": "Heathrow",
+   "detail": "end 2023-05-18 -> 2023-05-17",
+   "why": "Ran past the start of 'Bergamo, Italy'"
+  },
+  {
+   "kind": "trimmed overlap",
+   "event": "Pontessieve, Italy Workaway",
+   "detail": "end 2023-06-11 -> 2023-06-10",
+   "why": "Ran past the start of 'Rome'"
+  },
+  {
+   "kind": "trimmed overlap",
+   "event": "Rome",
+   "detail": "end 2023-06-14 -> 2023-06-13",
+   "why": "Ran past the start of 'Barcelona'"
+  },
+  {
+   "kind": "trimmed overlap",
+   "event": "Barcelona",
+   "detail": "end 2023-06-18 -> 2023-06-17",
+   "why": "Ran past the start of 'San Sebastian'"
+  },
+  {
+   "kind": "trimmed overlap",
+   "event": "San Sebastian",
+   "detail": "end 2023-06-21 -> 2023-06-20",
+   "why": "Ran past the start of 'Ericeira'"
+  },
+  {
+   "kind": "trimmed overlap",
+   "event": "Ericeira",
+   "detail": "end 2023-06-24 -> 2023-06-23",
+   "why": "Ran past the start of 'Lisbon'"
+  },
+  {
+   "kind": "trimmed overlap",
+   "event": "Lisbon",
+   "detail": "end 2023-06-29 -> 2023-06-28",
+   "why": "Ran past the start of 'London'"
+  },
+  {
+   "kind": "trimmed overlap",
+   "event": "London",
+   "detail": "end 2023-07-01 -> 2023-06-30",
+   "why": "Ran past the start of 'Stay with Fem parents in Utrecht'"
+  },
+  {
+   "kind": "trimmed overlap",
+   "event": "Stay with Fem parents in Utrecht",
+   "detail": "end 2023-07-07 -> 2023-07-06",
+   "why": "Ran past the start of 'Amsterdam'"
+  },
+  {
+   "kind": "trimmed overlap",
+   "event": "Chicago",
+   "detail": "end 2023-11-06 -> 2023-11-05",
+   "why": "Ran past the start of 'Mexico'"
+  },
+  {
+   "kind": "trimmed overlap",
+   "event": "Crested Butte",
+   "detail": "end 2024-02-01 -> 2024-01-31",
+   "why": "Ran past the start of 'Stay at Townhome in North Salt Lake'"
+  },
+  {
+   "kind": "trimmed overlap",
+   "event": "CO",
+   "detail": "end 2024-06-08 -> 2024-06-07",
+   "why": "Ran past the start of 'SF 2'"
+  },
+  {
+   "kind": "trimmed overlap",
+   "event": "SF 2",
+   "detail": "end 2024-06-11 -> 2024-06-10",
+   "why": "Ran past the start of 'Arkansas'"
+  },
+  {
+   "kind": "trimmed overlap",
+   "event": "Miami",
+   "detail": "end 2024-07-04 -> 2024-07-03",
+   "why": "Ran past the start of 'Mexico City'"
+  },
+  {
+   "kind": "trimmed overlap",
+   "event": "Mexico City",
+   "detail": "end 2024-07-22 -> 2024-07-21",
+   "why": "Ran past the start of 'Omaha (slept on road)'"
+  },
+  {
+   "kind": "trimmed overlap",
+   "event": "Hoboken",
+   "detail": "end 2024-09-20 -> 2024-09-19",
+   "why": "Ran past the start of 'Ross Bach - Vegas'"
+  },
+  {
+   "kind": "trimmed overlap",
+   "event": "Rio de Janerio NYE",
+   "detail": "end 2025-01-06 -> 2025-01-05",
+   "why": "Ran past the start of 'Pipa Brazil - noma chapter'"
+  },
+  {
+   "kind": "trimmed overlap",
+   "event": "Hoboken 2",
+   "detail": "end 2025-04-11 -> 2025-04-10",
+   "why": "Ran past the start of 'Phoenix'"
+  },
+  {
+   "kind": "trimmed overlap",
+   "event": "CO Springs - John Retirement",
+   "detail": "end 2025-07-21 -> 2025-07-19",
+   "why": "Ran past the start of 'Costa Rica 3'"
+  },
+  {
+   "kind": "trimmed overlap",
+   "event": "Denver 2",
+   "detail": "end 2025-09-02 -> 2025-09-01",
+   "why": "Ran past the start of 'San Jose'"
+  },
+  {
+   "kind": "trimmed overlap",
+   "event": "San Jose",
+   "detail": "end 2025-09-04 -> 2025-09-03",
+   "why": "Ran past the start of 'SF 3'"
+  },
+  {
+   "kind": "trimmed overlap",
+   "event": "Cartagena",
+   "detail": "end 2025-10-07 -> 2025-10-06",
+   "why": "Ran past the start of 'San Miguel'"
+  },
+  {
+   "kind": "trimmed overlap",
+   "event": "Mexico City 2",
+   "detail": "end 2025-10-18 -> 2025-10-17",
+   "why": "Ran past the start of 'Tarifa - WiFi Tribe chapter'"
+  },
+  {
+   "kind": "trimmed overlap",
+   "event": "Tarifa - WiFi Tribe chapter",
+   "detail": "end 2025-11-15 -> 2025-11-14",
+   "why": "Ran past the start of 'Seville'"
+  },
+  {
+   "kind": "trimmed overlap",
+   "event": "Buenos Aires",
+   "detail": "end 2026-04-06 -> 2026-04-05",
+   "why": "Ran past the start of 'Iguazu'"
+  },
+  {
+   "kind": "trimmed overlap",
+   "event": "Iguazu",
+   "detail": "end 2026-04-08 -> 2026-04-07",
+   "why": "Ran past the start of 'Cusco'"
+  },
+  {
+   "kind": "trimmed overlap",
+   "event": "Cusco",
+   "detail": "end 2026-04-24 -> 2026-04-23",
+   "why": "Ran past the start of 'Huacachina'"
+  },
+  {
+   "kind": "trimmed overlap",
+   "event": "Huacachina",
+   "detail": "end 2026-04-28 -> 2026-04-27",
+   "why": "Ran past the start of 'Paracas'"
+  },
+  {
+   "kind": "trimmed overlap",
+   "event": "Paracas",
+   "detail": "end 2026-04-29 -> 2026-04-28",
+   "why": "Ran past the start of 'Lima'"
+  },
+  {
+   "kind": "trimmed overlap",
+   "event": "Madrid",
+   "detail": "end 2026-07-23 -> 2026-07-22",
+   "why": "Ran past the start of 'Valencia'"
+  },
+  {
+   "kind": "trimmed overlap",
+   "event": "Valencia",
+   "detail": "end 2026-08-01 -> 2026-07-31",
+   "why": "Ran past the start of 'Pride in Amsterdam'"
+  },
+  {
+   "kind": "trimmed overlap",
+   "event": "Valencia 2",
+   "detail": "end 2026-08-27 -> 2026-08-26",
+   "why": "Ran past the start of 'Granada'"
+  },
+  {
+   "kind": "merged booking",
+   "event": "Hanoi Street Hotel",
+   "detail": "2022-10-09 to 2022-10-11",
+   "why": "Same stay as 'Hanoi' (room change or booking detail), not a separate trip."
+  },
+  {
+   "kind": "side trip",
+   "event": "Ha long Bay",
+   "detail": "2022-10-11 to 2022-10-14",
+   "why": "Sits inside 'Hanoi'. Its 3 nights subtracted from that stay."
+  },
+  {
+   "kind": "side trip",
+   "event": "Ninh Binh Vientam",
+   "detail": "2022-10-17 to 2022-10-21",
+   "why": "Sits inside 'Hanoi'. Its 4 nights subtracted from that stay."
+  },
+  {
+   "kind": "side trip",
+   "event": "Wonderland Koh Pangan",
+   "detail": "2023-04-12 to 2023-04-16",
+   "why": "Sits inside 'Koh Phangan'. Its 4 nights subtracted from that stay."
+  },
+  {
+   "kind": "merged booking",
+   "event": "Stay at Morgans",
+   "detail": "2023-04-30 to 2023-05-01",
+   "why": "Same stay as 'Bangkok 3' (room change or booking detail), not a separate trip."
+  },
+  {
+   "kind": "side trip",
+   "event": "Iowa",
+   "detail": "2023-08-24 to 2023-08-28",
+   "why": "Sits inside 'Fort Lauderdale'. Its 4 nights subtracted from that stay."
+  },
+  {
+   "kind": "side trip",
+   "event": "Lake Atitlan",
+   "detail": "2025-05-01 to 2025-05-05",
+   "why": "Sits inside 'Antigua - WiFi Tribe Chapter'. Its 4 nights subtracted from that stay."
+  },
+  {
+   "kind": "side trip",
+   "event": "Morocco",
+   "detail": "2025-11-01 to 2025-11-03",
+   "why": "Sits inside 'Tarifa - WiFi Tribe chapter'. Its 2 nights subtracted from that stay."
+  },
+  {
+   "kind": "side trip",
+   "event": "NY for work",
+   "detail": "2025-12-09 to 2025-12-10",
+   "why": "Sits inside 'Hoboken 4'. Its 1 nights subtracted from that stay."
+  },
+  {
+   "kind": "side trip",
+   "event": "Machu Picchu",
+   "detail": "2026-04-20 to 2026-04-23",
+   "why": "Sits inside 'Cusco'. Its 3 nights subtracted from that stay."
+  },
+  {
+   "kind": "side trip",
+   "event": "Barcelona 2",
+   "detail": "2026-08-21 to 2026-08-24",
+   "why": "Sits inside 'Valencia 2'. Its 3 nights subtracted from that stay."
+  },
+  {
+   "kind": "merged run",
+   "event": "Koh Tao Sairee Upgrade",
+   "detail": "2022-12-19 to 2022-12-22",
+   "why": "Continues 'Koh Tao - Sairee Cottage' at the same place. Counted as one stay."
+  },
+  {
+   "kind": "merged run",
+   "event": "Koh Tao Sairee Downgrade",
+   "detail": "2022-12-22 to 2022-12-24",
+   "why": "Continues 'Koh Tao - Sairee Cottage' at the same place. Counted as one stay."
+  },
+  {
+   "kind": "merged run",
+   "event": "Koh Tao Sairee Hut",
+   "detail": "2022-12-24 to 2022-12-29",
+   "why": "Continues 'Koh Tao - Sairee Cottage' at the same place. Counted as one stay."
+  },
+  {
+   "kind": "merged run",
+   "event": "Arizona",
+   "detail": "2023-11-28 to 2024-01-27",
+   "why": "Continues 'Thanksgiving in AZ' at the same place. Counted as one stay."
+  }
+ ]
+}

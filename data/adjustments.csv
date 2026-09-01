@@ -1,0 +1,74 @@
+action,event,change,reason
+dropped,Babe Leaves for India,2023-02-01,"Reminder/marker, not a stay"
+dropped,Parents Arrive!,2023-03-01,"Reminder/marker, not a stay"
+unknown location,Stay at Morgans,2023-04-30 to 2023-05-01,"No location on the event. Counted as time away, not attributed to a country."
+inferred location,Stay with Dela / Jepper - Sonderberg,2023-07-10 to 2023-07-14,"Read 'Sonderberg' as Sønderborg, Denmark. Say the word if that is wrong."
+dropped,Leave for FLL,2023-08-07,"Reminder/marker, not a stay"
+dropped,Parents back,2025-04-09,"Reminder/marker, not a stay"
+inferred location,Antigua - WiFi Tribe Chapter,2025-04-25 to 2025-05-24,"Read as Antigua, Guatemala (not Antigua & Barbuda), since Lake Atitlán sits inside this stay."
+future,Lisbon 2,2026-09-02 to 2026-09-04,"Hasn't happened yet, excluded"
+future,Sri Lanka Chapter,2026-10-16 to 2026-11-14,"Hasn't happened yet, excluded"
+future,Casa Shambala,2026-11-17 to 2026-12-05,"Hasn't happened yet, excluded"
+trimmed overlap,Hanoi Street Hotel,end 2022-10-12 -> 2022-10-11,Ran past the start of 'Ha long Bay'
+trimmed overlap,"Seoul, South Korea",end 2022-10-31 -> 2022-10-30,"Ran past the start of 'Chiang Mai, Thailand'"
+trimmed overlap,"Chiang Mai, Thailand",end 2022-11-25 -> 2022-11-24,"Ran past the start of 'Pai, Thailand'"
+trimmed overlap,Koh Tao - Sairee Cottage,end 2022-12-20 -> 2022-12-19,Ran past the start of 'Koh Tao Sairee Upgrade'
+trimmed overlap,Koh Tao Sairee Upgrade,end 2022-12-23 -> 2022-12-22,Ran past the start of 'Koh Tao Sairee Downgrade'
+trimmed overlap,Koh Tao Sairee Downgrade,end 2022-12-25 -> 2022-12-24,Ran past the start of 'Koh Tao Sairee Hut'
+trimmed overlap,Ko Lanta,end 2023-01-19 -> 2023-01-18,Ran past the start of 'Ko Lipe'
+trimmed overlap,Kuala Lumpur,end 2023-02-02 -> 2023-02-01,Ran past the start of 'Bangkok'
+trimmed overlap,Bangkok,end 2023-02-03 -> 2023-02-02,Ran past the start of 'Phnom Penh'
+trimmed overlap,Phnom Penh,end 2023-02-04 -> 2023-02-03,Ran past the start of 'Siem Reap'
+trimmed overlap,Siem Reap,end 2023-02-06 -> 2023-02-05,Ran past the start of 'Ho Chi Minh - TEFL'
+trimmed overlap,Ho Chi Minh - TEFL,end 2023-03-06 -> 2023-03-05,Ran past the start of 'Ubud Bali'
+trimmed overlap,Bangkok 2,end 2023-04-06 -> 2023-04-05,Ran past the start of 'Surat Thani'
+trimmed overlap,Koh Phangan,end 2023-04-18 -> 2023-04-17,Ran past the start of 'Koh Tao'
+trimmed overlap,Hoi An,end 2023-05-05 -> 2023-05-04,"Ran past the start of 'Da Nang, Vietnam'"
+trimmed overlap,"Hanoi, Vietnam",end 2023-05-16 -> 2023-05-15,Ran past the start of 'Heathrow'
+trimmed overlap,Heathrow,end 2023-05-18 -> 2023-05-17,"Ran past the start of 'Bergamo, Italy'"
+trimmed overlap,"Pontessieve, Italy Workaway",end 2023-06-11 -> 2023-06-10,Ran past the start of 'Rome'
+trimmed overlap,Rome,end 2023-06-14 -> 2023-06-13,Ran past the start of 'Barcelona'
+trimmed overlap,Barcelona,end 2023-06-18 -> 2023-06-17,Ran past the start of 'San Sebastian'
+trimmed overlap,San Sebastian,end 2023-06-21 -> 2023-06-20,Ran past the start of 'Ericeira'
+trimmed overlap,Ericeira,end 2023-06-24 -> 2023-06-23,Ran past the start of 'Lisbon'
+trimmed overlap,Lisbon,end 2023-06-29 -> 2023-06-28,Ran past the start of 'London'
+trimmed overlap,London,end 2023-07-01 -> 2023-06-30,Ran past the start of 'Stay with Fem parents in Utrecht'
+trimmed overlap,Stay with Fem parents in Utrecht,end 2023-07-07 -> 2023-07-06,Ran past the start of 'Amsterdam'
+trimmed overlap,Chicago,end 2023-11-06 -> 2023-11-05,Ran past the start of 'Mexico'
+trimmed overlap,Crested Butte,end 2024-02-01 -> 2024-01-31,Ran past the start of 'Stay at Townhome in North Salt Lake'
+trimmed overlap,CO,end 2024-06-08 -> 2024-06-07,Ran past the start of 'SF 2'
+trimmed overlap,SF 2,end 2024-06-11 -> 2024-06-10,Ran past the start of 'Arkansas'
+trimmed overlap,Miami,end 2024-07-04 -> 2024-07-03,Ran past the start of 'Mexico City'
+trimmed overlap,Mexico City,end 2024-07-22 -> 2024-07-21,Ran past the start of 'Omaha (slept on road)'
+trimmed overlap,Hoboken,end 2024-09-20 -> 2024-09-19,Ran past the start of 'Ross Bach - Vegas'
+trimmed overlap,Rio de Janerio NYE,end 2025-01-06 -> 2025-01-05,Ran past the start of 'Pipa Brazil - noma chapter'
+trimmed overlap,Hoboken 2,end 2025-04-11 -> 2025-04-10,Ran past the start of 'Phoenix'
+trimmed overlap,CO Springs - John Retirement,end 2025-07-21 -> 2025-07-19,Ran past the start of 'Costa Rica 3'
+trimmed overlap,Denver 2,end 2025-09-02 -> 2025-09-01,Ran past the start of 'San Jose'
+trimmed overlap,San Jose,end 2025-09-04 -> 2025-09-03,Ran past the start of 'SF 3'
+trimmed overlap,Cartagena,end 2025-10-07 -> 2025-10-06,Ran past the start of 'San Miguel'
+trimmed overlap,Mexico City 2,end 2025-10-18 -> 2025-10-17,Ran past the start of 'Tarifa - WiFi Tribe chapter'
+trimmed overlap,Tarifa - WiFi Tribe chapter,end 2025-11-15 -> 2025-11-14,Ran past the start of 'Seville'
+trimmed overlap,Buenos Aires,end 2026-04-06 -> 2026-04-05,Ran past the start of 'Iguazu'
+trimmed overlap,Iguazu,end 2026-04-08 -> 2026-04-07,Ran past the start of 'Cusco'
+trimmed overlap,Cusco,end 2026-04-24 -> 2026-04-23,Ran past the start of 'Huacachina'
+trimmed overlap,Huacachina,end 2026-04-28 -> 2026-04-27,Ran past the start of 'Paracas'
+trimmed overlap,Paracas,end 2026-04-29 -> 2026-04-28,Ran past the start of 'Lima'
+trimmed overlap,Madrid,end 2026-07-23 -> 2026-07-22,Ran past the start of 'Valencia'
+trimmed overlap,Valencia,end 2026-08-01 -> 2026-07-31,Ran past the start of 'Pride in Amsterdam'
+trimmed overlap,Valencia 2,end 2026-08-27 -> 2026-08-26,Ran past the start of 'Granada'
+merged booking,Hanoi Street Hotel,2022-10-09 to 2022-10-11,"Same stay as 'Hanoi' (room change or booking detail), not a separate trip."
+side trip,Ha long Bay,2022-10-11 to 2022-10-14,Sits inside 'Hanoi'. Its 3 nights subtracted from that stay.
+side trip,Ninh Binh Vientam,2022-10-17 to 2022-10-21,Sits inside 'Hanoi'. Its 4 nights subtracted from that stay.
+side trip,Wonderland Koh Pangan,2023-04-12 to 2023-04-16,Sits inside 'Koh Phangan'. Its 4 nights subtracted from that stay.
+merged booking,Stay at Morgans,2023-04-30 to 2023-05-01,"Same stay as 'Bangkok 3' (room change or booking detail), not a separate trip."
+side trip,Iowa,2023-08-24 to 2023-08-28,Sits inside 'Fort Lauderdale'. Its 4 nights subtracted from that stay.
+side trip,Lake Atitlan,2025-05-01 to 2025-05-05,Sits inside 'Antigua - WiFi Tribe Chapter'. Its 4 nights subtracted from that stay.
+side trip,Morocco,2025-11-01 to 2025-11-03,Sits inside 'Tarifa - WiFi Tribe chapter'. Its 2 nights subtracted from that stay.
+side trip,NY for work,2025-12-09 to 2025-12-10,Sits inside 'Hoboken 4'. Its 1 nights subtracted from that stay.
+side trip,Machu Picchu,2026-04-20 to 2026-04-23,Sits inside 'Cusco'. Its 3 nights subtracted from that stay.
+side trip,Barcelona 2,2026-08-21 to 2026-08-24,Sits inside 'Valencia 2'. Its 3 nights subtracted from that stay.
+merged run,Koh Tao Sairee Upgrade,2022-12-19 to 2022-12-22,Continues 'Koh Tao - Sairee Cottage' at the same place. Counted as one stay.
+merged run,Koh Tao Sairee Downgrade,2022-12-22 to 2022-12-24,Continues 'Koh Tao - Sairee Cottage' at the same place. Counted as one stay.
+merged run,Koh Tao Sairee Hut,2022-12-24 to 2022-12-29,Continues 'Koh Tao - Sairee Cottage' at the same place. Counted as one stay.
+merged run,Arizona,2023-11-28 to 2024-01-27,Continues 'Thanksgiving in AZ' at the same place. Counted as one stay.
