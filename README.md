@@ -2,7 +2,7 @@
 
 Four years of one Google Calendar, cleaned up and counted. Oct 1 2022 to Sep 1 2026.
 
-**Live site:** https://nickernst02.github.io/travel-book/
+**Live site:** https://mylifeindata.github.io/travel-book/
 
 898 nights away, 533 at home in Wheaton, out of 1,431 days. 23 countries, 90 places
 away from home, 120 separate stays.
