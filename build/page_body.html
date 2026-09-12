@@ -1,0 +1,170 @@
+<div class="wrap">
+
+<header class="masthead">
+  <div class="mast-top">
+    <span class="eyebrow">Google Calendar · Oct 2022 to Sep 2026</span>
+    <span class="eyebrow" id="src"></span>
+  </div>
+  <h1>Where in the world<br>is <span class="em">Nick</span></h1>
+  <p class="tagline">Four years of one travel calendar, cleaned up and counted. Every night is either somewhere or home in Wheaton, and nothing is counted twice.</p>
+</header>
+
+<nav class="tabbar" role="tablist" aria-label="Sections">
+  <button class="tab" role="tab" id="t-overview"  aria-controls="p-overview"  aria-selected="true">Overview</button>
+  <button class="tab" role="tab" id="t-map"       aria-controls="p-map"       aria-selected="false">The map</button>
+  <button class="tab" role="tab" id="t-rhythm"    aria-controls="p-rhythm"    aria-selected="false">Rhythm</button>
+  <button class="tab" role="tab" id="t-flow"      aria-controls="p-flow"      aria-selected="false">Flow</button>
+  <button class="tab" role="tab" id="t-countries" aria-controls="p-countries" aria-selected="false">Countries</button>
+  <button class="tab" role="tab" id="t-log"       aria-controls="p-log"       aria-selected="false">The log</button>
+  <button class="tab" role="tab" id="t-method"    aria-controls="p-method"    aria-selected="false">Method</button>
+</nav>
+
+<div class="panelwrap">
+
+<!-- ============ OVERVIEW ============ -->
+<section id="p-overview" role="tabpanel" aria-labelledby="t-overview">
+  <div class="sec">
+    <div class="sec-head"><span class="eyebrow">The shape of it</span><span class="rule"></span></div>
+    <h2 id="ov-h"></h2>
+    <p class="lede" id="ov-sub"></p>
+    <div class="tiles" id="tiles"></div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-head"><span class="eyebrow">Pace by year</span><span class="rule"></span></div>
+    <h2>2023 was the outlier, not the baseline</h2>
+    <p class="lede">The backpacking year ran at 92% away. Since then it settles near half the year on the road, which is a different life wearing the same label.</p>
+    <div class="tiles" id="year-tiles"></div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-head"><span class="eyebrow">Longest stays</span><span class="rule"></span></div>
+    <h2>Where you actually stopped moving</h2>
+    <p class="lede">Home is excluded here. The top two are winter bases rather than trips, which is worth knowing before reading them as travel.</p>
+    <div class="panel"><div class="bars" id="longest-bars"></div></div>
+  </div>
+</section>
+
+<!-- ============ MAP ============ -->
+<section id="p-map" role="tabpanel" aria-labelledby="t-map" hidden>
+  <div class="sec">
+    <div class="sec-head"><span class="eyebrow">Every move</span><span class="rule"></span></div>
+    <h2>Drag the slider to any date</h2>
+    <p class="lede">Each arc is a hop from one stay to the next, drawn in order. Circles are places, sized by nights spent there. Drag the slider or press play to watch the route build, and the readout tells you exactly where you were that night.</p>
+    <div class="panel">
+      <div class="legend" id="legend-map"></div>
+      <div class="mapwrap" id="mapwrap"></div>
+      <div class="map-ctl">
+        <button class="playbtn" id="play" aria-label="Play the route">▶</button>
+        <input type="range" id="slider" min="0" max="100" value="100" aria-label="Date">
+        <div class="readout" id="readout"></div>
+      </div>
+      <p class="note" id="map-note"></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RHYTHM ============ -->
+<section id="p-rhythm" role="tabpanel" aria-labelledby="t-rhythm" hidden>
+  <div class="sec">
+    <div class="sec-head"><span class="eyebrow">Day by day</span><span class="rule"></span></div>
+    <h2>Every night, Oct 2022 to now</h2>
+    <p class="lede">One column per day, colored by where you slept. Every day is accounted for, so the blue is home rather than missing data. Late 2022 and 2023 run almost solid; from 2024 home starts taking real bites.</p>
+    <div class="panel">
+      <div class="legend" id="legend-1"></div>
+      <div class="scroller"><div id="ribbon" style="min-width:640px"></div></div>
+      <div class="months" id="months" style="min-width:640px"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FLOW ============ -->
+<section id="p-flow" role="tabpanel" aria-labelledby="t-flow" hidden>
+  <div class="sec">
+    <div class="sec-head"><span class="eyebrow">Year to region to place</span><span class="rule"></span></div>
+    <h2>Where each year went</h2>
+    <p class="lede">Ribbon width is nights. The US is split out as its own region and broken down place by place; Mexico sits with Central America. Home is drawn compressed so it doesn't flatten everything else, and its real number is on the label.</p>
+    <div class="panel">
+      <div class="legend" id="legend-2"></div>
+      <div class="scroller"><div id="sankey" style="min-width:860px"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COUNTRIES ============ -->
+<section id="p-countries" role="tabpanel" aria-labelledby="t-countries" hidden>
+  <div class="sec">
+    <div class="sec-head"><span class="eyebrow">Ranking</span><span class="rule"></span></div>
+    <h2>Where the nights away went</h2>
+    <p class="lede" id="rank-sub"></p>
+    <div class="panel"><div class="bars" id="country-bars"></div></div>
+  </div>
+  <div class="sec">
+    <div class="sec-head"><span class="eyebrow">By region</span><span class="rule"></span></div>
+    <div class="panel"><div class="bars" id="bucket-bars"></div></div>
+  </div>
+</section>
+
+<!-- ============ LOG ============ -->
+<section id="p-log" role="tabpanel" aria-labelledby="t-log" hidden>
+  <div class="sec">
+    <div class="sec-head"><span class="eyebrow">The record</span><span class="rule"></span></div>
+    <h2 id="log-h"></h2>
+    <p class="lede">Every stay behind every chart, home stretches included. Home rows are greyed; they come from days with nothing on the calendar.</p>
+    <div class="panel">
+      <div class="scroller"><table id="log"><thead><tr>
+        <th>Dates</th><th>Place</th><th>Country</th><th style="text-align:right">Nights</th>
+      </tr></thead><tbody></tbody></table></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ METHOD ============ -->
+<section id="p-method" role="tabpanel" aria-labelledby="t-method" hidden>
+  <div class="sec">
+    <div class="sec-head"><span class="eyebrow">How this was built</span><span class="rule"></span></div>
+    <h2>What got cleaned, and what to distrust</h2>
+    <p class="lede">A calendar is a log of intentions, not a passport. These are the judgment calls made turning it into numbers, so you can overrule any of them.</p>
+
+    <details open>
+      <summary>Rules applied to every event</summary>
+      <div class="details-body" style="color:var(--ink-2); font-size:.88rem; max-width:70ch">
+        <p><strong style="color:var(--ink)">Home is the default.</strong> Chicago and Wheaton events are Home, and so is every day with nothing on the calendar. That means all 1,431 days are accounted for and "away" is a real complement rather than "logged".</p>
+        <p><strong style="color:var(--ink)">Nights, not days.</strong> A stay counts as end date minus start date, so a Friday to Sunday trip is 2 nights.</p>
+        <p><strong style="color:var(--ink)">Overlaps get trimmed, not merged.</strong> Where one stay ran past the start of the next, the earlier one was cut back to the day the next began. That happens 48 times, mostly on the fast runs through Thailand, Bali and Peru.</p>
+        <p><strong style="color:var(--ink)">Room changes are not new trips.</strong> The four Koh Tao events of Dec 2022 (cottage, upgrade, downgrade, hut) are one continuous fortnight on one island. Same for the hotel booking inside the Hanoi stay and "Thanksgiving in AZ" running into "Arizona".</p>
+        <p><strong style="color:var(--ink)">Side trips are nested, not double counted.</strong> Nine stays sit entirely inside a longer one, like Ha Long Bay inside Hanoi, Lake Atitlán inside Antigua, Morocco inside Tarifa. Each is listed separately and its nights are subtracted from the surrounding stay.</p>
+        <p><strong style="color:var(--ink)">Calendar dates win.</strong> The Salt Lake stay runs Jan 31 to Mar 10 2024 as entered, 39 nights. The Airbnb blurb pasted into that event says a shorter window; it's ignored.</p>
+        <p><strong style="color:var(--ink)">Arizona is travel, not home.</strong> The 67-night Nov 2023 to Jan 2024 stretch and the 39-night Salt Lake one are winter bases, so they sit at the top of the longest-stays list without being anything like a trip.</p>
+        <p><strong style="color:var(--ink)">Reminders were dropped.</strong> Four events were notes to self rather than stays, things like "Parents Arrive!" and "Leave for FLL".</p>
+        <p><strong style="color:var(--ink)">Two locations were inferred.</strong> "Sonderberg" read as Sønderborg in Denmark, and "Antigua" as Antigua in Guatemala rather than Antigua and Barbuda, since Lake Atitlán sits inside that stay. Both worth a second look.</p>
+        <p><strong style="color:var(--ink)">Places kept their calendar names.</strong> "Phoenix" and "Arizona" stay separate because you logged them separately, as do "Decatur, IL" and "Decatur / Hillsboro, IL". Say the word and they merge.</p>
+        <p><strong style="color:var(--ink)">Upcoming trips excluded.</strong> Lisbon in September, Sri Lanka in October and Casa Shambala in November are on the calendar but haven't happened.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Adjustments: <span class="mono" id="chg-count"></span> edits made to the raw calendar</summary>
+      <div class="details-body">
+        <div class="scroller"><table id="changes"><thead><tr><th>Action</th><th>Event</th><th>Change</th><th>Reason</th></tr></thead><tbody></tbody></table></div>
+      </div>
+    </details>
+
+    <details>
+      <summary>The one number to distrust</summary>
+      <div class="details-body" style="color:var(--ink-2); font-size:.88rem; max-width:70ch">
+        <p>Home nights are inferred, not recorded. Any day you travelled without logging it counts here as a night in Wheaton, so <strong style="color:var(--ink)">898 nights away is a floor, not a ceiling</strong>. The effect is small in 2022 and 2023, where the calendar is nearly continuous, and largest in 2024 and 2025, where the longest unlogged stretch runs 53 days.</p>
+      </div>
+    </details>
+  </div>
+</section>
+
+</div>
+
+<div class="foot">
+  <span>Source: Google Calendar, "Travel". Window Oct 1 2022 to Sep 1 2026.</span>
+  <span class="mono" id="foot-n"></span>
+</div>
+
+</div>
+<div id="tip" role="status" aria-live="polite"></div>

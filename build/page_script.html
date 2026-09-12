@@ -1,0 +1,377 @@
+<script src="./data.js"></script>
+<script>
+(function(){
+const M = DATA.meta;
+const KC = ['var(--k0)','var(--k1)','var(--k2)','var(--k3)','var(--k4)','var(--k5)','var(--k6)'];
+const kc = i => (i>=0 && i<KC.length) ? KC[i] : 'var(--bx)';
+const NS='http://www.w3.org/2000/svg';
+const S=(n,a)=>{const e=document.createElementNS(NS,n); for(const k in a) e.setAttribute(k,a[k]); return e;};
+const el=(n,c,t)=>{const e=document.createElement(n); if(c)e.className=c; if(t!=null)e.textContent=t; return e;};
+const MON=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const fmtD=s=>{const[y,m,d]=s.split('-'); return MON[+m-1]+' '+(+d)+' '+y;};
+const nn=n=>n.toLocaleString('en-US');
+const WSTART=M.window_start, WEND=M.window_end;
+const dayISO=i=>{const d=new Date(WSTART+'T00:00:00Z'); d.setUTCDate(d.getUTCDate()+i); return d.toISOString().slice(0,10);};
+
+/* ---------------- tabs ---------------- */
+const tabs=[...document.querySelectorAll('.tab')];
+function show(id){
+  tabs.forEach(t=>{
+    const on = t.id===id;
+    t.setAttribute('aria-selected', on?'true':'false');
+    document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+  });
+  if(location.hash.slice(1)!==id.slice(2)) history.replaceState(null,'','#'+id.slice(2));
+}
+tabs.forEach(t=>{
+  t.addEventListener('click', ()=>show(t.id));
+  t.addEventListener('keydown', e=>{
+    const i=tabs.indexOf(t);
+    if(e.key==='ArrowRight'||e.key==='ArrowLeft'){
+      e.preventDefault();
+      const nx=tabs[(i+(e.key==='ArrowRight'?1:tabs.length-1))%tabs.length];
+      nx.focus(); show(nx.id);
+    }
+  });
+});
+const fromHash = tabs.find(t=>t.id==='t-'+location.hash.slice(1));
+show(fromHash ? fromHash.id : 't-overview');
+
+/* ---------------- tooltip ---------------- */
+const tip=document.getElementById('tip'); let tipOn=false;
+function showTip(e,html){ tip.innerHTML=html; tip.style.opacity='1'; tipOn=true; moveTip(e); }
+function moveTip(e){
+  if(!tipOn) return;
+  const r=tip.getBoundingClientRect();
+  let x=e.clientX+14, y=e.clientY+16;
+  if(x+r.width>innerWidth-10) x=e.clientX-r.width-14;
+  if(y+r.height>innerHeight-10) y=e.clientY-r.height-14;
+  tip.style.left=Math.max(8,x)+'px'; tip.style.top=Math.max(8,y)+'px';
+}
+function hideTip(){ tip.style.opacity='0'; tipOn=false; }
+addEventListener('mousemove',moveTip,{passive:true});
+addEventListener('scroll',hideTip,{passive:true});
+const tipHead=(c,l)=>'<div class="t-h"><span class="sw" style="background:'+c+'"></span>'+l+'</div>';
+
+/* ---------------- header + tiles ---------------- */
+document.getElementById('src').textContent = M.n_countries+' countries · '+M.n_places+' places';
+document.getElementById('foot-n').textContent = nn(M.total_nights)+' nights away · '+nn(M.home_nights)+' home · '+M.n_countries+' countries';
+document.getElementById('log-h').textContent = 'All '+DATA.trips.length+' stays';
+document.getElementById('ov-h').textContent = 'Away '+M.pct+'% of the last four years';
+document.getElementById('ov-sub').textContent =
+  nn(M.total_nights)+' nights somewhere else and '+nn(M.home_nights)+' at home in Wheaton, out of '+
+  nn(M.window_days)+' days. Every day is assigned, so a night that is not away is a night at home.';
+
+const tiles=document.getElementById('tiles');
+[[nn(M.total_nights),'nights away','out of '+nn(M.window_days)+' days'],
+ [M.pct+'%','of all days away','the other '+nn(M.home_nights)+' were home'],
+ [M.n_countries,'countries visited','across '+M.n_buckets+' regions'],
+ [M.n_places,'places away from home','cities, islands, states and regions'],
+ [M.n_trips,'separate stays','median '+M.median_trip+' nights, longest '+M.max_trip],
+ [nn(M.intl_nights),'nights outside the US','against '+M.us_nights+' away inside it']
+].forEach(([v,l,n])=>{
+  const t=el('div','tile'); t.append(el('span','v',v),el('span','l',l),el('span','n',n)); tiles.append(t);
+});
+
+const yt=document.getElementById('year-tiles');
+DATA.years.forEach(y=>{
+  const t=el('div','tile');
+  t.append(el('span','v',y.pct+'%'), el('span','l',y.year+' away'),
+    el('span','n', y.nights+' away · '+y.home+' home · '+y.trips+' stays'+(y.partial?' · partial year':'')));
+  yt.append(t);
+});
+
+/* ---------------- legends ---------------- */
+const ORDER = DATA.display_order || DATA.bucket_names;
+function legend(node, counts, only){
+  ORDER.forEach(nm=>{
+    const i = DATA.bucket_names.indexOf(nm);
+    if(!DATA.nights_by_bucket[nm]) return;
+    if(only && !only.includes(nm)) return;
+    const g=el('span','lg');
+    g.append(el('span','sw k'+i), document.createTextNode(nm));
+    if(counts) g.append(el('span','num','· '+nn(DATA.nights_by_bucket[nm])+'n'));
+    node.append(g);
+  });
+}
+legend(document.getElementById('legend-1'), true);
+legend(document.getElementById('legend-2'), false);
+legend(document.getElementById('legend-map'), false);
+
+/* ---------------- day map ---------------- */
+const dayMap=new Map();
+for(const t of DATA.trips.slice().sort((a,b)=>(a.side?1:0)-(b.side?1:0))){
+  let d=new Date(t.s+'T00:00:00Z'), end=new Date(t.e+'T00:00:00Z');
+  while(d<end){ dayMap.set(d.toISOString().slice(0,10),t); d.setUTCDate(d.getUTCDate()+1); }
+}
+
+/* ---------------- ribbon ---------------- */
+const ribbon=document.getElementById('ribbon');
+DATA.years.forEach(yr=>{
+  const row=el('div','ribbon-row');
+  const lab=el('div','yr'); lab.textContent=yr.year;
+  const sm=el('small'); sm.textContent=yr.nights+'n away · '+yr.pct+'%'; lab.append(sm);
+  const track=el('div');
+  track.style.cssText='height:34px;background:var(--track);border-radius:5px;overflow:hidden;cursor:crosshair';
+  const svg=S('svg',{viewBox:'0 0 366 10',preserveAspectRatio:'none',width:'100%',height:'34'});
+  const days=(yr.year%4===0)?366:365;
+  for(let i=0;i<days;i++){
+    const d=new Date(Date.UTC(yr.year,0,1+i)).toISOString().slice(0,10);
+    if(d<WSTART||d>=WEND){ svg.append(S('rect',{x:i,y:0,width:1.02,height:10,fill:'var(--rule-soft)'})); continue; }
+    const t=dayMap.get(d);
+    if(t) svg.append(S('rect',{x:i,y:0,width:1.02,height:10,fill:kc(t.b)}));
+  }
+  track.append(svg);
+  track.addEventListener('mousemove',ev=>{
+    const r=track.getBoundingClientRect();
+    const i=Math.floor((ev.clientX-r.left)/r.width*366);
+    if(i<0||i>=days){ hideTip(); return; }
+    const d=new Date(Date.UTC(yr.year,0,1+i)).toISOString().slice(0,10);
+    if(d<WSTART) showTip(ev,tipHead('var(--rule)','Before this window')+'<div class="t-s">'+fmtD(d)+'</div>');
+    else if(d>=WEND) showTip(ev,tipHead('var(--rule)','Not yet')+'<div class="t-s">'+fmtD(d)+'</div>');
+    else { const t=dayMap.get(d);
+      showTip(ev,tipHead(kc(t.b), t.home?'Home':t.place)+'<div class="t-s">'+t.country+' · '+fmtD(d)+'</div>'); }
+  });
+  track.addEventListener('mouseleave',hideTip);
+  row.append(lab,track); ribbon.append(row);
+});
+const months=document.getElementById('months');
+months.style.cssText='position:relative;height:16px;margin-left:66px;margin-top:4px;min-width:640px';
+MON.forEach((m,i)=>{
+  const cum=[0,31,59,90,120,151,181,212,243,273,304,334][i];
+  const s=el('span',null,m);
+  s.style.cssText='position:absolute;left:'+(cum/366*100)+'%;font-family:"JetBrains Mono",monospace;font-size:.62rem;color:var(--muted);letter-spacing:.04em';
+  months.append(s);
+});
+
+/* ---------------- sankey ---------------- */
+(function(){
+  const {nodes,links}=DATA.sankey;
+  const W=1200,H=1560,NW=12,ML=66,MR=216,TOP=32,PAD=[40,32,13];
+  const byId={}; nodes.forEach(n=>byId[n.id]=n);
+  const layers=[[],[],[]]; nodes.forEach(n=>layers[n.layer].push(n));
+
+  // Home is ~40% of all nights. Drawn at full scale it flattens everything else,
+  // so its ribbons are compressed to a stub and the labels carry the real number.
+  const homeTot=links.filter(l=>l.s[0]==='Y'&&l.home).reduce((a,l)=>a+l.v,0);
+  const restTot=links.filter(l=>l.s[0]==='Y'&&!l.home).reduce((a,l)=>a+l.v,0);
+  const HK=Math.min(1,(0.10*restTot)/homeTot);
+  const dv=x=>x.home?x.v*HK:x.v;
+
+  nodes.forEach(n=>{n.v=0;n.dv=0;});
+  links.forEach(l=>{ const a=byId[l.s]; a.v+=l.v; a.dv+=dv(l); });
+  layers[2].forEach(n=>{n.v=0;n.dv=0;});
+  links.forEach(l=>{ const b=byId[l.t]; if(b.layer===2){ b.v+=l.v; b.dv+=dv(l); } });
+
+  const tot=layers.map(L=>L.reduce((a,n)=>a+n.dv,0));
+  const gaps=layers.map((L,i)=>(L.length-1)*PAD[i]);
+  const scale=(H-Math.max(...gaps))/Math.max(...tot);
+  const X=[ML, ML+(W-ML-MR-NW)/2, W-MR-NW];
+  layers.forEach((L,li)=>{
+    const lh=tot[li]*scale+gaps[li]; let y=(H-lh)/2;
+    L.forEach(n=>{ n.x=X[li]; n.y=y; n.h=Math.max(2,n.dv*scale); y+=n.h+PAD[li]; n.so=0; n.ti=0; });
+  });
+
+  const svg=S('svg',{viewBox:'0 '+(-TOP)+' '+W+' '+(H+TOP+14),width:'100%',style:'display:block;height:auto'});
+  const gl=S('g',{}),gn=S('g',{}); svg.append(gl,gn);
+  const reset=()=>gl.querySelectorAll('.link').forEach(o=>o.setAttribute('fill-opacity','0.32'));
+
+  links.forEach(l=>{
+    const a=byId[l.s],b=byId[l.t],th=Math.max(1,dv(l)*scale);
+    const ay=a.y+a.so,by=b.y+b.ti; a.so+=th; b.ti+=th;
+    const x0=a.x+NW,x1=b.x,mx=(x0+x1)/2;
+    const d='M'+x0+','+ay+'C'+mx+','+ay+' '+mx+','+by+' '+x1+','+by
+           +'L'+x1+','+(by+th)+'C'+mx+','+(by+th)+' '+mx+','+(ay+th)+' '+x0+','+(ay+th)+'Z';
+    const p=S('path',{d:d,fill:kc(l.b),'fill-opacity':'0.32',class:'link'});
+    p.style.cursor='pointer';
+    p.addEventListener('mouseenter',ev=>{
+      gl.querySelectorAll('.link').forEach(o=>o.setAttribute('fill-opacity',o===p?'0.78':'0.06'));
+      showTip(ev,tipHead(kc(l.b),a.label+' → '+b.label)+'<div class="t-s">'+nn(l.v)+' nights'+(l.home?' · drawn compressed':'')+'</div>');
+    });
+    p.addEventListener('mouseleave',()=>{reset();hideTip();});
+    gl.append(p);
+  });
+
+  nodes.forEach(n=>{
+    const g=S('g',{});
+    const fill=n.layer===0?'var(--ink-2)':kc(n.b);
+    const r=S('rect',{x:n.x,y:n.y,width:NW,height:n.h,rx:3,fill:fill});
+    r.style.cursor='pointer';
+    r.addEventListener('mouseenter',ev=>{
+      gl.querySelectorAll('.link').forEach((o,i)=>{
+        const l=links[i]; o.setAttribute('fill-opacity',(l.s===n.id||l.t===n.id)?'0.78':'0.05');
+      });
+      showTip(ev,tipHead(fill,n.label)+'<div class="t-s">'+nn(n.v)+' nights'+(n.home?' · drawn compressed':'')+'</div>');
+    });
+    r.addEventListener('mouseleave',()=>{reset();hideTip();});
+    g.append(r);
+
+    let t;
+    if(n.layer===0){
+      t=S('text',{x:n.x-11,y:n.y+n.h/2+1,'text-anchor':'end',class:'sk-label'});
+      t.setAttribute('font-weight','600'); t.setAttribute('font-size','16'); t.textContent=n.label;
+      const v=S('text',{x:n.x-11,y:n.y+n.h/2+16,'text-anchor':'end',class:'sk-val'});
+      v.textContent=nn(n.v)+'n'; g.append(v);
+    } else if(n.layer===1){
+      t=S('text',{x:n.x,y:n.y-8,class:'sk-label small'});
+      t.setAttribute('font-weight','600'); t.setAttribute('font-size','12.5'); t.textContent=n.label;
+    } else {
+      t=S('text',{x:n.x+NW+9,y:n.y+n.h/2+4,class:'sk-label small'}); t.textContent=n.label;
+    }
+    if(n.layer>0){
+      const v=S('tspan',{}); v.textContent='  '+nn(n.v)+'n'+(n.home?' (compressed)':'');
+      v.setAttribute('font-family','"JetBrains Mono",monospace');
+      v.setAttribute('font-size','10'); v.setAttribute('fill','var(--muted)');
+      t.append(v);
+    }
+    g.append(t); gn.append(g);
+  });
+  document.getElementById('sankey').append(svg);
+})();
+
+/* ---------------- map ---------------- */
+(function(){
+  const MW=1000,MH=500,LAT_TOP=84,LAT_BOT=-56;
+  const px=lo=>(lo+180)/360*MW, py=la=>(LAT_TOP-la)/(LAT_TOP-LAT_BOT)*MH;
+  const svg=S('svg',{viewBox:'0 0 '+MW+' '+MH,width:'100%'});
+  svg.append(S('rect',{x:0,y:0,width:MW,height:MH,fill:'var(--sea)'}));
+  svg.append(S('path',{d:WORLD,fill:'var(--land)',stroke:'var(--land-line)','stroke-width':'0.4','fill-rule':'evenodd'}));
+  const gArc=S('g',{fill:'none','stroke-linecap':'round'}), gDot=S('g',{}), gNow=S('g',{});
+  svg.append(gArc,gDot,gNow);
+
+  function arc(x1,y1,x2,y2){
+    const dx=x2-x1, dy=y2-y1, len=Math.hypot(dx,dy) || 1;
+    const cx=(x1+x2)/2 + (-dy/len)*len*0.17, cy=(y1+y2)/2 + (dx/len)*len*0.17;
+    return 'M'+x1+','+y1+'Q'+cx.toFixed(1)+','+cy.toFixed(1)+' '+x2+','+y2;
+  }
+  // Legs, in order. A leg that would cross the antimeridian is drawn as two
+  // pieces running off opposite edges instead of a line back across the map.
+  const legs=[];
+  for(let i=1;i<DATA.seq.length;i++){
+    const a=DATA.seq[i-1], b=DATA.seq[i];
+    if(a.lat===b.lat && a.lon===b.lon) continue;
+    let x1=px(a.lon),y1=py(a.lat),x2=px(b.lon),y2=py(b.lat);
+    const paths=[];
+    if(Math.abs(x2-x1)>MW/2){
+      const s=x2>x1?-1:1;
+      paths.push(arc(x1,y1,x2+s*MW,y2), arc(x1-s*MW,y1,x2,y2));
+    } else paths.push(arc(x1,y1,x2,y2));
+    const nodes=paths.map(d=>{
+      const p=S('path',{d:d,stroke:kc(b.b),'stroke-width':'1.5','stroke-opacity':'0.72'});
+      gArc.append(p); return p;
+    });
+    legs.push({on:b.s, nodes:nodes, from:a, to:b});
+  }
+  const maxN=Math.max(...DATA.map_places.map(p=>p.n));
+  DATA.map_places.forEach(p=>{
+    const c=S('circle',{cx:px(p.lon).toFixed(1),cy:py(p.lat).toFixed(1),
+      r:(2.4+Math.sqrt(p.n/maxN)*7).toFixed(1),fill:kc(p.b),'fill-opacity':'0.9',
+      stroke:'var(--sea)','stroke-width':'0.9'});
+    c.style.cursor='pointer';
+    c.addEventListener('mouseenter',ev=>showTip(ev,tipHead(kc(p.b),p.place)+
+      '<div class="t-s">'+p.country+' · '+nn(p.n)+' nights</div>'));
+    c.addEventListener('mouseleave',hideTip);
+    gDot.append(c);
+  });
+  const ring=S('circle',{r:'9',fill:'none',stroke:'var(--ink)','stroke-width':'1.6'});
+  const core=S('circle',{r:'3.2',fill:'var(--ink)'});
+  gNow.append(ring,core);
+  document.getElementById('mapwrap').append(svg);
+
+  const totalDays=M.window_days-1;
+  const slider=document.getElementById('slider'); slider.max=totalDays; slider.value=totalDays;
+  const readout=document.getElementById('readout');
+  function render(i){
+    const iso=dayISO(i), t=dayMap.get(iso);
+    legs.forEach(L=>L.nodes.forEach(n=>n.setAttribute('stroke-opacity', L.on<=iso?'0.72':'0.04')));
+    if(t){
+      const c=DATA.map_places.find(p=>p.place===t.place);
+      if(c){ ring.setAttribute('cx',px(c.lon).toFixed(1)); ring.setAttribute('cy',py(c.lat).toFixed(1));
+             core.setAttribute('cx',px(c.lon).toFixed(1)); core.setAttribute('cy',py(c.lat).toFixed(1));
+             gNow.style.display=''; }
+      else gNow.style.display='none';
+      const night=Math.round((Date.parse(iso)-Date.parse(t.s))/864e5)+1;
+      readout.innerHTML='<div class="p"><span class="sw" style="background:'+kc(t.b)+'"></span>'+
+        (t.home?'Home, Wheaton IL':t.place+', '+t.country)+'</div>'+
+        '<div class="d">'+fmtD(iso)+' · night '+night+' of '+t.n+'</div>';
+    }
+  }
+  slider.addEventListener('input',()=>render(+slider.value));
+  render(totalDays);
+
+  let timer=null;
+  const btn=document.getElementById('play');
+  btn.addEventListener('click',()=>{
+    if(timer){ clearInterval(timer); timer=null; btn.textContent='▶'; btn.setAttribute('aria-label','Play the route'); return; }
+    if(+slider.value>=totalDays) slider.value=0;
+    btn.textContent='❚❚'; btn.setAttribute('aria-label','Pause');
+    timer=setInterval(()=>{
+      const v=+slider.value+3;
+      if(v>=totalDays){ slider.value=totalDays; render(totalDays); clearInterval(timer); timer=null; btn.textContent='▶'; return; }
+      slider.value=v; render(v);
+    },28);
+  });
+  document.getElementById('map-note').textContent =
+    legs.length+' legs drawn between '+DATA.map_places.length+' places. Arcs are schematic, not flight paths, and a leg that crosses the Pacific runs off one edge and back in the other.';
+})();
+
+/* ---------------- bars ---------------- */
+function bars(node,rows,max){
+  rows.forEach(r=>{
+    const row=el('div','bar-row');
+    const nm=el('div','nm',r.name); nm.title=r.name;
+    const tr=el('div','bar-track'); const fl=el('div','bar-fill');
+    fl.style.background=kc(r.b); fl.style.width='0%'; tr.append(fl);
+    const vv=el('div','vv'); vv.innerHTML=nn(r.nights)+'n <em>'+r.right+'</em>';
+    row.append(nm,tr,vv);
+    row.addEventListener('mouseenter',ev=>showTip(ev,tipHead(kc(r.b),r.name)+'<div class="t-s">'+r.tip+'</div>'));
+    row.addEventListener('mouseleave',hideTip);
+    node.append(row);
+    requestAnimationFrame(()=>{ fl.style.width=(r.nights/max*100)+'%'; });
+  });
+}
+const top2=DATA.countries.slice(0,2);
+document.getElementById('rank-sub').textContent =
+  M.n_countries+' countries. Home nights are excluded, so the US figure is US travel only. '+
+  top2[0].name+' leads on volume but not commitment: '+top2[0].nights+' nights over '+top2[0].trips+
+  ' stays, against '+top2[1].name+"'s "+top2[1].nights+' in '+top2[1].trips+'.';
+
+bars(document.getElementById('country-bars'),
+  DATA.countries.map(c=>({name:c.name,nights:c.nights,b:c.b,
+    right:c.trips+(c.trips===1?' stay':' stays'),
+    tip:c.nights+' nights across '+c.trips+(c.trips===1?' stay':' stays')+' · '+Math.round(c.nights/c.trips)+' per stay'})),
+  DATA.countries[0].nights);
+
+const bkRows=ORDER.filter(b=>DATA.nights_by_bucket[b]).map(b=>({
+  name:b, nights:DATA.nights_by_bucket[b], b:DATA.bucket_names.indexOf(b),
+  right:Math.round(DATA.nights_by_bucket[b]/M.window_days*100)+'%',
+  tip:nn(DATA.nights_by_bucket[b])+' of '+nn(M.window_days)+' nights'}));
+bars(document.getElementById('bucket-bars'), bkRows, Math.max(...bkRows.map(r=>r.nights)));
+
+bars(document.getElementById('longest-bars'),
+  DATA.longest.map(l=>({name:l.place,nights:l.n,b:l.b,
+    right:MON[+l.start.slice(5,7)-1]+" '"+l.start.slice(2,4),
+    tip:l.country+' · '+fmtD(l.start)+' to '+fmtD(l.end)})),
+  DATA.longest[0].n);
+
+/* ---------------- tables ---------------- */
+const lb=document.querySelector('#log tbody');
+DATA.trips.forEach(t=>{
+  const tr=el('tr'); if(t.home) tr.className='home';
+  const p=el('td');
+  const dot=el('span','dot'); dot.style.background=kc(t.b);
+  p.append(dot,document.createTextNode(t.home?'Home':t.place));
+  if(t.side) p.append(el('span','tag','side trip'));
+  if(t.filled) p.append(el('span','tag','inferred'));
+  tr.append(el('td','d',fmtD(t.s)+' → '+fmtD(t.e)),p,el('td',null,t.country),el('td','n',t.n));
+  lb.append(tr);
+});
+const cb=document.querySelector('#changes tbody');
+DATA.changes.forEach(c=>{
+  const tr=el('tr'); const k=el('td',null,c.kind); k.style.whiteSpace='nowrap';
+  tr.append(k,el('td',null,c.event),el('td','d',c.detail),el('td',null,c.why));
+  cb.append(tr);
+});
+document.getElementById('chg-count').textContent=DATA.changes.length;
+})();
+</script>
