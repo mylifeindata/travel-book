@@ -262,17 +262,36 @@ MON.forEach((m,i)=>{
     });
     legs.push({on:b.s, nodes:nodes, from:a, to:b});
   }
+  // A place has no dot until the first night spent there, and the dot grows with
+  // the nights as the slider advances. At day 0 only Wheaton is on the map.
+  const dayIdx=s=>Math.round((Date.parse(s)-Date.parse(WSTART))/864e5);
   const maxN=Math.max(...DATA.map_places.map(p=>p.n));
-  DATA.map_places.forEach(p=>{
+  const rFor=n=>(2.4+Math.sqrt(Math.max(n,1)/maxN)*7).toFixed(2);
+
+  const staysByPlace=new Map();
+  DATA.seq.forEach(x=>{
+    if(!staysByPlace.has(x.place)) staysByPlace.set(x.place,[]);
+    staysByPlace.get(x.place).push({si:dayIdx(x.s), ei:dayIdx(x.e)});
+  });
+
+  const dots=DATA.map_places.map(p=>{
+    const stays=staysByPlace.get(p.place)||[];
     const c=S('circle',{cx:px(p.lon).toFixed(1),cy:py(p.lat).toFixed(1),
-      r:(2.4+Math.sqrt(p.n/maxN)*7).toFixed(1),fill:kc(p.b),'fill-opacity':'0.9',
-      stroke:'var(--sea)','stroke-width':'0.9'});
+      r:rFor(1),fill:kc(p.b),'fill-opacity':'0.9',
+      stroke:'var(--sea)','stroke-width':'0.9',opacity:'0'});
     c.style.cursor='pointer';
-    c.addEventListener('mouseenter',ev=>showTip(ev,tipHead(kc(p.b),p.place)+
-      '<div class="t-s">'+p.country+' · '+nn(p.n)+' nights</div>'));
+    const d={p:p, c:c, stays:stays, first:Math.min(...stays.map(s=>s.si)), shown:0};
+    c.addEventListener('mouseenter',ev=>{
+      const sofar=d.shown;
+      showTip(ev,tipHead(kc(p.b),p.place)+'<div class="t-s">'+p.country+' · '+
+        (sofar<p.n ? nn(sofar)+' of '+nn(p.n)+' nights so far' : nn(p.n)+' nights')+'</div>');
+    });
     c.addEventListener('mouseleave',hideTip);
     gDot.append(c);
+    return d;
   });
+  // Later arrivals paint over earlier ones, so the newest dot is never buried.
+  dots.slice().sort((a,b)=>a.first-b.first).forEach(d=>gDot.append(d.c));
   const ring=S('circle',{r:'9',fill:'none',stroke:'var(--ink)','stroke-width':'1.6'});
   const core=S('circle',{r:'3.2',fill:'var(--ink)'});
   gNow.append(ring,core);
@@ -283,7 +302,15 @@ MON.forEach((m,i)=>{
   const readout=document.getElementById('readout');
   function render(i){
     const iso=dayISO(i), t=dayMap.get(iso);
-    legs.forEach(L=>L.nodes.forEach(n=>n.setAttribute('stroke-opacity', L.on<=iso?'0.72':'0.04')));
+    legs.forEach(L=>L.nodes.forEach(n=>n.setAttribute('stroke-opacity', L.on<=iso?'0.72':'0')));
+    dots.forEach(d=>{
+      let nights=0;
+      for(const s of d.stays) nights += Math.max(0, Math.min(s.ei, i+1) - s.si);
+      if(nights===d.shown) return;
+      d.shown=nights;
+      d.c.setAttribute('opacity', nights?'1':'0');
+      if(nights) d.c.setAttribute('r', rFor(nights));
+    });
     if(t){
       const c=DATA.map_places.find(p=>p.place===t.place);
       if(c){ ring.setAttribute('cx',px(c.lon).toFixed(1)); ring.setAttribute('cy',py(c.lat).toFixed(1));
@@ -312,7 +339,7 @@ MON.forEach((m,i)=>{
     },28);
   });
   document.getElementById('map-note').textContent =
-    legs.length+' legs drawn between '+DATA.map_places.length+' places. Arcs are schematic, not flight paths, and a leg that crosses the Pacific runs off one edge and back in the other.';
+    legs.length+' legs between '+DATA.map_places.length+' places, each appearing on the night you first arrived and sized by nights spent there so far. Arcs are schematic, not flight paths, and a leg that crosses the Pacific runs off one edge and back in the other.';
 })();
 
 /* ---------------- bars ---------------- */

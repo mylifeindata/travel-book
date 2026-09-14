@@ -119,6 +119,8 @@ h1 .em{color:var(--k1)}
 /* ---------- map ---------- */
 .mapwrap{position:relative; background:var(--sea); border-radius:10px; overflow:hidden; border:1px solid var(--rule)}
 .mapwrap svg{display:block; width:100%; height:auto}
+#mapwrap circle{transition:r .3s cubic-bezier(.22,.8,.3,1), opacity .3s}
+#mapwrap path{transition:stroke-opacity .3s}
 .map-ctl{display:grid; grid-template-columns:auto 1fr auto; gap:14px; align-items:center; margin-top:16px}
 @media (max-width:640px){ .map-ctl{grid-template-columns:auto 1fr; row-gap:10px} .map-ctl .readout{grid-column:1/-1} }
 .playbtn{appearance:none; border:1px solid var(--rule); background:var(--surface-2); color:var(--ink);
