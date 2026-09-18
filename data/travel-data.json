@@ -3,18 +3,22 @@
   "window_start": "2022-10-01",
   "window_end": "2026-09-01",
   "window_days": 1431,
-  "total_nights": 898,
-  "home_nights": 533,
-  "pct": 62.8,
-  "n_trips": 120,
+  "total_nights": 904,
+  "home_nights": 527,
+  "pct": 63.2,
+  "n_trips": 121,
   "n_countries": 23,
   "n_places": 90,
   "n_buckets": 7,
   "us_nights": 293,
-  "intl_nights": 605,
+  "intl_nights": 611,
   "median_trip": 4,
   "max_trip": 67,
-  "home_place": "Wheaton, IL"
+  "home_place": "Wheaton, IL",
+  "total_km": 273204,
+  "total_mi": 169761,
+  "n_legs": 155,
+  "earth_laps": 6.82
  },
  "bucket_names": [
   "Home",
@@ -25,25 +29,34 @@
   "Africa",
   "Asia"
  ],
+ "display_order": [
+  "Central America & Mexico",
+  "South America",
+  "Europe",
+  "Africa",
+  "Asia",
+  "United States",
+  "Home"
+ ],
  "nights_by_bucket": {
-  "Home": 533,
-  "United States": 293,
   "Central America & Mexico": 104,
   "South America": 124,
   "Europe": 160,
   "Africa": 2,
-  "Asia": 215
+  "Asia": 221,
+  "United States": 293,
+  "Home": 527
  },
  "years": [
   {
    "year": 2022,
-   "nights": 81,
-   "home": 11,
-   "trips": 10,
+   "nights": 87,
+   "home": 5,
+   "trips": 11,
    "countries": 3,
    "places": 10,
    "days_in_year": 92,
-   "pct": 88.0,
+   "pct": 94.6,
    "partial": true
   },
   {
@@ -100,8 +113,8 @@
   },
   {
    "name": "Thailand",
-   "nights": 109,
-   "trips": 16,
+   "nights": 115,
+   "trips": 17,
    "b": 6
   },
   {
@@ -289,7 +302,7 @@
    "n": 25
   },
   {
-   "place": "Gjøvik",
+   "place": "Gj\u00f8vik",
    "country": "Norway",
    "b": 4,
    "start": "2023-07-14",
@@ -417,12 +430,12 @@
    "s": "2022-12-09",
    "e": "2022-12-15",
    "n": 6,
-   "place": "Wheaton, IL",
-   "country": "United States",
-   "b": 0,
+   "place": "Chiang Mai",
+   "country": "Thailand",
+   "b": 6,
    "side": false,
-   "filled": true,
-   "home": true
+   "filled": false,
+   "home": false
   },
   {
    "s": "2022-12-15",
@@ -758,7 +771,7 @@
    "s": "2023-06-17",
    "e": "2023-06-20",
    "n": 3,
-   "place": "San Sebastián",
+   "place": "San Sebasti\u00e1n",
    "country": "Spain",
    "b": 4,
    "side": false,
@@ -824,7 +837,7 @@
    "s": "2023-07-10",
    "e": "2023-07-14",
    "n": 4,
-   "place": "Sønderborg",
+   "place": "S\u00f8nderborg",
    "country": "Denmark",
    "b": 4,
    "side": false,
@@ -835,7 +848,7 @@
    "s": "2023-07-14",
    "e": "2023-08-05",
    "n": 22,
-   "place": "Gjøvik",
+   "place": "Gj\u00f8vik",
    "country": "Norway",
    "b": 4,
    "side": false,
@@ -1286,7 +1299,7 @@
    "s": "2024-11-08",
    "e": "2024-11-18",
    "n": 10,
-   "place": "Medellín",
+   "place": "Medell\u00edn",
    "country": "Colombia",
    "b": 3,
    "side": false,
@@ -1429,7 +1442,7 @@
    "s": "2025-05-01",
    "e": "2025-05-05",
    "n": 4,
-   "place": "Lake Atitlán",
+   "place": "Lake Atitl\u00e1n",
    "country": "Guatemala",
    "b": 2,
    "side": true,
@@ -1572,7 +1585,7 @@
    "s": "2025-09-19",
    "e": "2025-09-23",
    "n": 4,
-   "place": "Medellín",
+   "place": "Medell\u00edn",
    "country": "Colombia",
    "b": 3,
    "side": false,
@@ -1759,7 +1772,7 @@
    "s": "2026-02-14",
    "e": "2026-03-03",
    "n": 17,
-   "place": "Medellín",
+   "place": "Medell\u00edn",
    "country": "Colombia",
    "b": 3,
    "side": false,
@@ -1792,7 +1805,7 @@
    "s": "2026-04-05",
    "e": "2026-04-07",
    "n": 2,
-   "place": "Iguazú",
+   "place": "Iguaz\u00fa",
    "country": "Argentina",
    "b": 3,
    "side": false,
@@ -2088,13 +2101,13 @@
   {
    "s": "2022-12-09",
    "e": "2022-12-15",
-   "place": "Wheaton, IL",
-   "country": "United States",
-   "b": 0,
+   "place": "Chiang Mai",
+   "country": "Thailand",
+   "b": 6,
    "n": 6,
-   "lat": 41.87,
-   "lon": -88.11,
-   "home": true,
+   "lat": 18.79,
+   "lon": 98.99,
+   "home": false,
    "side": false
   },
   {
@@ -2460,7 +2473,7 @@
   {
    "s": "2023-06-17",
    "e": "2023-06-20",
-   "place": "San Sebastián",
+   "place": "San Sebasti\u00e1n",
    "country": "Spain",
    "b": 4,
    "n": 3,
@@ -2532,7 +2545,7 @@
   {
    "s": "2023-07-10",
    "e": "2023-07-14",
-   "place": "Sønderborg",
+   "place": "S\u00f8nderborg",
    "country": "Denmark",
    "b": 4,
    "n": 4,
@@ -2544,7 +2557,7 @@
   {
    "s": "2023-07-14",
    "e": "2023-08-05",
-   "place": "Gjøvik",
+   "place": "Gj\u00f8vik",
    "country": "Norway",
    "b": 4,
    "n": 22,
@@ -3036,7 +3049,7 @@
   {
    "s": "2024-11-08",
    "e": "2024-11-18",
-   "place": "Medellín",
+   "place": "Medell\u00edn",
    "country": "Colombia",
    "b": 3,
    "n": 10,
@@ -3192,7 +3205,7 @@
   {
    "s": "2025-05-01",
    "e": "2025-05-05",
-   "place": "Lake Atitlán",
+   "place": "Lake Atitl\u00e1n",
    "country": "Guatemala",
    "b": 2,
    "n": 4,
@@ -3348,7 +3361,7 @@
   {
    "s": "2025-09-19",
    "e": "2025-09-23",
-   "place": "Medellín",
+   "place": "Medell\u00edn",
    "country": "Colombia",
    "b": 3,
    "n": 4,
@@ -3552,7 +3565,7 @@
   {
    "s": "2026-02-14",
    "e": "2026-03-03",
-   "place": "Medellín",
+   "place": "Medell\u00edn",
    "country": "Colombia",
    "b": 3,
    "n": 17,
@@ -3588,7 +3601,7 @@
   {
    "s": "2026-04-05",
    "e": "2026-04-07",
-   "place": "Iguazú",
+   "place": "Iguaz\u00fa",
    "country": "Argentina",
    "b": 3,
    "n": 2,
@@ -3795,7 +3808,7 @@
    "place": "Wheaton, IL",
    "lat": 41.87,
    "lon": -88.11,
-   "n": 533,
+   "n": 527,
    "b": 0,
    "country": "United States"
   },
@@ -3824,7 +3837,15 @@
    "country": "United States"
   },
   {
-   "place": "Medellín",
+   "place": "Chiang Mai",
+   "lat": 18.79,
+   "lon": 98.99,
+   "n": 31,
+   "b": 6,
+   "country": "Thailand"
+  },
+  {
+   "place": "Medell\u00edn",
    "lat": 6.24,
    "lon": -75.58,
    "n": 31,
@@ -3846,14 +3867,6 @@
    "n": 26,
    "b": 4,
    "country": "Spain"
-  },
-  {
-   "place": "Chiang Mai",
-   "lat": 18.79,
-   "lon": 98.99,
-   "n": 25,
-   "b": 6,
-   "country": "Thailand"
   },
   {
    "place": "Koh Tao",
@@ -3880,7 +3893,7 @@
    "country": "Mexico"
   },
   {
-   "place": "Gjøvik",
+   "place": "Gj\u00f8vik",
    "lat": 60.8,
    "lon": 10.69,
    "n": 22,
@@ -4256,7 +4269,7 @@
    "country": "Thailand"
   },
   {
-   "place": "Sønderborg",
+   "place": "S\u00f8nderborg",
    "lat": 54.91,
    "lon": 9.79,
    "n": 4,
@@ -4304,7 +4317,7 @@
    "country": "United States"
   },
   {
-   "place": "Lake Atitlán",
+   "place": "Lake Atitl\u00e1n",
    "lat": 14.69,
    "lon": -91.2,
    "n": 4,
@@ -4360,7 +4373,7 @@
    "country": "Italy"
   },
   {
-   "place": "San Sebastián",
+   "place": "San Sebasti\u00e1n",
    "lat": 43.32,
    "lon": -1.98,
    "n": 3,
@@ -4464,7 +4477,7 @@
    "country": "Morocco"
   },
   {
-   "place": "Iguazú",
+   "place": "Iguaz\u00fa",
    "lat": -25.6,
    "lon": -54.57,
    "n": 2,
@@ -4553,20 +4566,6 @@
     "b": -1
    },
    {
-    "id": "BHome",
-    "label": "Home",
-    "layer": 1,
-    "b": 0,
-    "home": true
-   },
-   {
-    "id": "BUnited States",
-    "label": "United States",
-    "layer": 1,
-    "b": 1,
-    "home": false
-   },
-   {
     "id": "BCentral America & Mexico",
     "label": "Central America & Mexico",
     "layer": 1,
@@ -4602,11 +4601,172 @@
     "home": false
    },
    {
-    "id": "DHome|Wheaton, IL",
-    "label": "Wheaton, IL",
-    "layer": 2,
+    "id": "BUnited States",
+    "label": "United States",
+    "layer": 1,
+    "b": 1,
+    "home": false
+   },
+   {
+    "id": "BHome",
+    "label": "Home",
+    "layer": 1,
     "b": 0,
     "home": true
+   },
+   {
+    "id": "DCentral America & Mexico|Mexico",
+    "label": "Mexico",
+    "layer": 2,
+    "b": 2,
+    "home": false
+   },
+   {
+    "id": "DCentral America & Mexico|Guatemala",
+    "label": "Guatemala",
+    "layer": 2,
+    "b": 2,
+    "home": false
+   },
+   {
+    "id": "DCentral America & Mexico|Belize",
+    "label": "Belize",
+    "layer": 2,
+    "b": 2,
+    "home": false
+   },
+   {
+    "id": "DCentral America & Mexico|Costa Rica",
+    "label": "Costa Rica",
+    "layer": 2,
+    "b": 2,
+    "home": false
+   },
+   {
+    "id": "DSouth America|Colombia",
+    "label": "Colombia",
+    "layer": 2,
+    "b": 3,
+    "home": false
+   },
+   {
+    "id": "DSouth America|Brazil",
+    "label": "Brazil",
+    "layer": 2,
+    "b": 3,
+    "home": false
+   },
+   {
+    "id": "DSouth America|Peru",
+    "label": "Peru",
+    "layer": 2,
+    "b": 3,
+    "home": false
+   },
+   {
+    "id": "DSouth America|Argentina",
+    "label": "Argentina",
+    "layer": 2,
+    "b": 3,
+    "home": false
+   },
+   {
+    "id": "DEurope|Spain",
+    "label": "Spain",
+    "layer": 2,
+    "b": 4,
+    "home": false
+   },
+   {
+    "id": "DEurope|Italy",
+    "label": "Italy",
+    "layer": 2,
+    "b": 4,
+    "home": false
+   },
+   {
+    "id": "DEurope|Norway",
+    "label": "Norway",
+    "layer": 2,
+    "b": 4,
+    "home": false
+   },
+   {
+    "id": "DEurope|Portugal",
+    "label": "Portugal",
+    "layer": 2,
+    "b": 4,
+    "home": false
+   },
+   {
+    "id": "DEurope|Netherlands",
+    "label": "Netherlands",
+    "layer": 2,
+    "b": 4,
+    "home": false
+   },
+   {
+    "id": "DEurope|Denmark",
+    "label": "Denmark",
+    "layer": 2,
+    "b": 4,
+    "home": false
+   },
+   {
+    "id": "DEurope|United Kingdom",
+    "label": "United Kingdom",
+    "layer": 2,
+    "b": 4,
+    "home": false
+   },
+   {
+    "id": "DAfrica|Morocco",
+    "label": "Morocco",
+    "layer": 2,
+    "b": 5,
+    "home": false
+   },
+   {
+    "id": "DAsia|Thailand",
+    "label": "Thailand",
+    "layer": 2,
+    "b": 6,
+    "home": false
+   },
+   {
+    "id": "DAsia|Vietnam",
+    "label": "Vietnam",
+    "layer": 2,
+    "b": 6,
+    "home": false
+   },
+   {
+    "id": "DAsia|Indonesia",
+    "label": "Indonesia",
+    "layer": 2,
+    "b": 6,
+    "home": false
+   },
+   {
+    "id": "DAsia|Malaysia",
+    "label": "Malaysia",
+    "layer": 2,
+    "b": 6,
+    "home": false
+   },
+   {
+    "id": "DAsia|South Korea",
+    "label": "South Korea",
+    "layer": 2,
+    "b": 6,
+    "home": false
+   },
+   {
+    "id": "DAsia|Cambodia",
+    "label": "Cambodia",
+    "layer": 2,
+    "b": 6,
+    "home": false
    },
    {
     "id": "DUnited States|Arizona",
@@ -4770,188 +4930,27 @@
     "home": false
    },
    {
-    "id": "DCentral America & Mexico|Mexico",
-    "label": "Mexico",
+    "id": "DHome|Wheaton, IL",
+    "label": "Wheaton, IL",
     "layer": 2,
-    "b": 2,
-    "home": false
-   },
-   {
-    "id": "DCentral America & Mexico|Guatemala",
-    "label": "Guatemala",
-    "layer": 2,
-    "b": 2,
-    "home": false
-   },
-   {
-    "id": "DCentral America & Mexico|Belize",
-    "label": "Belize",
-    "layer": 2,
-    "b": 2,
-    "home": false
-   },
-   {
-    "id": "DCentral America & Mexico|Costa Rica",
-    "label": "Costa Rica",
-    "layer": 2,
-    "b": 2,
-    "home": false
-   },
-   {
-    "id": "DSouth America|Colombia",
-    "label": "Colombia",
-    "layer": 2,
-    "b": 3,
-    "home": false
-   },
-   {
-    "id": "DSouth America|Brazil",
-    "label": "Brazil",
-    "layer": 2,
-    "b": 3,
-    "home": false
-   },
-   {
-    "id": "DSouth America|Peru",
-    "label": "Peru",
-    "layer": 2,
-    "b": 3,
-    "home": false
-   },
-   {
-    "id": "DSouth America|Argentina",
-    "label": "Argentina",
-    "layer": 2,
-    "b": 3,
-    "home": false
-   },
-   {
-    "id": "DEurope|Spain",
-    "label": "Spain",
-    "layer": 2,
-    "b": 4,
-    "home": false
-   },
-   {
-    "id": "DEurope|Italy",
-    "label": "Italy",
-    "layer": 2,
-    "b": 4,
-    "home": false
-   },
-   {
-    "id": "DEurope|Norway",
-    "label": "Norway",
-    "layer": 2,
-    "b": 4,
-    "home": false
-   },
-   {
-    "id": "DEurope|Portugal",
-    "label": "Portugal",
-    "layer": 2,
-    "b": 4,
-    "home": false
-   },
-   {
-    "id": "DEurope|Netherlands",
-    "label": "Netherlands",
-    "layer": 2,
-    "b": 4,
-    "home": false
-   },
-   {
-    "id": "DEurope|Denmark",
-    "label": "Denmark",
-    "layer": 2,
-    "b": 4,
-    "home": false
-   },
-   {
-    "id": "DEurope|United Kingdom",
-    "label": "United Kingdom",
-    "layer": 2,
-    "b": 4,
-    "home": false
-   },
-   {
-    "id": "DAfrica|Morocco",
-    "label": "Morocco",
-    "layer": 2,
-    "b": 5,
-    "home": false
-   },
-   {
-    "id": "DAsia|Thailand",
-    "label": "Thailand",
-    "layer": 2,
-    "b": 6,
-    "home": false
-   },
-   {
-    "id": "DAsia|Vietnam",
-    "label": "Vietnam",
-    "layer": 2,
-    "b": 6,
-    "home": false
-   },
-   {
-    "id": "DAsia|Indonesia",
-    "label": "Indonesia",
-    "layer": 2,
-    "b": 6,
-    "home": false
-   },
-   {
-    "id": "DAsia|Malaysia",
-    "label": "Malaysia",
-    "layer": 2,
-    "b": 6,
-    "home": false
-   },
-   {
-    "id": "DAsia|South Korea",
-    "label": "South Korea",
-    "layer": 2,
-    "b": 6,
-    "home": false
-   },
-   {
-    "id": "DAsia|Cambodia",
-    "label": "Cambodia",
-    "layer": 2,
-    "b": 6,
-    "home": false
+    "b": 0,
+    "home": true
    }
   ],
   "links": [
    {
     "s": "Y2022",
-    "t": "BHome",
-    "v": 11,
-    "b": 0,
-    "home": true
-   },
-   {
-    "s": "Y2022",
     "t": "BAsia",
-    "v": 81,
+    "v": 87,
     "b": 6,
     "home": false
    },
    {
-    "s": "Y2023",
+    "s": "Y2022",
     "t": "BHome",
-    "v": 30,
+    "v": 5,
     "b": 0,
     "home": true
-   },
-   {
-    "s": "Y2023",
-    "t": "BUnited States",
-    "v": 111,
-    "b": 1,
-    "home": false
    },
    {
     "s": "Y2023",
@@ -4975,18 +4974,18 @@
     "home": false
    },
    {
-    "s": "Y2024",
-    "t": "BHome",
-    "v": 162,
-    "b": 0,
-    "home": true
-   },
-   {
-    "s": "Y2024",
+    "s": "Y2023",
     "t": "BUnited States",
-    "v": 144,
+    "v": 111,
     "b": 1,
     "home": false
+   },
+   {
+    "s": "Y2023",
+    "t": "BHome",
+    "v": 30,
+    "b": 0,
+    "home": true
    },
    {
     "s": "Y2024",
@@ -5003,18 +5002,18 @@
     "home": false
    },
    {
-    "s": "Y2025",
-    "t": "BHome",
-    "v": 204,
-    "b": 0,
-    "home": true
-   },
-   {
-    "s": "Y2025",
+    "s": "Y2024",
     "t": "BUnited States",
-    "v": 31,
+    "v": 144,
     "b": 1,
     "home": false
+   },
+   {
+    "s": "Y2024",
+    "t": "BHome",
+    "v": 162,
+    "b": 0,
+    "home": true
    },
    {
     "s": "Y2025",
@@ -5045,18 +5044,18 @@
     "home": false
    },
    {
-    "s": "Y2026",
-    "t": "BHome",
-    "v": 126,
-    "b": 0,
-    "home": true
-   },
-   {
-    "s": "Y2026",
+    "s": "Y2025",
     "t": "BUnited States",
-    "v": 7,
+    "v": 31,
     "b": 1,
     "home": false
+   },
+   {
+    "s": "Y2025",
+    "t": "BHome",
+    "v": 204,
+    "b": 0,
+    "home": true
    },
    {
     "s": "Y2026",
@@ -5073,11 +5072,172 @@
     "home": false
    },
    {
-    "s": "BHome",
-    "t": "DHome|Wheaton, IL",
-    "v": 533,
+    "s": "Y2026",
+    "t": "BUnited States",
+    "v": 7,
+    "b": 1,
+    "home": false
+   },
+   {
+    "s": "Y2026",
+    "t": "BHome",
+    "v": 126,
     "b": 0,
     "home": true
+   },
+   {
+    "s": "BCentral America & Mexico",
+    "t": "DCentral America & Mexico|Mexico",
+    "v": 34,
+    "b": 2,
+    "home": false
+   },
+   {
+    "s": "BCentral America & Mexico",
+    "t": "DCentral America & Mexico|Guatemala",
+    "v": 29,
+    "b": 2,
+    "home": false
+   },
+   {
+    "s": "BCentral America & Mexico",
+    "t": "DCentral America & Mexico|Belize",
+    "v": 22,
+    "b": 2,
+    "home": false
+   },
+   {
+    "s": "BCentral America & Mexico",
+    "t": "DCentral America & Mexico|Costa Rica",
+    "v": 19,
+    "b": 2,
+    "home": false
+   },
+   {
+    "s": "BSouth America",
+    "t": "DSouth America|Colombia",
+    "v": 44,
+    "b": 3,
+    "home": false
+   },
+   {
+    "s": "BSouth America",
+    "t": "DSouth America|Brazil",
+    "v": 30,
+    "b": 3,
+    "home": false
+   },
+   {
+    "s": "BSouth America",
+    "t": "DSouth America|Peru",
+    "v": 27,
+    "b": 3,
+    "home": false
+   },
+   {
+    "s": "BSouth America",
+    "t": "DSouth America|Argentina",
+    "v": 23,
+    "b": 3,
+    "home": false
+   },
+   {
+    "s": "BEurope",
+    "t": "DEurope|Spain",
+    "v": 71,
+    "b": 4,
+    "home": false
+   },
+   {
+    "s": "BEurope",
+    "t": "DEurope|Italy",
+    "v": 27,
+    "b": 4,
+    "home": false
+   },
+   {
+    "s": "BEurope",
+    "t": "DEurope|Norway",
+    "v": 25,
+    "b": 4,
+    "home": false
+   },
+   {
+    "s": "BEurope",
+    "t": "DEurope|Portugal",
+    "v": 16,
+    "b": 4,
+    "home": false
+   },
+   {
+    "s": "BEurope",
+    "t": "DEurope|Netherlands",
+    "v": 13,
+    "b": 4,
+    "home": false
+   },
+   {
+    "s": "BEurope",
+    "t": "DEurope|Denmark",
+    "v": 4,
+    "b": 4,
+    "home": false
+   },
+   {
+    "s": "BEurope",
+    "t": "DEurope|United Kingdom",
+    "v": 4,
+    "b": 4,
+    "home": false
+   },
+   {
+    "s": "BAfrica",
+    "t": "DAfrica|Morocco",
+    "v": 2,
+    "b": 5,
+    "home": false
+   },
+   {
+    "s": "BAsia",
+    "t": "DAsia|Thailand",
+    "v": 115,
+    "b": 6,
+    "home": false
+   },
+   {
+    "s": "BAsia",
+    "t": "DAsia|Vietnam",
+    "v": 61,
+    "b": 6,
+    "home": false
+   },
+   {
+    "s": "BAsia",
+    "t": "DAsia|Indonesia",
+    "v": 27,
+    "b": 6,
+    "home": false
+   },
+   {
+    "s": "BAsia",
+    "t": "DAsia|Malaysia",
+    "v": 10,
+    "b": 6,
+    "home": false
+   },
+   {
+    "s": "BAsia",
+    "t": "DAsia|South Korea",
+    "v": 5,
+    "b": 6,
+    "home": false
+   },
+   {
+    "s": "BAsia",
+    "t": "DAsia|Cambodia",
+    "v": 3,
+    "b": 6,
+    "home": false
    },
    {
     "s": "BUnited States",
@@ -5241,158 +5401,11 @@
     "home": false
    },
    {
-    "s": "BCentral America & Mexico",
-    "t": "DCentral America & Mexico|Mexico",
-    "v": 34,
-    "b": 2,
-    "home": false
-   },
-   {
-    "s": "BCentral America & Mexico",
-    "t": "DCentral America & Mexico|Guatemala",
-    "v": 29,
-    "b": 2,
-    "home": false
-   },
-   {
-    "s": "BCentral America & Mexico",
-    "t": "DCentral America & Mexico|Belize",
-    "v": 22,
-    "b": 2,
-    "home": false
-   },
-   {
-    "s": "BCentral America & Mexico",
-    "t": "DCentral America & Mexico|Costa Rica",
-    "v": 19,
-    "b": 2,
-    "home": false
-   },
-   {
-    "s": "BSouth America",
-    "t": "DSouth America|Colombia",
-    "v": 44,
-    "b": 3,
-    "home": false
-   },
-   {
-    "s": "BSouth America",
-    "t": "DSouth America|Brazil",
-    "v": 30,
-    "b": 3,
-    "home": false
-   },
-   {
-    "s": "BSouth America",
-    "t": "DSouth America|Peru",
-    "v": 27,
-    "b": 3,
-    "home": false
-   },
-   {
-    "s": "BSouth America",
-    "t": "DSouth America|Argentina",
-    "v": 23,
-    "b": 3,
-    "home": false
-   },
-   {
-    "s": "BEurope",
-    "t": "DEurope|Spain",
-    "v": 71,
-    "b": 4,
-    "home": false
-   },
-   {
-    "s": "BEurope",
-    "t": "DEurope|Italy",
-    "v": 27,
-    "b": 4,
-    "home": false
-   },
-   {
-    "s": "BEurope",
-    "t": "DEurope|Norway",
-    "v": 25,
-    "b": 4,
-    "home": false
-   },
-   {
-    "s": "BEurope",
-    "t": "DEurope|Portugal",
-    "v": 16,
-    "b": 4,
-    "home": false
-   },
-   {
-    "s": "BEurope",
-    "t": "DEurope|Netherlands",
-    "v": 13,
-    "b": 4,
-    "home": false
-   },
-   {
-    "s": "BEurope",
-    "t": "DEurope|Denmark",
-    "v": 4,
-    "b": 4,
-    "home": false
-   },
-   {
-    "s": "BEurope",
-    "t": "DEurope|United Kingdom",
-    "v": 4,
-    "b": 4,
-    "home": false
-   },
-   {
-    "s": "BAfrica",
-    "t": "DAfrica|Morocco",
-    "v": 2,
-    "b": 5,
-    "home": false
-   },
-   {
-    "s": "BAsia",
-    "t": "DAsia|Thailand",
-    "v": 109,
-    "b": 6,
-    "home": false
-   },
-   {
-    "s": "BAsia",
-    "t": "DAsia|Vietnam",
-    "v": 61,
-    "b": 6,
-    "home": false
-   },
-   {
-    "s": "BAsia",
-    "t": "DAsia|Indonesia",
-    "v": 27,
-    "b": 6,
-    "home": false
-   },
-   {
-    "s": "BAsia",
-    "t": "DAsia|Malaysia",
-    "v": 10,
-    "b": 6,
-    "home": false
-   },
-   {
-    "s": "BAsia",
-    "t": "DAsia|South Korea",
-    "v": 5,
-    "b": 6,
-    "home": false
-   },
-   {
-    "s": "BAsia",
-    "t": "DAsia|Cambodia",
-    "v": 3,
-    "b": 6,
-    "home": false
+    "s": "BHome",
+    "t": "DHome|Wheaton, IL",
+    "v": 527,
+    "b": 0,
+    "home": true
    }
   ]
  },
@@ -5419,7 +5432,7 @@
    "kind": "inferred location",
    "event": "Stay with Dela / Jepper - Sonderberg",
    "detail": "2023-07-10 to 2023-07-14",
-   "why": "Read 'Sonderberg' as Sønderborg, Denmark. Say the word if that is wrong."
+   "why": "Read 'Sonderberg' as S\u00f8nderborg, Denmark. Say the word if that is wrong."
   },
   {
    "kind": "dropped",
@@ -5437,7 +5450,7 @@
    "kind": "inferred location",
    "event": "Antigua - WiFi Tribe Chapter",
    "detail": "2025-04-25 to 2025-05-24",
-   "why": "Read as Antigua, Guatemala (not Antigua & Barbuda), since Lake Atitlán sits inside this stay."
+   "why": "Read as Antigua, Guatemala (not Antigua & Barbuda), since Lake Atitl\u00e1n sits inside this stay."
   },
   {
    "kind": "future",

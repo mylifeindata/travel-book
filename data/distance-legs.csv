@@ -1,0 +1,159 @@
+arrived,place,country,lat,lon,leg_km,cumulative_km
+2022-10-01,"Wheaton, IL",United States,41.87,-88.11,0.0,0.0
+2022-10-06,Hanoi,Vietnam,21.03,105.85,12874.9,12874.9
+2022-10-11,Ha Long Bay,Vietnam,20.91,107.18,138.7,13013.6
+2022-10-14,Hanoi,Vietnam,21.03,105.85,138.7,13152.3
+2022-10-17,Ninh Binh,Vietnam,20.25,105.97,87.6,13239.9
+2022-10-21,Hanoi,Vietnam,21.03,105.85,87.6,13327.5
+2022-10-25,Seoul,South Korea,37.57,126.98,2740.8,16068.3
+2022-10-30,Chiang Mai,Thailand,18.79,98.99,3424.4,19492.7
+2022-11-24,Pai,Thailand,19.36,98.44,85.8,19578.5
+2022-11-28,Elephant Nature Park,Thailand,19.2,98.86,47.5,19626.0
+2022-12-05,Pa Pae Retreat,Thailand,18.55,98.53,80.2,19706.2
+2022-12-09,Chiang Mai,Thailand,18.79,98.99,55.3,19761.5
+2022-12-15,Koh Tao,Thailand,10.1,99.84,970.6,20732.1
+2022-12-29,Ao Nang,Thailand,8.03,98.82,256.0,20988.1
+2023-01-05,Krabi,Thailand,8.09,98.91,11.9,21000.0
+2023-01-14,Ko Lanta,Thailand,7.62,99.05,54.5,21054.5
+2023-01-18,Ko Lipe,Thailand,6.49,99.3,128.6,21183.1
+2023-01-22,George Town,Malaysia,5.41,100.34,166.3,21349.4
+2023-01-28,Kuala Lumpur,Malaysia,3.14,101.69,293.5,21642.9
+2023-02-01,Bangkok,Thailand,13.76,100.5,1188.1,22831.0
+2023-02-02,Phnom Penh,Cambodia,11.56,104.92,538.3,23369.3
+2023-02-03,Siem Reap,Cambodia,13.36,103.86,230.9,23600.2
+2023-02-05,Ho Chi Minh City,Vietnam,10.82,106.63,412.9,24013.1
+2023-03-05,"Ubud, Bali",Indonesia,-8.51,115.26,2351.9,26365.0
+2023-03-09,"Candidasa, Bali",Indonesia,-8.51,115.57,34.1,26399.1
+2023-03-13,Gili Trawangan,Indonesia,-8.35,116.04,54.7,26453.8
+2023-03-20,Nusa Penida,Indonesia,-8.73,115.54,69.3,26523.1
+2023-03-25,"Uluwatu, Bali",Indonesia,-8.83,115.09,50.7,26573.8
+2023-04-01,Bangkok,Thailand,13.76,100.5,2983.7,29557.5
+2023-04-05,Surat Thani,Thailand,9.14,99.33,529.3,30086.8
+2023-04-11,Koh Phangan,Thailand,9.73,100.01,99.3,30186.1
+2023-04-12,"Wonderland, Koh Phangan",Thailand,9.73,100.01,0.0,30186.1
+2023-04-16,Koh Phangan,Thailand,9.73,100.01,0.0,30186.1
+2023-04-17,Koh Tao,Thailand,10.1,99.84,45.2,30231.3
+2023-04-28,Bangkok,Thailand,13.76,100.5,413.3,30644.6
+2023-05-01,Hoi An,Vietnam,15.88,108.34,875.0,31519.6
+2023-05-04,Da Nang,Vietnam,16.05,108.2,24.1,31543.7
+2023-05-10,Hanoi,Vietnam,21.03,105.85,606.6,32150.3
+2023-05-15,London Heathrow,United Kingdom,51.47,-0.45,9257.0,41407.3
+2023-05-17,Bergamo,Italy,45.7,9.67,981.2,42388.5
+2023-05-20,Pontassieve,Italy,43.78,11.44,255.2,42643.7
+2023-06-10,Rome,Italy,41.9,12.5,226.2,42869.9
+2023-06-13,Barcelona,Spain,41.39,2.17,859.7,43729.6
+2023-06-17,San Sebastián,Spain,43.32,-1.98,402.8,44132.4
+2023-06-20,Ericeira,Portugal,38.96,-9.42,788.9,44921.3
+2023-06-23,Lisbon,Portugal,38.72,-9.14,36.1,44957.4
+2023-06-28,London,United Kingdom,51.51,-0.13,1585.4,46542.8
+2023-06-30,Utrecht,Netherlands,52.09,5.12,366.6,46909.4
+2023-07-06,Amsterdam,Netherlands,52.37,4.9,34.6,46944.0
+2023-07-10,Sønderborg,Denmark,54.91,9.79,428.4,47372.4
+2023-07-14,Gjøvik,Norway,60.8,10.69,657.1,48029.5
+2023-08-05,Oslo,Norway,59.91,10.75,99.0,48128.5
+2023-08-08,Fort Lauderdale,United States,26.12,-80.14,7565.9,55694.4
+2023-08-24,Iowa,United States,41.88,-93.1,2115.4,57809.8
+2023-08-28,Fort Lauderdale,United States,26.12,-80.14,2115.4,59925.2
+2023-09-09,"Wheaton, IL",United States,41.87,-88.11,1897.0,61822.2
+2023-09-14,Fort Lauderdale,United States,26.12,-80.14,1897.0,63719.2
+2023-10-04,"Wheaton, IL",United States,41.87,-88.11,1897.0,65616.2
+2023-10-12,New Orleans,United States,29.95,-90.07,1337.0,66953.2
+2023-10-16,"Wheaton, IL",United States,41.87,-88.11,1337.0,68290.2
+2023-10-21,Fort Lauderdale,United States,26.12,-80.14,1897.0,70187.2
+2023-10-28,"Wheaton, IL",United States,41.87,-88.11,1897.0,72084.2
+2023-11-05,Mexico,Mexico,19.43,-99.13,2703.2,74787.4
+2023-11-10,"Wheaton, IL",United States,41.87,-88.11,2703.2,77490.6
+2023-11-14,Denver,United States,39.74,-104.99,1437.9,78928.5
+2023-11-21,Arizona,United States,33.45,-112.07,942.0,79870.5
+2024-01-27,"Crested Butte, CO",United States,38.87,-106.99,755.5,80626.0
+2024-01-31,Salt Lake City,United States,40.76,-111.89,468.2,81094.2
+2024-03-10,Arizona,United States,33.45,-112.07,813.0,81907.2
+2024-03-28,"Wheaton, IL",United States,41.87,-88.11,2297.5,84204.7
+2024-04-14,Arizona,United States,33.45,-112.07,2297.5,86502.2
+2024-04-22,New York,United States,40.71,-74.01,3442.9,89945.1
+2024-04-26,San Francisco,United States,37.77,-122.42,4129.1,94074.2
+2024-04-29,"Wheaton, IL",United States,41.87,-88.11,2945.5,97019.7
+2024-05-05,Belize,Belize,17.19,-88.5,2744.5,99764.2
+2024-05-27,Arizona,United States,33.45,-112.07,2967.1,102731.3
+2024-06-01,Colorado,United States,39.55,-105.78,880.5,103611.8
+2024-06-07,San Francisco,United States,37.77,-122.42,1456.2,105068.0
+2024-06-10,Arkansas,United States,34.75,-92.29,2710.5,107778.5
+2024-06-13,"Wheaton, IL",United States,41.87,-88.11,871.4,108649.9
+2024-06-20,"Petoskey, MI",United States,45.37,-84.96,464.4,109114.3
+2024-06-24,"Wheaton, IL",United States,41.87,-88.11,464.4,109578.7
+2024-06-30,Miami,United States,25.76,-80.19,1932.8,111511.5
+2024-07-03,Mexico City,Mexico,19.43,-99.13,2065.2,113576.7
+2024-07-21,"Omaha, NE",United States,41.26,-95.93,2446.3,116023.0
+2024-07-23,"Wheaton, IL",United States,41.87,-88.11,653.9,116676.9
+2024-08-31,Costa Rica,Costa Rica,9.75,-83.75,3597.0,120273.9
+2024-09-06,"Wheaton, IL",United States,41.87,-88.11,3597.0,123870.9
+2024-09-16,"Hoboken, NJ",United States,40.74,-74.03,1181.5,125052.4
+2024-09-19,Las Vegas,United States,36.17,-115.14,3582.6,128635.0
+2024-09-23,"Wheaton, IL",United States,41.87,-88.11,2408.5,131043.5
+2024-11-02,Arizona,United States,33.45,-112.07,2297.5,133341.0
+2024-11-08,Medellín,Colombia,6.24,-75.58,4824.4,138165.4
+2024-11-18,"Wheaton, IL",United States,41.87,-88.11,4150.8,142316.2
+2024-11-21,Austin,United States,30.27,-97.74,1551.0,143867.2
+2024-11-24,"Wheaton, IL",United States,41.87,-88.11,1551.0,145418.2
+2024-12-28,Rio de Janeiro,Brazil,-22.91,-43.17,8557.1,153975.3
+2025-01-05,Pipa,Brazil,-6.23,-35.05,2048.7,156024.0
+2025-01-27,"Wheaton, IL",United States,41.87,-88.11,7576.1,163600.1
+2025-02-12,Wisconsin,United States,44.5,-89.5,313.4,163913.5
+2025-02-13,"Wheaton, IL",United States,41.87,-88.11,313.4,164226.9
+2025-04-07,"Hoboken, NJ",United States,40.74,-74.03,1181.5,165408.4
+2025-04-10,Phoenix,United States,33.45,-112.07,3441.3,168849.7
+2025-04-14,"Wheaton, IL",United States,41.87,-88.11,2297.5,171147.2
+2025-04-25,Antigua,Guatemala,14.56,-90.73,3047.2,174194.4
+2025-05-01,Lake Atitlán,Guatemala,14.69,-91.2,52.6,174247.0
+2025-05-05,Antigua,Guatemala,14.56,-90.73,52.6,174299.6
+2025-05-24,Costa Rica,Costa Rica,9.75,-83.75,928.1,175227.7
+2025-05-29,"Wheaton, IL",United States,41.87,-88.11,3597.0,178824.7
+2025-06-24,"Hoboken, NJ",United States,40.74,-74.03,1181.5,180006.2
+2025-06-27,"Wheaton, IL",United States,41.87,-88.11,1181.5,181187.7
+2025-07-18,Colorado Springs,United States,38.83,-104.82,1453.3,182641.0
+2025-07-19,Costa Rica,Costa Rica,9.75,-83.75,3853.2,186494.2
+2025-07-27,"Wheaton, IL",United States,41.87,-88.11,3597.0,190091.2
+2025-08-28,New York,United States,40.71,-74.01,1183.7,191274.9
+2025-08-30,Denver,United States,39.74,-104.99,2618.7,193893.6
+2025-09-01,"San Jose, CA",United States,37.34,-121.89,1491.5,195385.1
+2025-09-03,San Francisco,United States,37.77,-122.42,66.9,195452.0
+2025-09-08,"Wheaton, IL",United States,41.87,-88.11,2945.5,198397.5
+2025-09-19,Medellín,Colombia,6.24,-75.58,4150.8,202548.3
+2025-09-23,Cartagena,Colombia,10.39,-75.51,461.5,203009.8
+2025-10-06,San Miguel de Allende,Mexico,20.91,-100.74,2938.0,205947.8
+2025-10-12,Mexico City,Mexico,19.43,-99.13,235.2,206183.0
+2025-10-17,Tarifa,Spain,36.01,-5.6,9057.3,215240.3
+2025-11-01,Morocco,Morocco,31.63,-7.99,534.7,215775.0
+2025-11-03,Tarifa,Spain,36.01,-5.6,534.7,216309.7
+2025-11-14,Seville,Spain,37.39,-5.98,157.1,216466.8
+2025-11-20,"Wheaton, IL",United States,41.87,-88.11,6772.0,223238.8
+2025-11-26,"Decatur, IL",United States,39.84,-88.95,236.5,223475.3
+2025-11-30,"Wheaton, IL",United States,41.87,-88.11,236.5,223711.8
+2025-12-07,"Hoboken, NJ",United States,40.74,-74.03,1181.5,224893.3
+2025-12-09,New York,United States,40.71,-74.01,3.7,224897.0
+2025-12-10,"Wheaton, IL",United States,41.87,-88.11,1183.7,226080.7
+2025-12-31,New York,United States,40.71,-74.01,1183.7,227264.4
+2026-01-02,"Wheaton, IL",United States,41.87,-88.11,1183.7,228448.1
+2026-02-04,Phoenix,United States,33.45,-112.07,2297.5,230745.6
+2026-02-08,"Wheaton, IL",United States,41.87,-88.11,2297.5,233043.1
+2026-02-14,Medellín,Colombia,6.24,-75.58,4150.8,237193.9
+2026-03-03,"Wheaton, IL",United States,41.87,-88.11,4150.8,241344.7
+2026-03-15,Buenos Aires,Argentina,-34.6,-58.38,9027.2,250371.9
+2026-04-05,Iguazú,Argentina,-25.6,-54.57,1065.5,251437.4
+2026-04-07,Cusco,Peru,-13.53,-71.97,2259.4,253696.8
+2026-04-20,Machu Picchu,Peru,-13.16,-72.55,75.0,253771.8
+2026-04-23,Huacachina,Peru,-14.09,-75.76,362.0,254133.8
+2026-04-27,Paracas,Peru,-13.84,-76.25,59.7,254193.5
+2026-04-28,Lima,Peru,-12.05,-77.04,216.7,254410.2
+2026-05-04,"Wheaton, IL",United States,41.87,-88.11,6101.8,260512.0
+2026-06-06,"Decatur / Hillsboro, IL",United States,39.84,-88.95,236.5,260748.5
+2026-06-08,"Wheaton, IL",United States,41.87,-88.11,236.5,260985.0
+2026-07-20,Madrid,Spain,40.42,-3.7,6759.8,267744.8
+2026-07-22,Valencia,Spain,39.47,-0.38,302.1,268046.9
+2026-07-31,Amsterdam,Netherlands,52.37,4.9,1490.4,269537.3
+2026-08-03,Lisbon,Portugal,38.72,-9.14,1863.5,271400.8
+2026-08-07,Ericeira,Portugal,38.96,-9.42,36.1,271436.9
+2026-08-11,Valencia,Spain,39.47,-0.38,780.5,272217.4
+2026-08-21,Barcelona,Spain,41.39,2.17,303.6,272521.0
+2026-08-24,Valencia,Spain,39.47,-0.38,303.6,272824.6
+2026-08-26,Granada,Spain,37.18,-3.6,379.1,273203.7

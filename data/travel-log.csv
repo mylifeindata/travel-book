@@ -8,7 +8,7 @@ start,end,nights,place,country,region,is_home,is_side_trip,inferred_home
 2022-11-24,2022-11-28,4,Pai,Thailand,Asia,0,0,0
 2022-11-28,2022-12-05,7,Elephant Nature Park,Thailand,Asia,0,0,0
 2022-12-05,2022-12-09,4,Pa Pae Retreat,Thailand,Asia,0,0,0
-2022-12-09,2022-12-15,6,"Wheaton, IL",United States,Home,1,0,1
+2022-12-09,2022-12-15,6,Chiang Mai,Thailand,Asia,0,0,0
 2022-12-15,2022-12-29,14,Koh Tao,Thailand,Asia,0,0,0
 2022-12-29,2023-01-05,7,Ao Nang,Thailand,Asia,0,0,0
 2023-01-05,2023-01-14,9,Krabi,Thailand,Asia,0,0,0
