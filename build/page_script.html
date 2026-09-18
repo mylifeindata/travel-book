@@ -66,6 +66,7 @@ const tiles=document.getElementById('tiles');
 [[nn(M.total_nights),'nights away','out of '+nn(M.window_days)+' days'],
  [M.pct+'%','of all days away','the other '+nn(M.home_nights)+' were home'],
  [M.n_countries,'countries visited','across '+M.n_buckets+' regions'],
+ [nn(M.total_mi),'miles covered','at least · '+M.earth_laps+'x around the Earth'],
  [M.n_places,'places away from home','cities, islands, states and regions'],
  [M.n_trips,'separate stays','median '+M.median_trip+' nights, longest '+M.max_trip],
  [nn(M.intl_nights),'nights outside the US','against '+M.us_nights+' away inside it']
@@ -247,8 +248,9 @@ MON.forEach((m,i)=>{
   // Legs, in order. A leg that would cross the antimeridian is drawn as two
   // pieces running off opposite edges instead of a line back across the map.
   const legs=[];
-  for(let i=1;i<DATA.seq.length;i++){
-    const a=DATA.seq[i-1], b=DATA.seq[i];
+  const PATH=DATA.path;
+  for(let i=1;i<PATH.length;i++){
+    const a=PATH[i-1], b=PATH[i];
     if(a.lat===b.lat && a.lon===b.lon) continue;
     let x1=px(a.lon),y1=py(a.lat),x2=px(b.lon),y2=py(b.lat);
     const paths=[];
@@ -260,7 +262,7 @@ MON.forEach((m,i)=>{
       const p=S('path',{d:d,stroke:kc(b.b),'stroke-width':'1.5','stroke-opacity':'0.72'});
       gArc.append(p); return p;
     });
-    legs.push({on:b.s, nodes:nodes, from:a, to:b});
+    legs.push({on:b.d, km:b.km||0, nodes:nodes, from:a, to:b});
   }
   // A place has no dot until the first night spent there, and the dot grows with
   // the nights as the slider advances. At day 0 only Wheaton is on the map.
@@ -300,9 +302,19 @@ MON.forEach((m,i)=>{
   const totalDays=M.window_days-1;
   const slider=document.getElementById('slider'); slider.max=totalDays; slider.value=totalDays;
   const readout=document.getElementById('readout');
+  const distMi=document.getElementById('dist-mi'), distKm=document.getElementById('dist-km'),
+        distLaps=document.getElementById('dist-laps');
   function render(i){
     const iso=dayISO(i), t=dayMap.get(iso);
-    legs.forEach(L=>L.nodes.forEach(n=>n.setAttribute('stroke-opacity', L.on<=iso?'0.72':'0')));
+    let km=0;
+    legs.forEach(L=>{
+      const on=L.on<=iso;
+      if(on) km+=L.km;
+      L.nodes.forEach(n=>n.setAttribute('stroke-opacity', on?'0.72':'0'));
+    });
+    distMi.textContent=nn(Math.round(km*0.621371));
+    distKm.textContent=nn(Math.round(km))+' km';
+    distLaps.textContent=(km/40075.017).toFixed(2)+'x around the Earth';
     dots.forEach(d=>{
       let nights=0;
       for(const s of d.stays) nights += Math.max(0, Math.min(s.ei, i+1) - s.si);
@@ -339,7 +351,10 @@ MON.forEach((m,i)=>{
     },28);
   });
   document.getElementById('map-note').textContent =
-    legs.length+' legs between '+DATA.map_places.length+' places, each appearing on the night you first arrived and sized by nights spent there so far. Arcs are schematic, not flight paths, and a leg that crosses the Pacific runs off one edge and back in the other.';
+    legs.length+' legs between '+DATA.map_places.length+' places, each appearing on the night you first '
+    +'arrived and sized by nights spent there so far. Distance is great-circle point to point, so it is a floor: '
+    +'real routes, layovers and everything driven once you were somewhere are not in it. Arcs are schematic, and a '
+    +'leg crossing the Pacific runs off one edge and back in the other.';
 })();
 
 /* ---------------- bars ---------------- */

@@ -18,6 +18,7 @@ P = {
  "Ninh Binh Vientam":("Ninh Binh","Vietnam","Asia"),
  "Seoul, South Korea":("Seoul","South Korea","Asia"),
  "Chiang Mai, Thailand":("Chiang Mai","Thailand","Asia"),
+ "Chiang Mai Dec":("Chiang Mai","Thailand","Asia"),
  "Pai, Thailand":("Pai","Thailand","Asia"),
  "Elephant Nature Park, Thailand":("Elephant Nature Park","Thailand","Asia"),
  "Pa Pae Meditation Retreat, Thailand":("Pa Pae Retreat","Thailand","Asia"),

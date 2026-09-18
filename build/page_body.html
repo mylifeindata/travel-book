@@ -52,12 +52,18 @@
     <h2>Drag the slider to any date</h2>
     <p class="lede">Start at the left and there is one dot on the map: Wheaton. Every other place stays dark until the night you first sleep there, then appears and grows as the nights add up. Drag the slider or press play to watch the route build, and the readout tells you exactly where you were that night.</p>
     <div class="panel">
+      <div class="map-head">
+        <div class="odo">
+          <div class="odo-v"><span id="dist-mi">0</span><span class="odo-u">mi</span></div>
+          <div class="odo-s">travelled · <span id="dist-km"></span> · <span id="dist-laps"></span></div>
+        </div>
+        <div class="readout" id="readout"></div>
+      </div>
       <div class="legend" id="legend-map"></div>
       <div class="mapwrap" id="mapwrap"></div>
       <div class="map-ctl">
         <button class="playbtn" id="play" aria-label="Play the route">▶</button>
         <input type="range" id="slider" min="0" max="100" value="100" aria-label="Date">
-        <div class="readout" id="readout"></div>
       </div>
       <p class="note" id="map-note"></p>
     </div>
@@ -153,7 +159,8 @@
     <details>
       <summary>The one number to distrust</summary>
       <div class="details-body" style="color:var(--ink-2); font-size:.88rem; max-width:70ch">
-        <p>Home nights are inferred, not recorded. Any day you travelled without logging it counts here as a night in Wheaton, so <strong style="color:var(--ink)">898 nights away is a floor, not a ceiling</strong>. The effect is small in 2022 and 2023, where the calendar is nearly continuous, and largest in 2024 and 2025, where the longest unlogged stretch runs 53 days.</p>
+        <p>Home nights are inferred, not recorded. Any day you travelled without logging it counts here as a night in Wheaton, so <strong style="color:var(--ink)">904 nights away is a floor, not a ceiling</strong>. The effect is small in 2022 and 2023, where the calendar is nearly continuous, and largest in 2024 and 2025, where the longest unlogged stretch runs 53 days.</p>
+        <p>Distance has the same problem in reverse. It is measured straight line, point to point between the places you slept, so it misses layovers, the actual routing of any flight, and everything driven once you had arrived. Treat it as the shortest path that could have produced this itinerary.</p>
       </div>
     </details>
   </div>

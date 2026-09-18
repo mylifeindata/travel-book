@@ -10,8 +10,8 @@ BASE = os.path.dirname(os.path.abspath(__file__))
 SITE_URL = 'https://mylifeindata.github.io/travel-book/'
 TITLE = 'Where in the World is Nick'
 # No full name here on purpose: the GitHub account was renamed to drop it.
-DESC = ('Four years of one travel calendar, cleaned up and counted: 898 nights away, '
-        '23 countries, an animated world map and a year-to-region-to-place Sankey.')
+DESC = ('Four years of one travel calendar, cleaned up and counted: 904 nights away, '
+        '23 countries, 169,761 miles, an animated world map and a year-to-region-to-place Sankey.')
 
 head = open(os.path.join(BASE, 'page_head.html')).read()
 body = open(os.path.join(BASE, 'page_body.html')).read()
