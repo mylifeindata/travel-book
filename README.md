@@ -4,8 +4,8 @@ Four years of one Google Calendar, cleaned up and counted. Oct 1 2022 to Sep 1 2
 
 **Live site:** https://mylifeindata.github.io/travel-book/
 
-898 nights away, 533 at home in Wheaton, out of 1,431 days. 23 countries, 90 places
-away from home, 120 separate stays.
+904 nights away, 527 at home in Wheaton, out of 1,431 days. 23 countries, 90 places
+away from home, 121 separate stays, 169,761 miles covered.
 
 ## What's in here
 
@@ -15,12 +15,13 @@ away from home, 120 separate stays.
 | `data/travel-log.csv` | Every stay: dates, nights, place, country, region, and flags for home / side trip / inferred. |
 | `data/travel-data.json` | The full payload the page reads, including the Sankey graph and map coordinates. |
 | `data/adjustments.csv` | Every edit made to the raw calendar, with the reason. |
+| `data/distance-legs.csv` | Every leg behind the distance total: arrival date, place, coordinates, leg km, running km. |
 | `build/` | The scripts that turn raw calendar events into that payload. |
 
 ## The tabs
 
 - **Overview** — headline numbers, pace by year, longest stays
-- **The map** — world map with a leg drawn for every move, plus a date slider and playback
+- **The map** — world map with a leg drawn for every move, a running distance total, plus a date slider and playback
 - **Rhythm** — one column per day, colored by where that night was spent
 - **Flow** — Sankey from year to region to place, with the US broken out place by place
 - **Countries** — nights away by country and by region
@@ -47,7 +48,13 @@ Aggregates are all derived from one day-to-stay map rather than by summing rows,
 what keeps the ribbon, the Sankey and the country bars from disagreeing.
 
 **The number to distrust:** home nights are inferred. Any unlogged travel counts here as a
-night in Wheaton, so 898 nights away is a floor, not a ceiling.
+night in Wheaton, so 904 nights away is a floor, not a ceiling.
+
+Distance is a floor for the opposite reason. It is great-circle, point to point between
+consecutive places slept in, walked off the day map so a side trip gets its return hop
+(Tarifa to Morocco to Tarifa to Seville, not Tarifa to Morocco to Seville). It has no
+layovers, no real flight routing and nothing driven once you were somewhere: 155 legs,
+273,204 km, 6.82 laps of the Earth.
 
 ## Rebuilding after a calendar edit
 
@@ -56,12 +63,14 @@ night in Wheaton, so 898 nights away is a floor, not a ceiling.
 #    too wide for one), then:
 cd build
 python3 clean.py     # markers, overlaps, nesting, consolidation -> trips.json
-python3 stats.py     # day map, aggregates, Sankey, map coords -> data.js
+python3 stats.py     # day map, aggregates, Sankey, map coords, distance -> data.js
 node worldpath.js    # only if you want to regenerate the world outline
+python3 assemble.py     # inlines data.js into index.html
+python3 export_data.py  # refreshes the CSV and JSON files in data/
 ```
 
-Then inline `data.js` into `index.html` in place of the existing `const WORLD = ... const DATA = ...`
-block.
+`assemble.py` stitches `page_head.html`, `page_body.html` and `page_script.html` together
+with `data.js` inlined, so `index.html` stays a single file with nothing to fetch.
 
 The world outline comes from [world-atlas](https://github.com/topojson/world-atlas)
 (Natural Earth 110m), projected equirectangular and simplified at build time so the page
