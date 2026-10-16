@@ -11,6 +11,7 @@
   --k0:#2a78d6; --k1:#eb6834; --k2:#1baf7a; --k3:#eda100; --k4:#e87ba4; --k5:#008300; --k6:#4a3aa7;
   --bx:#9aa5ac; --track:#e3e8ec;
   --land:#d5dde4; --land-line:#c2ccd4; --sea:#eaeef2;
+  --g-land:#f2f6f9; --g-line:#a9b7c5; --g-sea:#cfdae4;
   --shadow:0 1px 2px rgba(16,22,25,.05), 0 8px 24px -16px rgba(16,22,25,.28);
 }
 @media (prefers-color-scheme: dark){
@@ -22,6 +23,7 @@
     --k0:#3987e5; --k1:#d95926; --k2:#199e70; --k3:#c98500; --k4:#d55181; --k5:#008300; --k6:#9085e9;
     --bx:#6d787f; --track:#20272d;
     --land:#222a30; --land-line:#2e383f; --sea:#0f1418;
+    --g-land:#2b3744; --g-line:#46566a; --g-sea:#0c1117;
     --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px -16px rgba(0,0,0,.7);
   }
 }
@@ -33,6 +35,7 @@
   --k0:#3987e5; --k1:#d95926; --k2:#199e70; --k3:#c98500; --k4:#d55181; --k5:#008300; --k6:#9085e9;
   --bx:#6d787f; --track:#20272d;
   --land:#222a30; --land-line:#2e383f; --sea:#0f1418;
+  --g-land:#2b3744; --g-line:#46566a; --g-sea:#0c1117;
   --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px -16px rgba(0,0,0,.7);
 }
 
@@ -121,17 +124,39 @@ h1 .em{color:var(--k1)}
 .mapwrap svg{display:block; width:100%; height:auto}
 #mapwrap circle{transition:r .3s cubic-bezier(.22,.8,.3,1), opacity .3s}
 #mapwrap path{transition:stroke-opacity .3s}
+/* The globe is turned every frame, so nothing on it may animate its own way there. */
+.mapwrap.is-globe{background:transparent; border-color:transparent}
+.mapwrap .globe-svg{width:100%; aspect-ratio:1; height:auto; max-height:clamp(320px,62vh,600px);
+  touch-action:none; cursor:grab}
+.globe-svg.grabbing{cursor:grabbing}
+.globe-svg:focus-visible{outline:2px solid var(--k0); outline-offset:3px; border-radius:10px}
+.globe-svg circle,.globe-svg path{transition:none}
 .map-head{display:flex; justify-content:space-between; align-items:flex-end; gap:20px;
   flex-wrap:wrap; margin-bottom:18px; padding-bottom:16px; border-bottom:1px solid var(--rule)}
+.odo-since{font-family:"JetBrains Mono",monospace; font-size:.68rem; letter-spacing:.14em;
+  text-transform:uppercase; color:var(--muted); display:block; margin-bottom:9px}
+.odo-row{display:flex; align-items:flex-start; gap:clamp(20px,4vw,42px); flex-wrap:wrap}
 .odo-v{font-family:"Bricolage Grotesque",sans-serif; font-weight:800; letter-spacing:-.04em;
-  font-size:clamp(2.2rem,5.4vw,3.4rem); line-height:.92; display:flex; align-items:baseline; gap:.22em;
+  font-size:clamp(2rem,5vw,3.2rem); line-height:.92; display:flex; align-items:baseline; gap:.22em;
   font-variant-numeric:tabular-nums}
 .odo-u{font-family:"JetBrains Mono",monospace; font-weight:500; font-size:.9rem;
   letter-spacing:.1em; text-transform:uppercase; color:var(--muted)}
+.odo-l{font-family:"JetBrains Mono",monospace; font-size:.72rem; color:var(--muted);
+  letter-spacing:.02em; margin-top:7px}
 .odo-s{font-family:"JetBrains Mono",monospace; font-size:.72rem; color:var(--muted);
-  font-variant-numeric:tabular-nums; margin-top:7px; letter-spacing:.02em}
+  font-variant-numeric:tabular-nums; margin-top:12px; letter-spacing:.02em}
+.map-bar{display:flex; justify-content:space-between; align-items:center; gap:16px;
+  flex-wrap:wrap; margin-bottom:16px}
+.map-bar .legend{margin-bottom:0}
+.viewtog{display:flex; gap:1px; background:var(--rule); border:1px solid var(--rule);
+  border-radius:8px; overflow:hidden; flex:none}
+.viewbtn{appearance:none; border:0; background:var(--surface); color:var(--muted); cursor:pointer;
+  font:inherit; font-size:.78rem; letter-spacing:.01em; padding:6px 14px}
+.viewbtn[aria-pressed=true]{background:var(--surface-2); color:var(--ink); font-weight:600}
+.viewbtn:focus-visible{outline:2px solid var(--k0); outline-offset:-2px}
 .map-ctl{display:grid; grid-template-columns:auto 1fr; gap:14px; align-items:center; margin-top:16px}
-@media (max-width:640px){ .map-head{align-items:flex-start} .readout{text-align:left} .readout .p{justify-content:flex-start} }
+@media (max-width:640px){ .map-head{align-items:flex-start} .odo-row{gap:18px}
+  .odo-v{font-size:clamp(1.6rem,8vw,2.2rem)} }
 .playbtn{appearance:none; border:1px solid var(--rule); background:var(--surface-2); color:var(--ink);
   width:38px; height:38px; border-radius:50%; cursor:pointer; font-size:.9rem; display:grid; place-items:center; flex:none}
 .playbtn:hover{border-color:var(--k0); color:var(--k0)}

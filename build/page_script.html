@@ -230,113 +230,466 @@ MON.forEach((m,i)=>{
   document.getElementById('sankey').append(svg);
 })();
 
-/* ---------------- map ---------------- */
+/* ---------------- map: flat + globe ---------------- */
 (function(){
-  const MW=1000,MH=500,LAT_TOP=84,LAT_BOT=-56;
-  const px=lo=>(lo+180)/360*MW, py=la=>(LAT_TOP-la)/(LAT_TOP-LAT_BOT)*MH;
-  const svg=S('svg',{viewBox:'0 0 '+MW+' '+MH,width:'100%'});
-  svg.append(S('rect',{x:0,y:0,width:MW,height:MH,fill:'var(--sea)'}));
-  svg.append(S('path',{d:WORLD,fill:'var(--land)',stroke:'var(--land-line)','stroke-width':'0.4','fill-rule':'evenodd'}));
-  const gArc=S('g',{fill:'none','stroke-linecap':'round'}), gDot=S('g',{}), gNow=S('g',{});
-  svg.append(gArc,gDot,gNow);
+  const PATH=DATA.path, PLACES=DATA.map_places;
+  const CONT=DATA.continents||[];
+  const DEG=Math.PI/180;
 
-  function arc(x1,y1,x2,y2){
-    const dx=x2-x1, dy=y2-y1, len=Math.hypot(dx,dy) || 1;
-    const cx=(x1+x2)/2 + (-dy/len)*len*0.17, cy=(y1+y2)/2 + (dx/len)*len*0.17;
-    return 'M'+x1+','+y1+'Q'+cx.toFixed(1)+','+cy.toFixed(1)+' '+x2+','+y2;
-  }
-  // Legs, in order. A leg that would cross the antimeridian is drawn as two
-  // pieces running off opposite edges instead of a line back across the map.
-  const legs=[];
-  const PATH=DATA.path;
+  /* ---- shared per-frame state ------------------------------------------ */
+  // Every view reads the same numbers. Anything that counts lives here once so
+  // the globe and the flat map can never disagree.
+  const dayIdx=s=>Math.round((Date.parse(s)-Date.parse(WSTART))/864e5);
+  const legData=[];
   for(let i=1;i<PATH.length;i++){
     const a=PATH[i-1], b=PATH[i];
     if(a.lat===b.lat && a.lon===b.lon) continue;
-    let x1=px(a.lon),y1=py(a.lat),x2=px(b.lon),y2=py(b.lat);
-    const paths=[];
-    if(Math.abs(x2-x1)>MW/2){
-      const s=x2>x1?-1:1;
-      paths.push(arc(x1,y1,x2+s*MW,y2), arc(x1-s*MW,y1,x2,y2));
-    } else paths.push(arc(x1,y1,x2,y2));
-    const nodes=paths.map(d=>{
-      const p=S('path',{d:d,stroke:kc(b.b),'stroke-width':'1.5','stroke-opacity':'0.72'});
-      gArc.append(p); return p;
-    });
-    legs.push({on:b.d, km:b.km||0, nodes:nodes, from:a, to:b});
+    legData.push({on:b.d, km:b.km||0, a:a, b:b});
   }
-  // A place has no dot until the first night spent there, and the dot grows with
-  // the nights as the slider advances. At day 0 only Wheaton is on the map.
-  const dayIdx=s=>Math.round((Date.parse(s)-Date.parse(WSTART))/864e5);
-  const maxN=Math.max(...DATA.map_places.map(p=>p.n));
-  const rFor=n=>(2.4+Math.sqrt(Math.max(n,1)/maxN)*7).toFixed(2);
-
   const staysByPlace=new Map();
   DATA.seq.forEach(x=>{
     if(!staysByPlace.has(x.place)) staysByPlace.set(x.place,[]);
     staysByPlace.get(x.place).push({si:dayIdx(x.s), ei:dayIdx(x.e)});
   });
-
-  const dots=DATA.map_places.map(p=>{
+  const placeState=PLACES.map(p=>{
     const stays=staysByPlace.get(p.place)||[];
-    const c=S('circle',{cx:px(p.lon).toFixed(1),cy:py(p.lat).toFixed(1),
-      r:rFor(1),fill:kc(p.b),'fill-opacity':'0.9',
-      stroke:'var(--sea)','stroke-width':'0.9',opacity:'0'});
-    c.style.cursor='pointer';
-    const d={p:p, c:c, stays:stays, first:Math.min(...stays.map(s=>s.si)), shown:0};
+    return {p:p, stays:stays, first:Math.min(...stays.map(s=>s.si)), nights:0};
+  });
+  const maxN=Math.max(...PLACES.map(p=>p.n));
+  const rFor=n=>2.4+Math.sqrt(Math.max(n,1)/maxN)*7;
+
+  // Cumulative country and continent counts, keyed by day index, worked out once
+  // up front: every leg's arrival date adds whatever is new.
+  const totalDays=M.window_days-1;
+  const ctryAt=new Int16Array(totalDays+1), contAt=new Int16Array(totalDays+1);
+  (function(){
+    const seenC=new Set(), seenK=new Set();
+    let j=0;
+    for(let i=0;i<=totalDays;i++){
+      const iso=dayISO(i);
+      while(j<PATH.length && PATH[j].d<=iso){
+        seenC.add(PATH[j].country); seenK.add(CONT[PATH[j].b]||PATH[j].b); j++;
+      }
+      ctryAt[i]=seenC.size; contAt[i]=seenK.size;
+    }
+  })();
+
+  const state={i:totalDays, iso:WEND, km:0, cur:null, on:legData.map(()=>true)};
+
+  /* ---- flat view -------------------------------------------------------- */
+  const flat=(function(){
+    const MW=1000,MH=500,LAT_TOP=84,LAT_BOT=-56;
+    const px=lo=>(lo+180)/360*MW, py=la=>(LAT_TOP-la)/(LAT_TOP-LAT_BOT)*MH;
+    const svg=S('svg',{viewBox:'0 0 '+MW+' '+MH,width:'100%',style:'display:block;height:auto'});
+    svg.append(S('rect',{x:0,y:0,width:MW,height:MH,fill:'var(--sea)'}));
+    svg.append(S('path',{d:WORLD,fill:'var(--land)',stroke:'var(--land-line)','stroke-width':'0.4','fill-rule':'evenodd'}));
+    const gArc=S('g',{fill:'none','stroke-linecap':'round'}), gDot=S('g',{}), gNow=S('g',{});
+    svg.append(gArc,gDot,gNow);
+
+    function arc(x1,y1,x2,y2){
+      const dx=x2-x1, dy=y2-y1, len=Math.hypot(dx,dy) || 1;
+      const cx=(x1+x2)/2 + (-dy/len)*len*0.17, cy=(y1+y2)/2 + (dx/len)*len*0.17;
+      return 'M'+x1+','+y1+'Q'+cx.toFixed(1)+','+cy.toFixed(1)+' '+x2+','+y2;
+    }
+    // A leg that would cross the antimeridian is drawn as two pieces running off
+    // opposite edges instead of a line back across the whole map.
+    const legNodes=legData.map(L=>{
+      let x1=px(L.a.lon),y1=py(L.a.lat),x2=px(L.b.lon),y2=py(L.b.lat);
+      const ds=[];
+      if(Math.abs(x2-x1)>MW/2){
+        const s=x2>x1?-1:1;
+        ds.push(arc(x1,y1,x2+s*MW,y2), arc(x1-s*MW,y1,x2,y2));
+      } else ds.push(arc(x1,y1,x2,y2));
+      return ds.map(d=>{
+        const p=S('path',{d:d,stroke:kc(L.b.b),'stroke-width':'1.5','stroke-opacity':'0.72'});
+        gArc.append(p); return p;
+      });
+    });
+    const dots=placeState.map(d=>{
+      const p=d.p;
+      const c=S('circle',{cx:px(p.lon).toFixed(1),cy:py(p.lat).toFixed(1),
+        r:rFor(1).toFixed(2),fill:kc(p.b),'fill-opacity':'0.9',
+        stroke:'var(--sea)','stroke-width':'0.9',opacity:'0'});
+      c.style.cursor='pointer';
+      hookTip(c,d);
+      gDot.append(c);
+      return c;
+    });
+    // Later arrivals paint over earlier ones, so the newest dot is never buried.
+    placeState.map((d,i)=>[d.first,dots[i]]).sort((a,b)=>a[0]-b[0]).forEach(x=>gDot.append(x[1]));
+    const ring=S('circle',{r:'9',fill:'none',stroke:'var(--ink)','stroke-width':'1.6'});
+    const core=S('circle',{r:'3.2',fill:'var(--ink)'});
+    gNow.append(ring,core);
+
+    let shown=placeState.map(()=>-1);
+    function paint(){
+      legNodes.forEach((ns,i)=>{
+        const o=state.on[i]?'0.72':'0';
+        ns.forEach(n=>n.setAttribute('stroke-opacity',o));
+      });
+      placeState.forEach((d,i)=>{
+        if(d.nights===shown[i]) return;
+        shown[i]=d.nights;
+        dots[i].setAttribute('opacity', d.nights?'1':'0');
+        if(d.nights) dots[i].setAttribute('r', rFor(d.nights).toFixed(2));
+      });
+      if(state.cur){
+        const x=px(state.cur.lon).toFixed(1), y=py(state.cur.lat).toFixed(1);
+        ring.setAttribute('cx',x); ring.setAttribute('cy',y);
+        core.setAttribute('cx',x); core.setAttribute('cy',y);
+        gNow.style.display='';
+      } else gNow.style.display='none';
+    }
+    return {svg:svg, paint:paint, note:'Arcs are schematic, and a leg crossing the Pacific runs off one edge and back in the other.'};
+  })();
+
+  /* ---- globe view ------------------------------------------------------- */
+  // Orthographic, projected from scratch on every frame because that is what
+  // lets it turn. Land, graticule and flight paths are all clipped against the
+  // horizon: the far side of a ring is cut away and the gap is closed by walking
+  // the limb, so a continent rolling over the edge keeps a round silhouette.
+  const globe=(function(){
+    const VB=600, CX=VB/2, CY=VB/2, R=VB/2-16;
+    let rotLon=-40, rotLat=22, tgtLon=-40, tgtLat=22, follow=true;
+
+    // Unpack the lat/lon rings: base-36 deltas in tenths of a degree, laid out
+    // flat as unit vectors so a frame is pure arithmetic with no allocation.
+    function unpack(txt){
+      const out=[];
+      for(const r of txt.split(';')){
+        const toks=r.split(',');
+        const a=new Float64Array(toks.length*3);
+        let la=0, lo=0;
+        for(let i=0;i<toks.length;i++){
+          const u=toks[i].indexOf('_');
+          la+=parseInt(toks[i].slice(0,u),36); lo+=parseInt(toks[i].slice(u+1),36);
+          const p=la/10*DEG, l=lo/10*DEG, c=Math.cos(p);
+          a[i*3]=c*Math.cos(l); a[i*3+1]=c*Math.sin(l); a[i*3+2]=Math.sin(p);
+        }
+        out.push(a);
+      }
+      return out;
+    }
+    const RINGS=unpack(GLOBE);
+
+    const vec=(la,lo)=>{const p=la*DEG,l=lo*DEG,c=Math.cos(p); return [c*Math.cos(l),c*Math.sin(l),Math.sin(p)];};
+    function grat(){
+      const out=[];
+      for(let lo=-180;lo<180;lo+=30){
+        const a=new Float64Array(61*3);
+        for(let k=0;k<61;k++){const v=vec(-90+k*3,lo); a[k*3]=v[0];a[k*3+1]=v[1];a[k*3+2]=v[2];}
+        out.push(a);
+      }
+      for(let la=-60;la<=60;la+=30){
+        const a=new Float64Array(73*3);
+        for(let k=0;k<73;k++){const v=vec(la,-180+k*5); a[k*3]=v[0];a[k*3+1]=v[1];a[k*3+2]=v[2];}
+        out.push(a);
+      }
+      return out;
+    }
+    const GRAT=grat();
+
+    // Basis for the current rotation: c points at the viewer, e is east and n is
+    // north at the centre of the disc.
+    let cx=0,cy=0,cz=0, ex=0,ey=0,ez=0, nx=0,ny=0,nz=0;
+    function basis(){
+      const p=rotLat*DEG, l=rotLon*DEG, cp=Math.cos(p);
+      cx=cp*Math.cos(l); cy=cp*Math.sin(l); cz=Math.sin(p);
+      // east = normalize(zhat x c)
+      let bx=-cy, by=cx, bz=0;
+      const m=Math.hypot(bx,by)||1; ex=bx/m; ey=by/m; ez=0;
+      // north = c x east
+      nx=cy*ez-cz*ey; ny=cz*ex-cx*ez; nz=cx*ey-cy*ex;
+    }
+    const sx=(x,y,z)=>CX+(x*ex+y*ey+z*ez)*R;
+    const sy=(x,y,z)=>CY-(x*nx+y*ny+z*nz)*R;
+
+    // Where a segment from a visible point to a hidden one meets the horizon.
+    // Exact for the chord, and normalising puts it back on the sphere.
+    const tmp=[0,0,0];
+    function cross(ax,ay,az,da,bx,by,bz,db){
+      const t=da/(da-db);
+      let x=ax+(bx-ax)*t, y=ay+(by-ay)*t, z=az+(bz-az)*t;
+      const m=Math.hypot(x,y,z)||1;
+      tmp[0]=x/m; tmp[1]=y/m; tmp[2]=z/m;
+      return tmp;
+    }
+    function limb(x1,y1,x2,y2,inc,out){
+      let a=Math.atan2(y1-CY,x1-CX), b=Math.atan2(y2-CY,x2-CX), d=b-a;
+      if(inc){ while(d<=1e-9) d+=2*Math.PI; } else { while(d>=-1e-9) d-=2*Math.PI; }
+      const steps=Math.max(1,Math.ceil(Math.abs(d)/0.09));
+      for(let k=1;k<=steps;k++){
+        const th=a+d*k/steps;
+        out.push('L'+(CX+R*Math.cos(th)).toFixed(1)+','+(CY+R*Math.sin(th)).toFixed(1));
+      }
+    }
+    // Closed ring -> one filled subpath, cut at the horizon and sewn shut along
+    // the limb. The direction to walk the limb comes from the direction of
+    // travel as the ring leaves: cross product of radius and tangent.
+    function ringPath(a,out){
+      const n=a.length/3;
+      let anyVis=false, allVis=true, start=-1;
+      const dots=new Float64Array(n);
+      for(let i=0;i<n;i++){
+        const d=a[i*3]*cx+a[i*3+1]*cy+a[i*3+2]*cz;
+        dots[i]=d;
+        if(d>0) anyVis=true; else { allVis=false; if(start<0) start=i; }
+      }
+      if(!anyVis) return;
+      if(allVis){
+        out.push('M'+sx(a[0],a[1],a[2]).toFixed(1)+','+sy(a[0],a[1],a[2]).toFixed(1));
+        for(let i=1;i<n;i++) out.push('L'+sx(a[i*3],a[i*3+1],a[i*3+2]).toFixed(1)+','+sy(a[i*3],a[i*3+1],a[i*3+2]).toFixed(1));
+        out.push('Z');
+        return;
+      }
+      // Walk from a hidden vertex so every run opens with an entry crossing and
+      // closes with an exit crossing.
+      const runs=[]; let run=null;
+      for(let k=0;k<n;k++){
+        const i=(start+k)%n, j=(start+k+1)%n;
+        const vi=dots[i]>0, vj=dots[j]>0;
+        if(!vi&&vj){
+          const p=cross(a[j*3],a[j*3+1],a[j*3+2],dots[j],a[i*3],a[i*3+1],a[i*3+2],dots[i]);
+          run=[[sx(p[0],p[1],p[2]),sy(p[0],p[1],p[2])]];
+        }
+        if(vj&&run) run.push([sx(a[j*3],a[j*3+1],a[j*3+2]),sy(a[j*3],a[j*3+1],a[j*3+2])]);
+        if(vi&&!vj&&run){
+          const p=cross(a[i*3],a[i*3+1],a[i*3+2],dots[i],a[j*3],a[j*3+1],a[j*3+2],dots[j]);
+          run.push([sx(p[0],p[1],p[2]),sy(p[0],p[1],p[2])]);
+          runs.push(run); run=null;
+        }
+      }
+      if(!runs.length) return;
+      for(let k=0;k<runs.length;k++){
+        const P=runs[k];
+        out.push((k?'L':'M')+P[0][0].toFixed(1)+','+P[0][1].toFixed(1));
+        for(let m=1;m<P.length;m++) out.push('L'+P[m][0].toFixed(1)+','+P[m][1].toFixed(1));
+        const E=P[P.length-1];
+        let prev=P[P.length-2]||P[0], q=P.length-2;
+        while(q>0 && Math.hypot(E[0]-prev[0],E[1]-prev[1])<0.01){ prev=P[--q]; }
+        const inc=((E[0]-CX)*(E[1]-prev[1])-(E[1]-CY)*(E[0]-prev[0]))>0;
+        const N=runs[(k+1)%runs.length][0];
+        limb(E[0],E[1],N[0],N[1],inc,out);
+      }
+      out.push('Z');
+    }
+    // Open polyline -> however many visible pieces it has. Used for the
+    // graticule and for flight paths, which are not closed shapes.
+    function linePath(a,out){
+      const n=a.length/3;
+      let open=false, pd=0;
+      for(let i=0;i<n;i++){
+        const d=a[i*3]*cx+a[i*3+1]*cy+a[i*3+2]*cz;
+        if(d>0){
+          if(!open && i>0 && pd<=0){
+            const p=cross(a[i*3],a[i*3+1],a[i*3+2],d,a[(i-1)*3],a[(i-1)*3+1],a[(i-1)*3+2],pd);
+            out.push('M'+sx(p[0],p[1],p[2]).toFixed(1)+','+sy(p[0],p[1],p[2]).toFixed(1));
+            open=true;
+          }
+          out.push((open?'L':'M')+sx(a[i*3],a[i*3+1],a[i*3+2]).toFixed(1)+','+sy(a[i*3],a[i*3+1],a[i*3+2]).toFixed(1));
+          open=true;
+        } else if(open){
+          const p=cross(a[(i-1)*3],a[(i-1)*3+1],a[(i-1)*3+2],pd,a[i*3],a[i*3+1],a[i*3+2],d);
+          out.push('L'+sx(p[0],p[1],p[2]).toFixed(1)+','+sy(p[0],p[1],p[2]).toFixed(1));
+          open=false;
+        }
+        pd=d;
+      }
+    }
+
+    // Each leg as a real great circle, sampled by angular length.
+    const legArcs=legData.map(L=>{
+      const A=vec(L.a.lat,L.a.lon), B=vec(L.b.lat,L.b.lon);
+      let d=Math.acos(Math.max(-1,Math.min(1,A[0]*B[0]+A[1]*B[1]+A[2]*B[2])));
+      const steps=Math.max(8,Math.min(64,Math.ceil(d/DEG/3)));
+      const a=new Float64Array((steps+1)*3), s=Math.sin(d);
+      for(let k=0;k<=steps;k++){
+        const t=k/steps;
+        let x,y,z;
+        if(s<1e-9){ x=A[0];y=A[1];z=A[2]; }
+        else{
+          const w1=Math.sin((1-t)*d)/s, w2=Math.sin(t*d)/s;
+          x=A[0]*w1+B[0]*w2; y=A[1]*w1+B[1]*w2; z=A[2]*w1+B[2]*w2;
+        }
+        a[k*3]=x; a[k*3+1]=y; a[k*3+2]=z;
+      }
+      return a;
+    });
+    const placeVec=PLACES.map(p=>vec(p.lat,p.lon));
+
+    const svg=S('svg',{viewBox:'0 0 '+VB+' '+VB,preserveAspectRatio:'xMidYMid meet',
+      width:'100%',class:'globe-svg'});
+    svg.append(S('circle',{cx:CX,cy:CY,r:R,fill:'var(--g-sea)'}));
+    const pGrat=S('path',{fill:'none',stroke:'var(--g-line)','stroke-width':'0.8','stroke-opacity':'0.4'});
+    const pLand=S('path',{fill:'var(--g-land)',stroke:'var(--g-line)','stroke-width':'0.8','fill-rule':'nonzero'});
+    const gArc=S('g',{fill:'none','stroke-linecap':'round'});
+    const gDot=S('g',{}), gNow=S('g',{});
+    svg.append(pGrat,pLand,gArc,gDot,gNow);
+    svg.append(S('circle',{cx:CX,cy:CY,r:R,fill:'none',stroke:'var(--g-line)','stroke-width':'1','stroke-opacity':'0.8'}));
+
+    const arcNodes=legData.map(L=>{
+      const p=S('path',{stroke:kc(L.b.b),'stroke-width':'1.6','stroke-opacity':'0.78'});
+      gArc.append(p); return p;
+    });
+    const GR=1.25;  // the globe shows half the world, so its dots carry more weight
+    const dots=placeState.map(d=>{
+      const c=S('circle',{r:(rFor(1)*GR).toFixed(2),fill:kc(d.p.b),'fill-opacity':'0.92',
+        stroke:'var(--g-sea)','stroke-width':'1',opacity:'0'});
+      c.style.cursor='pointer';
+      hookTip(c,d);
+      gDot.append(c);
+      return c;
+    });
+    placeState.map((d,i)=>[d.first,dots[i]]).sort((a,b)=>a[0]-b[0]).forEach(x=>gDot.append(x[1]));
+    const ring=S('circle',{r:'11',fill:'none',stroke:'var(--ink)','stroke-width':'1.8'});
+    const core=S('circle',{r:'3.6',fill:'var(--ink)'});
+    gNow.append(ring,core);
+
+    const buf=[];
+    function paint(){
+      basis();
+      buf.length=0; for(const g of GRAT) linePath(g,buf);
+      pGrat.setAttribute('d',buf.join(''));
+      buf.length=0; for(const r of RINGS) ringPath(r,buf);
+      pLand.setAttribute('d',buf.join(''));
+      for(let i=0;i<arcNodes.length;i++){
+        if(!state.on[i]){ arcNodes[i].setAttribute('d',''); continue; }
+        buf.length=0; linePath(legArcs[i],buf);
+        arcNodes[i].setAttribute('d',buf.join(''));
+      }
+      for(let i=0;i<dots.length;i++){
+        const n=placeState[i].nights;
+        const v=placeVec[i];
+        if(!n || (v[0]*cx+v[1]*cy+v[2]*cz)<=0){ dots[i].setAttribute('opacity','0'); continue; }
+        dots[i].setAttribute('opacity','1');
+        dots[i].setAttribute('r',(rFor(n)*GR).toFixed(2));
+        dots[i].setAttribute('cx',sx(v[0],v[1],v[2]).toFixed(1));
+        dots[i].setAttribute('cy',sy(v[0],v[1],v[2]).toFixed(1));
+      }
+      if(state.cur){
+        const v=vec(state.cur.lat,state.cur.lon);
+        if((v[0]*cx+v[1]*cy+v[2]*cz)>0){
+          const x=sx(v[0],v[1],v[2]).toFixed(1), y=sy(v[0],v[1],v[2]).toFixed(1);
+          ring.setAttribute('cx',x); ring.setAttribute('cy',y);
+          core.setAttribute('cx',x); core.setAttribute('cy',y);
+          gNow.style.display='';
+        } else gNow.style.display='none';
+      } else gNow.style.display='none';
+    }
+
+    // Turning it. Dragging is free; moving the date eases the globe round to
+    // wherever you were, which is the whole point of watching it play.
+    let raf=null;
+    function tick(){
+      raf=null;
+      let dl=tgtLon-rotLon;
+      while(dl>180) dl-=360; while(dl<-180) dl+=360;
+      const dt=tgtLat-rotLat;
+      if(Math.abs(dl)<0.08 && Math.abs(dt)<0.08){ rotLon=tgtLon; rotLat=tgtLat; paint(); return; }
+      rotLon+=dl*0.14; rotLat+=dt*0.14;
+      paint();
+      raf=requestAnimationFrame(tick);
+    }
+    function ease(){ if(!raf) raf=requestAnimationFrame(tick); }
+    function lookAt(lat,lon){
+      if(!follow) return;
+      tgtLat=Math.max(-72,Math.min(72,lat)); tgtLon=lon;
+      ease();
+    }
+
+    let drag=null, pending=false;
+    function spin(dx,dy){
+      rotLon-=dx*0.28; rotLat+=dy*0.28;
+      rotLat=Math.max(-89,Math.min(89,rotLat));
+      if(rotLon>180) rotLon-=360; if(rotLon<-180) rotLon+=360;
+      tgtLon=rotLon; tgtLat=rotLat;
+      if(raf){ cancelAnimationFrame(raf); raf=null; }
+      if(!pending){ pending=true; requestAnimationFrame(()=>{pending=false; paint();}); }
+    }
+    svg.addEventListener('pointerdown',e=>{
+      drag={x:e.clientX,y:e.clientY}; follow=false;
+      svg.setPointerCapture(e.pointerId); svg.classList.add('grabbing');
+    });
+    svg.addEventListener('pointermove',e=>{
+      if(!drag) return;
+      e.preventDefault();
+      spin(e.clientX-drag.x, e.clientY-drag.y);
+      drag={x:e.clientX,y:e.clientY};
+    });
+    const stop=e=>{ if(!drag) return; drag=null; svg.classList.remove('grabbing');
+      try{svg.releasePointerCapture(e.pointerId);}catch(_){} };
+    svg.addEventListener('pointerup',stop);
+    svg.addEventListener('pointercancel',stop);
+    // Arrow keys do the same thing, so this is reachable without a mouse.
+    svg.setAttribute('tabindex','0');
+    svg.setAttribute('role','img');
+    svg.setAttribute('aria-label','Globe. Drag or use the arrow keys to turn it.');
+    svg.addEventListener('keydown',e=>{
+      const k={ArrowLeft:[-40,0],ArrowRight:[40,0],ArrowUp:[0,-26],ArrowDown:[0,26]}[e.key];
+      if(!k) return;
+      e.preventDefault(); follow=false; spin(k[0],k[1]);
+    });
+
+    return {svg:svg, paint:paint, lookAt:lookAt,
+      resume(){ follow=true; },
+      note:'Drag the globe to turn it, or use the arrow keys. Flight paths are true great circles, which is why they bend.'};
+  })();
+
+  function hookTip(c,d){
     c.addEventListener('mouseenter',ev=>{
-      const sofar=d.shown;
+      const p=d.p, sofar=d.nights;
       showTip(ev,tipHead(kc(p.b),p.place)+'<div class="t-s">'+p.country+' · '+
         (sofar<p.n ? nn(sofar)+' of '+nn(p.n)+' nights so far' : nn(p.n)+' nights')+'</div>');
     });
     c.addEventListener('mouseleave',hideTip);
-    gDot.append(c);
-    return d;
-  });
-  // Later arrivals paint over earlier ones, so the newest dot is never buried.
-  dots.slice().sort((a,b)=>a.first-b.first).forEach(d=>gDot.append(d.c));
-  const ring=S('circle',{r:'9',fill:'none',stroke:'var(--ink)','stroke-width':'1.6'});
-  const core=S('circle',{r:'3.2',fill:'var(--ink)'});
-  gNow.append(ring,core);
-  document.getElementById('mapwrap').append(svg);
+  }
 
-  const totalDays=M.window_days-1;
+  /* ---- wiring ----------------------------------------------------------- */
+  const wrap=document.getElementById('mapwrap');
+  wrap.append(globe.svg, flat.svg);
+  let view='globe';
+  flat.svg.style.display='none';
+
   const slider=document.getElementById('slider'); slider.max=totalDays; slider.value=totalDays;
   const readout=document.getElementById('readout');
   const distMi=document.getElementById('dist-mi'), distKm=document.getElementById('dist-km'),
-        distLaps=document.getElementById('dist-laps');
-  function render(i){
+        distLaps=document.getElementById('dist-laps'),
+        nCtry=document.getElementById('ctry-n'), nCont=document.getElementById('cont-n');
+
+  function render(i,moved){
     const iso=dayISO(i), t=dayMap.get(iso);
+    state.i=i; state.iso=iso;
     let km=0;
-    legs.forEach(L=>{
-      const on=L.on<=iso;
-      if(on) km+=L.km;
-      L.nodes.forEach(n=>n.setAttribute('stroke-opacity', on?'0.72':'0'));
-    });
+    for(let k=0;k<legData.length;k++){
+      const on=legData[k].on<=iso;
+      state.on[k]=on;
+      if(on) km+=legData[k].km;
+    }
+    state.km=km;
+    for(const d of placeState){
+      let n=0;
+      for(const s of d.stays) n += Math.max(0, Math.min(s.ei, i+1) - s.si);
+      d.nights=n;
+    }
+    state.cur = t ? (PLACES.find(p=>p.place===t.place)||null) : null;
+
     distMi.textContent=nn(Math.round(km*0.621371));
     distKm.textContent=nn(Math.round(km))+' km';
     distLaps.textContent=(km/40075.017).toFixed(2)+'x around the Earth';
-    dots.forEach(d=>{
-      let nights=0;
-      for(const s of d.stays) nights += Math.max(0, Math.min(s.ei, i+1) - s.si);
-      if(nights===d.shown) return;
-      d.shown=nights;
-      d.c.setAttribute('opacity', nights?'1':'0');
-      if(nights) d.c.setAttribute('r', rFor(nights));
-    });
+    nCtry.textContent=ctryAt[i];
+    nCont.textContent=contAt[i];
+
     if(t){
-      const c=DATA.map_places.find(p=>p.place===t.place);
-      if(c){ ring.setAttribute('cx',px(c.lon).toFixed(1)); ring.setAttribute('cy',py(c.lat).toFixed(1));
-             core.setAttribute('cx',px(c.lon).toFixed(1)); core.setAttribute('cy',py(c.lat).toFixed(1));
-             gNow.style.display=''; }
-      else gNow.style.display='none';
       const night=Math.round((Date.parse(iso)-Date.parse(t.s))/864e5)+1;
       readout.innerHTML='<div class="p"><span class="sw" style="background:'+kc(t.b)+'"></span>'+
         (t.home?'Home, Wheaton IL':t.place+', '+t.country)+'</div>'+
         '<div class="d">'+fmtD(iso)+' · night '+night+' of '+t.n+'</div>';
     }
+    if(moved && state.cur){ globe.resume(); globe.lookAt(state.cur.lat,state.cur.lon); }
+    (view==='globe'?globe:flat).paint();
   }
-  slider.addEventListener('input',()=>render(+slider.value));
-  render(totalDays);
+  slider.addEventListener('input',()=>render(+slider.value,true));
+  render(totalDays,false);
 
   let timer=null;
   const btn=document.getElementById('play');
@@ -346,15 +699,28 @@ MON.forEach((m,i)=>{
     btn.textContent='❚❚'; btn.setAttribute('aria-label','Pause');
     timer=setInterval(()=>{
       const v=+slider.value+3;
-      if(v>=totalDays){ slider.value=totalDays; render(totalDays); clearInterval(timer); timer=null; btn.textContent='▶'; return; }
-      slider.value=v; render(v);
+      if(v>=totalDays){ slider.value=totalDays; render(totalDays,true); clearInterval(timer); timer=null; btn.textContent='▶'; btn.setAttribute('aria-label','Play the route'); return; }
+      slider.value=v; render(v,true);
     },28);
   });
-  document.getElementById('map-note').textContent =
-    legs.length+' legs between '+DATA.map_places.length+' places, each appearing on the night you first '
+
+  const note=document.getElementById('map-note');
+  const BASE=legData.length+' legs between '+PLACES.length+' places, each appearing on the night you first '
     +'arrived and sized by nights spent there so far. Distance is great-circle point to point, so it is a floor: '
-    +'real routes, layovers and everything driven once you were somewhere are not in it. Arcs are schematic, and a '
-    +'leg crossing the Pacific runs off one edge and back in the other.';
+    +'real routes, layovers and everything driven once you were somewhere are not in it. ';
+  function setView(v){
+    view=v;
+    globe.svg.style.display = v==='globe' ? '' : 'none';
+    flat.svg.style.display  = v==='flat'  ? '' : 'none';
+    wrap.classList.toggle('is-globe', v==='globe');
+    [...document.querySelectorAll('.viewbtn')].forEach(b=>
+      b.setAttribute('aria-pressed', b.dataset.view===v ? 'true':'false'));
+    note.textContent=BASE+(v==='globe'?globe.note:flat.note);
+    (v==='globe'?globe:flat).paint();
+  }
+  [...document.querySelectorAll('.viewbtn')].forEach(b=>
+    b.addEventListener('click',()=>setView(b.dataset.view)));
+  setView('globe');
 })();
 
 /* ---------------- bars ---------------- */

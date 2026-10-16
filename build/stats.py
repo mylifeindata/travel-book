@@ -13,6 +13,12 @@ BI = {b:i for i,b in enumerate(BUCKETS)}
 # DISPLAY is the top-to-bottom stacking order, with Home and the US pushed to the
 # bottom. Validated for colourblind safety as an adjacent sequence in both themes.
 DISPLAY = ['Central America & Mexico','South America','Europe','Africa','Asia','United States','Home']
+# Real continents, one per bucket, for the continents counter on the map. The three
+# North American buckets exist because the US earned its own colour, not because
+# Wheaton is on a different landmass from Mexico City.
+CONTINENT = {'Home':'North America', 'United States':'North America',
+             'Central America & Mexico':'North America', 'South America':'South America',
+             'Europe':'Europe', 'Africa':'Africa', 'Asia':'Asia'}
 
 for t in trips:
     s, e = max(d(t['start']), START), min(d(t['end']), TODAY)
@@ -169,6 +175,7 @@ data = dict(
             n_legs=sum(1 for p in path if p['km'] > 0),
             earth_laps=round(total_km/40075.017, 2)),
   bucket_names=BUCKETS, display_order=DISPLAY,
+  continents=[CONTINENT[b] for b in BUCKETS],
   nights_by_bucket={b:nights_b[b] for b in DISPLAY if nights_b[b]},
   years=year_rows,
   countries=[{'name':k,'nights':v,'trips':stays_c[k],
@@ -185,6 +192,7 @@ data = dict(
 )
 open('/root/travel/data.js','w').write(
     'const WORLD = ' + json.dumps(open('/root/travel/world.txt').read()) + ';\n' +
+    'const GLOBE = ' + json.dumps(open('/root/travel/globe.txt').read()) + ';\n' +
     'const DATA = ' + json.dumps(data, separators=(',',':'), ensure_ascii=False) + ';')
 
 print(f"Window {START} to {TODAY} ({window_days} days)")

@@ -49,17 +49,37 @@
 <section id="p-map" role="tabpanel" aria-labelledby="t-map" hidden>
   <div class="sec">
     <div class="sec-head"><span class="eyebrow">Every move</span><span class="rule"></span></div>
-    <h2>Drag the slider to any date</h2>
-    <p class="lede">Start at the left and there is one dot on the map: Wheaton. Every other place stays dark until the night you first sleep there, then appears and grows as the nights add up. Drag the slider or press play to watch the route build, and the readout tells you exactly where you were that night.</p>
+    <h2>Drag the globe, drag the slider</h2>
+    <p class="lede">Turn the globe with your mouse or the arrow keys. Put the slider at the far left and there is one dot on it: Wheaton. Every other place stays dark until the night you first sleep there, then appears and grows as the nights add up. Press play and the globe follows you around, and the readout says exactly where you were that night.</p>
     <div class="panel">
       <div class="map-head">
         <div class="odo">
-          <div class="odo-v"><span id="dist-mi">0</span><span class="odo-u">mi</span></div>
-          <div class="odo-s">travelled · <span id="dist-km"></span> · <span id="dist-laps"></span></div>
+          <span class="odo-since">Since Oct 2022</span>
+          <div class="odo-row">
+            <div class="odo-stat">
+              <div class="odo-v"><span id="dist-mi">0</span><span class="odo-u">mi</span></div>
+              <div class="odo-l">travelled</div>
+            </div>
+            <div class="odo-stat">
+              <div class="odo-v"><span id="ctry-n">1</span></div>
+              <div class="odo-l">countries</div>
+            </div>
+            <div class="odo-stat">
+              <div class="odo-v"><span id="cont-n">1</span></div>
+              <div class="odo-l">continents</div>
+            </div>
+          </div>
+          <div class="odo-s"><span id="dist-km"></span> · <span id="dist-laps"></span></div>
         </div>
         <div class="readout" id="readout"></div>
       </div>
-      <div class="legend" id="legend-map"></div>
+      <div class="map-bar">
+        <div class="legend" id="legend-map"></div>
+        <div class="viewtog" role="group" aria-label="Projection">
+          <button class="viewbtn" data-view="globe" aria-pressed="true">Globe</button>
+          <button class="viewbtn" data-view="flat" aria-pressed="false">Flat</button>
+        </div>
+      </div>
       <div class="mapwrap" id="mapwrap"></div>
       <div class="map-ctl">
         <button class="playbtn" id="play" aria-label="Play the route">▶</button>
