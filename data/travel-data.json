@@ -38,6 +38,15 @@
   "United States",
   "Home"
  ],
+ "continents": [
+  "North America",
+  "North America",
+  "North America",
+  "South America",
+  "Europe",
+  "Africa",
+  "Asia"
+ ],
  "nights_by_bucket": {
   "Central America & Mexico": 104,
   "South America": 124,
