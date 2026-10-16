@@ -21,7 +21,7 @@ away from home, 121 separate stays, 169,761 miles covered.
 ## The tabs
 
 - **Overview** — headline numbers, pace by year, longest stays
-- **The map** — world map with a leg drawn for every move, a running distance total, plus a date slider and playback
+- **The map** — a draggable globe (or a flat world, your pick) with a leg drawn for every move, running miles / countries / continents counters, a date slider and playback
 - **Rhythm** — one column per day, colored by where that night was spent
 - **Flow** — Sankey from year to region to place, with the US broken out place by place
 - **Countries** — nights away by country and by region
@@ -75,6 +75,14 @@ with `data.js` inlined, so `index.html` stays a single file with nothing to fetc
 The world outline comes from [world-atlas](https://github.com/topojson/world-atlas)
 (Natural Earth 110m), projected equirectangular and simplified at build time so the page
 ships with zero runtime dependencies.
+
+`worldpath.js` emits it twice. `world.txt` is the flat map, already projected, with
+Antarctica dropped because it falls below that map's bottom cut. `globe.txt` is the same
+coastlines as raw lat/lon, delta encoded in tenths of a degree and base 36, because an
+orthographic globe has to reproject every vertex on every drag frame. It keeps Antarctica:
+on a globe the south pole is somewhere you can turn to. The globe clips land against the
+horizon and sews the gap shut along the limb, so a continent rolling over the edge keeps a
+round silhouette instead of being cut by a straight chord.
 
 ## Deploying
 
